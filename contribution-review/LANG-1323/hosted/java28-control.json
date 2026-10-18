@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "kind": "independent_unchanged_upstream_java28_date_parser_control",
+  "generated_at": "2026-10-18T20:40:50.357Z",
+  "verdict": "the_experimental_runs_40_date_parser_failures_are_reproduced_on_the_unchanged_upstream_base",
+  "repository": "agamal026/commons-lang",
+  "run_url": "https://github.com/agamal026/commons-lang/actions/runs/39163962620",
+  "run_id": 39163962620,
+  "run_attempt": 1,
+  "run_status": "completed",
+  "run_conclusion": "failure",
+  "run_metadata_observed_at": "2026-10-18T20:38:56.158Z",
+  "job": {
+    "id": 117782918411,
+    "name": "date-parser-control",
+    "url": "https://github.com/agamal026/commons-lang/actions/runs/39163962620/job/117782918411",
+    "status": "completed",
+    "conclusion": "failure",
+    "started_at": "2026-10-18T20:35:04Z",
+    "completed_at": "2026-10-18T20:37:58Z",
+    "metadata_observed_at": "2026-10-18T20:38:56.309Z",
+    "steps": [
+      {
+        "name": "Set up job",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:35:05Z",
+        "completed_at": "2026-10-18T20:35:06Z"
+      },
+      {
+        "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:35:06Z",
+        "completed_at": "2026-10-18T20:35:08Z"
+      },
+      {
+        "name": "Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:35:08Z",
+        "completed_at": "2026-10-18T20:35:08Z"
+      },
+      {
+        "name": "Set up JDK 28-ea",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:35:08Z",
+        "completed_at": "2026-10-18T20:35:26Z"
+      },
+      {
+        "name": "Baseline date-parser tests",
+        "conclusion": "failure",
+        "started_at": "2026-10-18T20:35:26Z",
+        "completed_at": "2026-10-18T20:37:56Z"
+      },
+      {
+        "name": "Post Set up JDK 28-ea",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:37:56Z",
+        "completed_at": "2026-10-18T20:37:56Z"
+      },
+      {
+        "name": "Post Run actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9",
+        "conclusion": "skipped",
+        "started_at": "2026-10-18T20:37:56Z",
+        "completed_at": "2026-10-18T20:37:56Z"
+      },
+      {
+        "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:37:56Z",
+        "completed_at": "2026-10-18T20:37:56Z"
+      },
+      {
+        "name": "Complete job",
+        "conclusion": "success",
+        "started_at": "2026-10-18T20:37:56Z",
+        "completed_at": "2026-10-18T20:37:57Z"
+      }
+    ]
+  },
+  "workflow": {
+    "head_sha": "bd12677bd0eb5f76a4233d66f343342b682fb8c5",
+    "source_url": "https://raw.githubusercontent.com/agamal026/commons-lang/bd12677bd0eb5f76a4233d66f343342b682fb8c5/.github/workflows/lang-1323-java28-control.yml",
+    "observed_at": "2026-10-18T20:37:43.422Z",
+    "text": "# Licensed to the Apache Software Foundation (ASF) under one or more\n# contributor license agreements. See the NOTICE file distributed with\n# this work for additional information regarding copyright ownership.\n# The ASF licenses this file to You under the Apache License, Version 2.0\n# (the \"License\"); you may not use this file except in compliance with\n# the License. You may obtain a copy of the License at\n#\n# https://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n\nname: LANG-1323 Java 28 upstream control\n\non:\n  push:\n    branches: ['validation/LANG-1323-java28-base']\n\npermissions:\n  contents: read\n\njobs:\n  date-parser-control:\n    runs-on: ubuntu-latest\n    timeout-minutes: 15\n    steps:\n    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1\n      with:\n        repository: apache/commons-lang\n        ref: c89cdf682fe21b0c39759cf58186ed5336a105d4\n        persist-credentials: false\n    - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9\n      with:\n        path: ~/.m2/repository\n        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}\n        restore-keys: |\n          ${{ runner.os }}-maven-\n    - name: Set up JDK 28-ea\n      uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad\n      with:\n        distribution: temurin\n        java-version: 28-ea\n    - name: Baseline date-parser tests\n      run: mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all -Dtest=FastDateParserJava15BugTest,FastDateParserTest test\n",
+    "scope": "Dedicated branch-only push trigger, no schedule. This metadata head is the control workflow commit, not the source being tested."
+  },
+  "checkout": {
+    "repository": "apache/commons-lang",
+    "sha": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+    "full_log_evidence": [
+      {
+        "line": 107,
+        "text": "2026-10-18T20:35:08.0631849Z c89cdf682fe21b0c39759cf58186ed5336a105d4"
+      },
+      {
+        "line": 135,
+        "text": "2026-10-18T20:35:08.1308780Z c89cdf682fe21b0c39759cf58186ed5336a105d4"
+      }
+    ],
+    "explicit_workflow_repository_and_ref_confirmed": true
+  },
+  "command": {
+    "value": "mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all -Dtest=FastDateParserJava15BugTest,FastDateParserTest test",
+    "evidence": [
+      {
+        "line": 216,
+        "text": "2026-10-18T20:35:26.8855622Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all -Dtest=FastDateParserJava15BugTest,FastDateParserTest test"
+      }
+    ],
+    "scope": "Only the two failing date-parser classes. This is not a full baseline default build or a repeated ordinary matrix."
+  },
+  "runtime": {
+    "java_version": "28-beta",
+    "distribution": "Eclipse Temurin",
+    "build": "28.0.0-ea.20.0.ea",
+    "vendor": "Eclipse Adoptium",
+    "maven_version": "3.10.0",
+    "maven_revision": "c43a36b8d67be7e0805a411bc0898af1a51f5472",
+    "requested_runner": "ubuntu-latest",
+    "evidence": [
+      {
+        "line": 224,
+        "text": "2026-10-18T20:35:28.2481091Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+      },
+      {
+        "line": 226,
+        "text": "2026-10-18T20:35:28.2483569Z Java version: 28-beta, vendor: Eclipse Adoptium, runtime: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/28.0.0-ea.20.0.ea/x64"
+      },
+      {
+        "line": 228,
+        "text": "2026-10-18T20:35:28.2485728Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+      }
+    ],
+    "matches_experimental_browser_receipt_runtime": true
+  },
+  "results": {
+    "suite": {
+      "tests": 52400,
+      "failures": 40,
+      "errors": 0,
+      "skipped": 0
+    },
+    "classes": [
+      {
+        "class": "org.apache.commons.lang3.time.FastDateParserJava15BugTest",
+        "tests": 1206,
+        "failures": 4,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "org.apache.commons.lang3.time.FastDateParserTest",
+        "tests": 51194,
+        "failures": 36,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "evidence": [
+      {
+        "line": 310,
+        "text": "2026-10-18T20:36:09.1498391Z [ERROR] Tests run: 1206, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 5.413 s <<< FAILURE! -- in org.apache.commons.lang3.time.FastDateParserJava15BugTest"
+      },
+      {
+        "line": 545,
+        "text": "2026-10-18T20:37:56.4092853Z [ERROR] Tests run: 51194, Failures: 36, Errors: 0, Skipped: 0, Time elapsed: 106.6 s <<< FAILURE! -- in org.apache.commons.lang3.time.FastDateParserTest"
+      },
+      {
+        "line": 1387,
+        "text": "2026-10-18T20:37:56.6537093Z [ERROR] Tests run: 52400, Failures: 40, Errors: 0, Skipped: 0"
+      },
+      {
+        "line": 1390,
+        "text": "2026-10-18T20:37:56.6557009Z [ERROR] BUILD FAILURE"
+      }
+    ],
+    "build_success": false,
+    "type_utils_was_not_run_in_this_control": true
+  },
+  "source_identity": {
+    "compared_upstream": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+    "compared_fix_source": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+    "independently_verified_with_local_git": true,
+    "unchanged_test_blobs": [
+      {
+        "path": "src/test/java/org/apache/commons/lang3/time/FastDateParserJava15BugTest.java",
+        "upstream_blob": "29e0b074300e08116d2563ecad742be318286a86",
+        "fix_blob": "29e0b074300e08116d2563ecad742be318286a86"
+      },
+      {
+        "path": "src/test/java/org/apache/commons/lang3/time/FastDateParserTest.java",
+        "upstream_blob": "0fddcbafce40d83c9aca014d5132475c16f21905",
+        "fix_blob": "0fddcbafce40d83c9aca014d5132475c16f21905"
+      }
+    ]
+  },
+  "failure_comparison": {
+    "experimental_job_id": 117779871695,
+    "experimental_receipt": "experimental-java28-browser.json",
+    "normalization": "Removed only per-line timestamp, [ERROR] marker and immediately surrounding whitespace; retained every failure summary's remaining Unicode text, locale, method, source line and message.",
+    "experimental_count": 40,
+    "control_count": 40,
+    "ordered_failure_summaries_byte_for_byte_equal": true,
+    "counts": {
+      "FastDateParserJava15BugTest.testLocales_Long_BC": 2,
+      "FastDateParserJava15BugTest.testLocales_Short_BC": 2,
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv": 12,
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU": 12,
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl": 12
+    },
+    "experimental_summaries": [
+      "FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl"
+    ],
+    "control_summaries": [
+      "FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl"
+    ],
+    "interpretation": "All 40 final failure summaries match in order after removing only timestamps and the [ERROR] marker. Same class totals, failure counts, methods, locales, and message text reproduce on unmodified upstream c89cdf with the same actual Java build."
+  },
+  "instrumentation_limit": {
+    "unsupported_major_72_message_count_in_control": 0,
+    "interpretation": "This narrow date-parser control does not reproduce the separate JaCoCo unsupported-major-72 instrumentation diagnostics from the full experimental suite. It proves the 40 date-parser failures independently of the TypeUtils fix, without claiming that every other diagnostic has been attributed."
+  },
+  "log": {
+    "file": "job-117782918411.log",
+    "bytes": 162539,
+    "sha256": "84c87cc8d512a322a60afb08e91c974bb6de00b1a19bf5acefbda9163a208495",
+    "git_blob_sha": "8a0c5cb3fe6f07615cb386ece00dacaa6f7d94a8",
+    "retrieved_at": "2026-10-18T20:39:02.919Z",
+    "format": "UTF-8 encoding of the connector-decoded log, preserving its returned BOM and line endings. Original transport bytes are not exposed by the connector.",
+    "complete_connector_decoded_text": true
+  },
+  "evidence_limits": [
+    "The control intentionally fails; a red check is the expected reproduction outcome, not a successful default build.",
+    "The experimental full run's selected browser final-results lines are the comparison input; its entire large log is not archived.",
+    "This auditor did not edit source, run builds, alter CI, rerun jobs, or claim human approval. The coordinator created and ran the control."
+  ],
+  "next_action": "Retain the tolerated experimental failure in the final hosted report, with its 40 date-parser failures attributed to unchanged upstream source. No further hosted rerun is needed to substantiate this attribution."
+}

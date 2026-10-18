@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "screened_at": "2026-10-18T20:27:10.194Z",
+  "repository": "apache/commons-lang",
+  "issue": "https://issues.apache.org/jira/browse/LANG-1323",
+  "source_commit": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+  "master_sha": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+  "master_unchanged": true,
+  "jira": {
+    "state": "Open",
+    "assignee": "Unassigned",
+    "updated": "2017-04-24",
+    "description_rechecked": true,
+    "comment_history": "Nine comments were read in the initial screening; this final public page still shows the unchanged update date."
+  },
+  "searches": [
+    {
+      "url": "https://api.github.com/repos/apache/commons-lang/pulls?state=open&per_page=100",
+      "observed_at": "2026-10-18T20:27:10.176Z",
+      "total_count": 58,
+      "incomplete_results": null,
+      "items": [
+        {
+          "number": 1825,
+          "title": "keep EventCountCircuitBreaker event count from wrapping on int overflow",
+          "url": "https://github.com/apache/commons-lang/pull/1825",
+          "head_sha": "1727a5002e69df78130e02951ef69ab00380e0e0"
+        },
+        {
+          "number": 1645,
+          "title": "[INFRA] Set up default rulesets for default and release branches",
+          "url": "https://github.com/apache/commons-lang/pull/1645",
+          "head_sha": "03d84efdb26f12256da2b2b23728fd8ffc3d2075"
+        },
+        {
+          "number": 1592,
+          "title": "LANG-1386",
+          "url": "https://github.com/apache/commons-lang/pull/1592",
+          "head_sha": "3f95c1f13108bd1e04b242b2a8f4a100ae44fba1"
+        },
+        {
+          "number": 1554,
+          "title": "LANG-1760: Replace XOR with Objects.hash in Pair and Triple to improv…",
+          "url": "https://github.com/apache/commons-lang/pull/1554",
+          "head_sha": "d06ee3141b5e4e70ed80095930f22f618efe16c5"
+        },
+        {
+          "number": 1544,
+          "title": "LANG-1750 Add support for FIFO fairness in TimedSemaphore and related test cases",
+          "url": "https://github.com/apache/commons-lang/pull/1544",
+          "head_sha": "9b36e2a2856322a39118f848e7f549a630cc0a41"
+        },
+        {
+          "number": 1524,
+          "title": "[LANG-1802] Optimize CharRange.hashCode() to reduce collision rate and improve calculation efficiency",
+          "url": "https://github.com/apache/commons-lang/pull/1524",
+          "head_sha": "459d2a184d189b4c9c5b0baaee576d66a05ae7ce"
+        },
+        {
+          "number": 1509,
+          "title": "Allows enums in RecursiveToStringStyle",
+          "url": "https://github.com/apache/commons-lang/pull/1509",
+          "head_sha": "4cf612e5777527c34f28c02b0cb93dfcd8574737"
+        },
+        {
+          "number": 1475,
+          "title": "[LANG-1656] Fairness setting in TimedSemaphore",
+          "url": "https://github.com/apache/commons-lang/pull/1475",
+          "head_sha": "c9dbf1baa5e702163d90a953723c23b969f190db"
+        },
+        {
+          "number": 1469,
+          "title": "[LANG-1656] Add Supplier-based variants of firstNonBlank and firstNonEmpty for short-circuit evaluation",
+          "url": "https://github.com/apache/commons-lang/pull/1469",
+          "head_sha": "790cbbcc1ccd30a901d9db0f90491f0c0d30dd73"
+        },
+        {
+          "number": 1460,
+          "title": "add countryCode",
+          "url": "https://github.com/apache/commons-lang/pull/1460",
+          "head_sha": "e27a4186ad96327e86c2e4d4c13c6dd49725e5c3"
+        },
+        {
+          "number": 1392,
+          "title": "Add StringUtils.truncateToByteLength",
+          "url": "https://github.com/apache/commons-lang/pull/1392",
+          "head_sha": "e9a1a31120ae2fe0a43b9f0d4b6eccff900db183"
+        },
+        {
+          "number": 1328,
+          "title": "Fb jpms - fixes for illegal access to private information in java.* packages.",
+          "url": "https://github.com/apache/commons-lang/pull/1328",
+          "head_sha": "499a0a9e1b926497522d750fd815aa56eadedf63"
+        },
+        {
+          "number": 1287,
+          "title": "Bump org.junit-pioneer:junit-pioneer from 1.9.1 to 2.3.0",
+          "url": "https://github.com/apache/commons-lang/pull/1287",
+          "head_sha": "0fe8c44922ce81d65e10bb23841078e305bd99d9"
+        },
+        {
+          "number": 1271,
+          "title": "Partially revert LANG-1172.",
+          "url": "https://github.com/apache/commons-lang/pull/1271",
+          "head_sha": "b5db85410e9681c509f51c7bd29b79a3b1e72920"
+        },
+        {
+          "number": 1270,
+          "title": "Add ArrayUtils.binarySearch() with a key extractor",
+          "url": "https://github.com/apache/commons-lang/pull/1270",
+          "head_sha": "f56bf0a2d5e1e79fb71985130ded97926f1ac651"
+        },
+        {
+          "number": 1137,
+          "title": "Add an ability to compare equal by equals() method objects with ReflectionBuilder",
+          "url": "https://github.com/apache/commons-lang/pull/1137",
+          "head_sha": "d7705a491d72e45952e45179d869766e56864d9f"
+        },
+        {
+          "number": 1114,
+          "title": "Add TypedEqualsBuilder class and test",
+          "url": "https://github.com/apache/commons-lang/pull/1114",
+          "head_sha": "d70d4c7f935d29cca66176deeff0e3bb8fb43378"
+        },
+        {
+          "number": 1095,
+          "title": "NumberUtils countSignificantFigures method",
+          "url": "https://github.com/apache/commons-lang/pull/1095",
+          "head_sha": "813d80de053f2e7485118c406981f239308dc718"
+        },
+        {
+          "number": 1082,
+          "title": "Add capacity for ReflectionToStringBuilder to include methods annotated with @ToStringInclude",
+          "url": "https://github.com/apache/commons-lang/pull/1082",
+          "head_sha": "6a337f84c866aafe2259d6d1e708a82e5f702595"
+        },
+        {
+          "number": 1018,
+          "title": "Several optimizations in the method formatDurationWords",
+          "url": "https://github.com/apache/commons-lang/pull/1018",
+          "head_sha": "fbe20767653f7574c6d62361b6724e9a3adeed0d"
+        },
+        {
+          "number": 993,
+          "title": "NumberUtils check if Number is null or zero",
+          "url": "https://github.com/apache/commons-lang/pull/993",
+          "head_sha": "6baea487f0a84dabb073109d73c101acde80a781"
+        },
+        {
+          "number": 806,
+          "title": "Add methods to enhance joins: joinNotEmptyWith, joinNotBlankWith",
+          "url": "https://github.com/apache/commons-lang/pull/806",
+          "head_sha": "394aad38dd489c80727d0c74500351e8ef119d37"
+        },
+        {
+          "number": 804,
+          "title": "floor and ceiling for Sorted Arrays",
+          "url": "https://github.com/apache/commons-lang/pull/804",
+          "head_sha": "20b240ba47254f22cdc5836871dee0389255d372"
+        },
+        {
+          "number": 784,
+          "title": "[LANG-1593] Common behavior for StringUtils join APIs when called with char or String delimiter",
+          "url": "https://github.com/apache/commons-lang/pull/784",
+          "head_sha": "554f8c785f5350c5f1e1b1b058dcab96e389c009"
+        },
+        {
+          "number": 709,
+          "title": "Implement StopWatch lap",
+          "url": "https://github.com/apache/commons-lang/pull/709",
+          "head_sha": "2b828299022c7f4f88cea54fabf2e05d53c3986e"
+        },
+        {
+          "number": 684,
+          "title": "[LANG-1634] Add ObjectUtils #applyIfNonNull and #applyFirstNonNull",
+          "url": "https://github.com/apache/commons-lang/pull/684",
+          "head_sha": "adf1e04fb5d614ce6417ce166a90246162f8de60"
+        },
+        {
+          "number": 675,
+          "title": "[LANG-1444] NumberUtils.createNumber(), BigDecimal for decimal fractions tending to zero",
+          "url": "https://github.com/apache/commons-lang/pull/675",
+          "head_sha": "548c4126dae9dd5256ad831ac6fb382b93add158"
+        },
+        {
+          "number": 611,
+          "title": "[LANG-1601] Refine performance of fraction.pow",
+          "url": "https://github.com/apache/commons-lang/pull/611",
+          "head_sha": "97388fde21a00bb7a25192bf70a059f8c46e8534"
+        },
+        {
+          "number": 606,
+          "title": "LANG-1598 Use JSR-305 for Null-Analysis",
+          "url": "https://github.com/apache/commons-lang/pull/606",
+          "head_sha": "a6d3b80c11b1c290abec1eb0a3b5783150daacfe"
+        },
+        {
+          "number": 577,
+          "title": "[LANG-1588] performance refine for StringUtils.center",
+          "url": "https://github.com/apache/commons-lang/pull/577",
+          "head_sha": "31a198978ea34d078d4293dff0fe2ac0b0fc9952"
+        },
+        {
+          "number": 576,
+          "title": "[LANG-1587] refine StringUtils.strip",
+          "url": "https://github.com/apache/commons-lang/pull/576",
+          "head_sha": "079df6c514e4963dabdf0c99a660198a9efd1450"
+        },
+        {
+          "number": 575,
+          "title": "[LANG-1586] refine StringUtils.wrap",
+          "url": "https://github.com/apache/commons-lang/pull/575",
+          "head_sha": "3746a2ecda4367070bcfeb97e2794a7c4140c12b"
+        },
+        {
+          "number": 574,
+          "title": "[LANG-1585] refine performance of StringUtils.normalizeSpace",
+          "url": "https://github.com/apache/commons-lang/pull/574",
+          "head_sha": "1ec7153fc5f83adff03c74b4bcee166dc27f9e7f"
+        },
+        {
+          "number": 572,
+          "title": "[LANG-1583] refine StringUtils.isMixedCase ",
+          "url": "https://github.com/apache/commons-lang/pull/572",
+          "head_sha": "b51f11881359e62e3bff72eb7c92d25971e31623"
+        },
+        {
+          "number": 571,
+          "title": "[LANG-1582] refine StringUtils.indexOfDifference ",
+          "url": "https://github.com/apache/commons-lang/pull/571",
+          "head_sha": "534f02a8a38e37abfd0c55abe55c5d9fb1376db9"
+        },
+        {
+          "number": 567,
+          "title": "[LANG-1578] refine StringUtils.compare",
+          "url": "https://github.com/apache/commons-lang/pull/567",
+          "head_sha": "da67756c0cd0ce7d357be62450bc974b68a18a63"
+        },
+        {
+          "number": 566,
+          "title": "[LANG-1577] refine StringUtils.chop",
+          "url": "https://github.com/apache/commons-lang/pull/566",
+          "head_sha": "f5b58257d94938d1e9378079d9b1fbde61e19904"
+        },
+        {
+          "number": 565,
+          "title": "[LANG-1576] refine StringUtils.chomp",
+          "url": "https://github.com/apache/commons-lang/pull/565",
+          "head_sha": "46350d4300c33f1821ea7d7cc561e4e348233736"
+        },
+        {
+          "number": 560,
+          "title": "[LANG-1572] green implementation CharSequenceUtils.indexOf",
+          "url": "https://github.com/apache/commons-lang/pull/560",
+          "head_sha": "77452dd913879a8c09d14342b1c9a05a17db39ef"
+        },
+        {
+          "number": 534,
+          "title": "[LANG-1548] split regionMatches for better performance",
+          "url": "https://github.com/apache/commons-lang/pull/534",
+          "head_sha": "d9be6a31d523ecd6764951d961ab63c002e08640"
+        },
+        {
+          "number": 524,
+          "title": "[LANG-1540] Add startsAndEndsWith() methods to StringUtils.",
+          "url": "https://github.com/apache/commons-lang/pull/524",
+          "head_sha": "f3bda7baa747817dccc8bcdf12afd666091d0411"
+        },
+        {
+          "number": 508,
+          "title": "LANG-1481 Add StringUtils.split() methods with String[] input.",
+          "url": "https://github.com/apache/commons-lang/pull/508",
+          "head_sha": "80ace1d8d6da93bc01a12edb7426bd7c0a0b8e64"
+        },
+        {
+          "number": 506,
+          "title": "LANG-1530 another method like formatDurationWords with ",
+          "url": "https://github.com/apache/commons-lang/pull/506",
+          "head_sha": "de7e11faa64fd1002bcbba85891126e1f9ddcb13"
+        },
+        {
+          "number": 495,
+          "title": "LANG-1519 Add zero, positive & negative util methods",
+          "url": "https://github.com/apache/commons-lang/pull/495",
+          "head_sha": "1f498beda2a0384c255e134d548163dcdf7a0061"
+        },
+        {
+          "number": 482,
+          "title": "LANG-1504 - Adding labels to split StopWatch feature",
+          "url": "https://github.com/apache/commons-lang/pull/482",
+          "head_sha": "667a71347e9f4ab5a167bfad749d67c6555cac8d"
+        },
+        {
+          "number": 478,
+          "title": "StringUtils.abbreviate handles empty abbrevMarker",
+          "url": "https://github.com/apache/commons-lang/pull/478",
+          "head_sha": "050682bcc76077c49338125c7a0357d3ab61f9d9"
+        },
+        {
+          "number": 474,
+          "title": "add FastSplitUtils",
+          "url": "https://github.com/apache/commons-lang/pull/474",
+          "head_sha": "5ed4af6c258016c0b8f704a28c14a4e4cf002ace"
+        },
+        {
+          "number": 460,
+          "title": "Lang-1465: Fix the ZZ time zone format",
+          "url": "https://github.com/apache/commons-lang/pull/460",
+          "head_sha": "4562502ded01f00507ab31bf4b57c0b51b3cfc66"
+        },
+        {
+          "number": 457,
+          "title": "WIP [LANG-1490] - Creates DiffResultView and DiffView classes",
+          "url": "https://github.com/apache/commons-lang/pull/457",
+          "head_sha": "5e5da28034f1497cd330f877e41b6bad3a80d03c"
+        },
+        {
+          "number": 450,
+          "title": "Add and use IllegalArgumentExceptions",
+          "url": "https://github.com/apache/commons-lang/pull/450",
+          "head_sha": "95467b2c7fd665eed465d13be9885039bc1477e4"
+        },
+        {
+          "number": 434,
+          "title": "Fixed a problem when parsing Chinese using the ToStringStyle.JSON_STYLE",
+          "url": "https://github.com/apache/commons-lang/pull/434",
+          "head_sha": "8efff432a66d0e2d9611254244703640e0b42e09"
+        },
+        {
+          "number": 414,
+          "title": "LANG-1369: Formatted and Paramaterized Exception Classes",
+          "url": "https://github.com/apache/commons-lang/pull/414",
+          "head_sha": "95144f52688c94b0125dbbe725d2e04dec4419f8"
+        },
+        {
+          "number": 358,
+          "title": "ClassUtils.getBaseClasses(desiredBase, packageName)",
+          "url": "https://github.com/apache/commons-lang/pull/358",
+          "head_sha": "a0bc206bb2618e87c7351eaa8d903e972dc27ede"
+        },
+        {
+          "number": 308,
+          "title": "LANG-1366 : Add Feature for No ClassName and MultiLine StringStyle",
+          "url": "https://github.com/apache/commons-lang/pull/308",
+          "head_sha": "68282aa915c659c99e0c96d64fd05d4928852627"
+        },
+        {
+          "number": 294,
+          "title": "Added indexesOf method",
+          "url": "https://github.com/apache/commons-lang/pull/294",
+          "head_sha": "faa6b3909421608f231457e7834456cdeb9b81f7"
+        },
+        {
+          "number": 278,
+          "title": "Lang-1345 Enhance non-empty strings",
+          "url": "https://github.com/apache/commons-lang/pull/278",
+          "head_sha": "e148f8157dcf9c52bfc5c4618b960e26a583b7ad"
+        },
+        {
+          "number": 275,
+          "title": "[LANG-1339]: deprecate circuit breakers and replace java.beans.PropertyListener by a Consumer<State>",
+          "url": "https://github.com/apache/commons-lang/pull/275",
+          "head_sha": "ed8e89d1a9be3528a2049aab29f4d93a505feee8"
+        },
+        {
+          "number": 219,
+          "title": "LANG-341: Add number to byte array methods to org.apache.commons.lang3.Conversion",
+          "url": "https://github.com/apache/commons-lang/pull/219",
+          "head_sha": "bd53cc4decb33872a9712bc9664477bb3de0e8d7"
+        }
+      ]
+    },
+    {
+      "url": "https://api.github.com/search/issues?q=repo%3Aapache%2Fcommons-lang%20is%3Apr%20%22LANG-1323%22&per_page=100",
+      "observed_at": "2026-10-18T20:27:10.194Z",
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": []
+    },
+    {
+      "url": "https://api.github.com/search/issues?q=repo%3Aapache%2Fcommons-lang%20is%3Apr%20is%3Aopen%20%28%22TypeUtils%22%20OR%20%22hashCode%22%29&per_page=100",
+      "observed_at": "2026-10-18T20:27:10.194Z",
+      "total_count": 2,
+      "incomplete_results": false,
+      "items": [
+        {
+          "number": 1524,
+          "title": "[LANG-1802] Optimize CharRange.hashCode() to reduce collision rate and improve calculation efficiency",
+          "url": "https://github.com/apache/commons-lang/pull/1524",
+          "head_sha": null
+        },
+        {
+          "number": 1554,
+          "title": "LANG-1760: Replace XOR with Objects.hash in Pair and Triple to improv…",
+          "url": "https://github.com/apache/commons-lang/pull/1554",
+          "head_sha": null
+        }
+      ]
+    }
+  ],
+  "conclusion": "No competing open PR for LANG-1323 or these remaining TypeUtils hash implementations was returned. Preserve the separately merged WildcardType correction in PR1807; its author identified the other two implementations as separate work.",
+  "scope": "Pre-submission recheck; not an upstream submission, assignment, acceptance, payment or full CI claim."
+}

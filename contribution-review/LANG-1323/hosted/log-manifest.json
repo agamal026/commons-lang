@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-18T20:41:30.224Z",
+  "repository": "agamal026/commons-lang",
+  "format": "Complete connector-decoded public GitHub job log text, written as UTF-8 with original returned BOM and line endings. No public-log text transformations were necessary after scanning for private workspace paths and obvious unmasked credential formats; GitHub's own *** masks are preserved.",
+  "logs": [
+    {
+      "job_id": 117779871772,
+      "observed_at": "2026-10-18T20:22:54.251Z",
+      "file": "job-117779871772.log",
+      "bytes": 14990,
+      "sha256": "811d4c5459463ff6fe4ac9f9195f9dfb79dd6355aa16bd2ad43648bbc39ac776",
+      "git_blob_sha": "8fcc2345ebd12c93b733dd941ef5029d7fa9990c"
+    },
+    {
+      "job_id": 117779871466,
+      "observed_at": "2026-10-18T20:22:54.497Z",
+      "file": "job-117779871466.log",
+      "bytes": 228631,
+      "sha256": "63e66315e3e90aa30771aa24b1607a138110053d7ab99e57ebe1bc81687a6e2d",
+      "git_blob_sha": "3181830b906ffc71ee0d598301f20a0bf27e8775"
+    },
+    {
+      "job_id": 117779871507,
+      "observed_at": "2026-10-18T20:30:08.725Z",
+      "file": "job-117779871507.log",
+      "bytes": 155874,
+      "sha256": "7e78e5e79d76ff1449097b002369ea0163ba849dad765b1ca5232669b3e1e092",
+      "git_blob_sha": "b640c8be7127f80facbeb10745c92db1a5bba7a2"
+    },
+    {
+      "job_id": 117779871619,
+      "observed_at": "2026-10-18T20:26:16.139Z",
+      "file": "job-117779871619.log",
+      "bytes": 154246,
+      "sha256": "52ad41be1740de547c2e9b2d85f77072ea537ad94fe5443bcf82641ba5d0fdaa",
+      "git_blob_sha": "f3626de2df4afa28058275f129446198454a6b30"
+    },
+    {
+      "job_id": 117779871627,
+      "observed_at": "2026-10-18T20:24:55.614Z",
+      "file": "job-117779871627.log",
+      "bytes": 171028,
+      "sha256": "4f1bf06d4defb8b8148aeab50196a67a499e96b21c6f579cd0eecc49ae6e31c3",
+      "git_blob_sha": "60bb414ac32959de7584f8a3126d92146a27e1cf"
+    },
+    {
+      "job_id": 117779871644,
+      "observed_at": "2026-10-18T20:26:16.142Z",
+      "file": "job-117779871644.log",
+      "bytes": 154153,
+      "sha256": "285e81f47b33a4e8757301db33955af397d9fb61f66f9b8e00380de8c2847a68",
+      "git_blob_sha": "b50511a0d3303228351c6ae3228f70e089e05177"
+    },
+    {
+      "job_id": 117779871666,
+      "observed_at": "2026-10-18T20:30:08.886Z",
+      "file": "job-117779871666.log",
+      "bytes": 169708,
+      "sha256": "bfc6e868eb93ee46375945d90f6943e7aa6dcc945d4156bf011f654106e10b78",
+      "git_blob_sha": "fe4d28d2b15bf62dba1fd1f34645cea816024131"
+    },
+    {
+      "job_id": 117779871669,
+      "observed_at": "2026-10-18T20:24:55.633Z",
+      "file": "job-117779871669.log",
+      "bytes": 175513,
+      "sha256": "f194bc8e03e410eea34f587237e59709b49185ca5e18a18be852ff39ba8038b1",
+      "git_blob_sha": "18689b088f41259e0fa9e28a5997ac755739ddc3"
+    },
+    {
+      "job_id": 117779871672,
+      "observed_at": "2026-10-18T20:26:16.144Z",
+      "file": "job-117779871672.log",
+      "bytes": 155579,
+      "sha256": "7b8da258e6f6312b70a59f4e2e47860beb2d3ffaf2671477cfc32877c876932b",
+      "git_blob_sha": "84979b2f1a08ffdca1a1a81c92837f017ea25cb3"
+    },
+    {
+      "job_id": 117779871686,
+      "observed_at": "2026-10-18T20:30:08.769Z",
+      "file": "job-117779871686.log",
+      "bytes": 155804,
+      "sha256": "a43b01c3e5e1f891c022e254c971dc026587555c8d055c8d9ee06b04f85ef35c",
+      "git_blob_sha": "6e58c5d2595e93d0b1d261e45bb0c87173285637"
+    },
+    {
+      "job_id": 117779871699,
+      "observed_at": "2026-10-18T20:30:08.714Z",
+      "file": "job-117779871699.log",
+      "bytes": 177583,
+      "sha256": "e1c41332e66a7c157f58578aa7655edbdd444ddaaaf5e8d15afc16f43f17ac8b",
+      "git_blob_sha": "5a9630196f8f9406e3d9484ca0afa5b24e837299"
+    },
+    {
+      "job_id": 117779871736,
+      "observed_at": "2026-10-18T20:30:10.274Z",
+      "file": "job-117779871736.log",
+      "bytes": 176243,
+      "sha256": "66ec36281641bb50d16f7d7692000ec0ff07b082ec3541539d5160bb5d17bc21",
+      "git_blob_sha": "00fc795b8add341b65084278191e5c9c36c4101d"
+    },
+    {
+      "job_id": 117779871749,
+      "observed_at": "2026-10-18T20:30:09.920Z",
+      "file": "job-117779871749.log",
+      "bytes": 173008,
+      "sha256": "fda13fabec861fedce6176ebf88a5fa22f352526c702f8e1dcc042aaf50a050f",
+      "git_blob_sha": "5d07dbeda70ac65c6acaaf0a3dcf894450114c4c"
+    },
+    {
+      "job_id": 117779871751,
+      "observed_at": "2026-10-18T20:30:09.898Z",
+      "file": "job-117779871751.log",
+      "bytes": 168828,
+      "sha256": "a2f867f6feb67e05833dab0c5cbdaf5b7c2c649cfa22d26b8735574d50189f6a",
+      "git_blob_sha": "eff542ab0de4bd7508f03faf555c9cc732e1b2a8"
+    },
+    {
+      "job_id": 117779871764,
+      "observed_at": "2026-10-18T20:30:10.027Z",
+      "file": "job-117779871764.log",
+      "bytes": 154865,
+      "sha256": "b44e40bdfc7d59007e9d1a54a96487a1d6eb4a5cca32c65b733da1041e016ddb",
+      "git_blob_sha": "d3b613baaf75aafcaeb19e57c5c895623139dc9e"
+    },
+    {
+      "job_id": 117779871769,
+      "observed_at": "2026-10-18T20:30:11.317Z",
+      "file": "job-117779871769.log",
+      "bytes": 156289,
+      "sha256": "026fff43e816b4cf642d9d5cce9915dee875dafebe970c82c4b8c706ad727fe2",
+      "git_blob_sha": "9ee8cb35e7519281ad9f9921e40c0b94c4a9bd32"
+    },
+    {
+      "job_id": 117779871779,
+      "observed_at": "2026-10-18T20:30:11.328Z",
+      "file": "job-117779871779.log",
+      "bytes": 155566,
+      "sha256": "0d83e2ef7083e3b843df11dd4307b676922f1e3ad725a5e469b3e028b8f1feca",
+      "git_blob_sha": "9ba158dfdb44a6e23bdcd679f9a708975509959c"
+    },
+    {
+      "job_id": 117779871801,
+      "observed_at": "2026-10-18T20:30:11.423Z",
+      "file": "job-117779871801.log",
+      "bytes": 171916,
+      "sha256": "78eda25c1755a7bd8f9363756803cd6611b4ac91aece63cdb21342da1a0e6f45",
+      "git_blob_sha": "d2b7ca59bf84e654f07e9d4f8a41ad35bbde8d62"
+    },
+    {
+      "job_id": 117779871811,
+      "observed_at": "2026-10-18T20:30:11.303Z",
+      "file": "job-117779871811.log",
+      "bytes": 156525,
+      "sha256": "61aba682ee8739fb431e8b7255a570eef2ae36768030afefcb7a826a477b90f6",
+      "git_blob_sha": "42d7e727ae8ca144cb20297d5236b66edac79abe"
+    },
+    {
+      "job_id": 117779871866,
+      "observed_at": "2026-10-18T20:30:12.495Z",
+      "file": "job-117779871866.log",
+      "bytes": 169565,
+      "sha256": "3c5f7aba8f5cf067fffc49034ab4b13fc72b5f54aa80a38473c8a4062ad2efe3",
+      "git_blob_sha": "734f3d18d6622a5539e4c7b15516272194af6e8c"
+    },
+    {
+      "job_id": 117779871541,
+      "observed_at": "2026-10-18T20:24:56.250Z",
+      "file": "job-117779871541.log",
+      "bytes": 681772,
+      "sha256": "70266e74de8819107253aea09fc8aac08fa7f2fc4df59b487b1911817df8ef7c",
+      "git_blob_sha": "f10662341e63fde464d432c22cfede98624ab9f9"
+    },
+    {
+      "job_id": 117780547870,
+      "observed_at": "2026-10-18T20:26:15.888Z",
+      "file": "job-117780547870.log",
+      "bytes": 15442,
+      "sha256": "c8f9f379cf8d16e66cf9c96595e6aed09ca95297ac26d60fb2002eb465683842",
+      "git_blob_sha": "67a681d0358d22c4ec1f7833f429487f034dfe47"
+    },
+    {
+      "job_id": 117782918411,
+      "observed_at": "2026-10-18T20:39:02.919Z",
+      "file": "job-117782918411.log",
+      "bytes": 162539,
+      "sha256": "84c87cc8d512a322a60afb08e91c974bb6de00b1a19bf5acefbda9163a208495",
+      "git_blob_sha": "8a0c5cb3fe6f07615cb386ece00dacaa6f7d94a8"
+    }
+  ],
+  "missing": [
+    {
+      "job_id": 117779871695,
+      "status": "Actual job failed; selected exact browser lines archived, complete decoded log not retrieved",
+      "reason": "GitHub connector repeatedly returned Transport closed",
+      "last_retrieval_attempt_at": "2026-10-18T20:30:21.751Z",
+      "browser_receipt": "experimental-java28-browser.json"
+    }
+  ],
+  "coverage": {
+    "main_workflow_complete_logs": 22,
+    "control_complete_logs": 1,
+    "main_experimental_selected_browser_excerpt": "experimental-java28-browser.json"
+  }
+}

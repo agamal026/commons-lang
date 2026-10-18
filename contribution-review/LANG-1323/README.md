@@ -1,9 +1,11 @@
 # LANG-1323: reflection type hash interoperability
 
-This checkpoint preserves a reproduced defect, the scoped fix and focused
-verification. The project's full default build and hosted runtime matrix are
-still pending at this checkpoint. This is contributor-fork evidence, not an
-upstream submission, maintainer acceptance or a reward.
+This checkpoint preserves the reproduced defect, scoped fix, completed local
+default build and all 18 successful ordinary hosted Maven jobs. The tolerated
+experimental Java 28 job failed in 40 date-parser cases; an exact unchanged-
+upstream control reproduced all 40 failures. This is contributor-fork validation
+evidence. Upstream submission, maintainer acceptance and rewards are separate
+events.
 
 ## Exact source
 
@@ -88,7 +90,78 @@ CA. A separately extracted JDK matched every regular archive file. Maven uses
 the existing platform Java trust store with certificate validation enabled.
 These setup failures are distinct from the reproduced code defect.
 
-## Independent review and remaining gates
+## Complete default build
+
+The final local default Maven build ran from **20:25:37 to 20:30:51 UTC on
+October 18, 2026**, using Temurin 17.0.20.1+1 and Maven 3.9.16. It completed
+successfully on the fixed source with the production, test and POM bytes
+unchanged. The POM selected:
+
+```text
+clean verify apache-rat:check checkstyle:check japicmp:cmp spotbugs:check pmd:check javadoc:javadoc
+```
+
+Fresh JUnit XML covers **316 suites and 88,157 distinct class/name pairs**:
+88,139 passed, 18 skipped, zero failures and zero errors. `TypeUtilsTest`
+contains 510 cases, zero failures/errors and one existing skip; all 14 new
+invocations passed. The build completed the license, style, compatibility,
+static-analysis, coverage and documentation checks selected by the default
+goals. The final standalone Javadoc invocation reused documentation generated
+earlier in the same build.
+
+The [final default-build packet](default-maven-final/README.md) retains the
+complete normalized console, all 316 suite summaries and original XML digests,
+source hashes, commands, timestamps and nonfatal warnings. These include cached
+SPDX license data, a missing `<bottom>` analysis class, and the PMD auxiliary
+classpath warning; the corresponding checks completed successfully, within
+their recorded scope.
+
+The [initial default-build attempt](default-maven-initial/README.md), from
+20:20:26 to 20:23:39 UTC, is also retained. Its full test suite had the same
+88,157/0/0/18 totals, but the build failed in forked Javadoc on HTTPS certificate
+validation. The final run propagated the existing platform trust store to that
+child JVM through `JAVA_TOOL_OPTIONS`, without disabling TLS validation or
+changing source, POM or build goals. The initial failed attempt is not counted
+as a successful default build.
+
+## Hosted matrix and experimental control
+
+The [hosted verification packet](hosted/README.md) records every actual job and
+its exact checkout, runtime, command, result and supporting console lines.
+All **18 ordinary jobs** passed the upstream default Maven command: Java 8, 11,
+17, 21, 25 and 27 on Ubuntu, Windows and macOS. Counts vary with the runtime and
+are preserved per job. The Java 8 profile omits only the final standalone
+Javadoc goal; Javadoc jar generation and Animal Sniffer still ran.
+
+The experimental Java 28-ea job is configured upstream with
+`continue-on-error: true`. It failed with 40 Chuvash date-parser cases while
+`TypeUtilsTest` passed (551 cases, zero failures/errors, one skip). Consequently,
+the Java CI workflow's aggregate success is not an all-19-jobs pass.
+
+The [dedicated control](hosted/java28-control.json) checked out the exact
+unchanged upstream base, `c89cdf682fe21b0c39759cf58186ed5336a105d4`, and used
+the same Temurin build `28.0.0-ea.20.0.ea` and Maven 3.10.0. It ran only the two
+failing date-parser classes: 52,400 cases, 40 failures, zero errors/skips. All
+40 final failure summaries match the experimental run exactly and in order
+after removal of timestamps and `[ERROR]` prefixes. Both date-test files are
+unchanged between base and fix. This establishes that those failures predate
+the contribution. The narrow control does not reproduce the full experimental
+run's separate JaCoCo class-version-72 diagnostics and does not claim to cover
+the full baseline suite.
+
+Both CodeQL jobs completed and uploaded results; their Java autobuild skipped
+tests and is recorded as analysis evidence. Dependency Review passed on its
+single-job retry after the fork's Dependency graph prerequisite was enabled.
+The initial failed attempt remains archived.
+
+The packet contains 23 complete connector-decoded job logs in
+[complete-logs.tar.gz](hosted/complete-logs.tar.gz), with per-member hashes in
+[the manifest](hosted/log-manifest.json). The very large experimental log could
+not be retrieved completely through the connector. Its
+[browser receipt](hosted/experimental-java28-browser.json) retains selected
+exact results and diagnostics, without claiming a full log archive or digest.
+
+## Independent review and contribution scope
 
 The [independent automated review](source-review.json) read the exact source,
 checked all 14 before-and-after cases, verified the unchanged test/POM hashes,
@@ -96,11 +169,15 @@ and reversed the two production edits to recover the original source bytes.
 It found no blocking correctness or scope issue. This is automated review;
 no personal human review or legal signature is asserted.
 
-Complete the project's default Maven command and inspect its actual hosted
-jobs before upstream submission. A separate owned validation base,
+The default build and actual hosted jobs have been inspected. A separate owned validation base,
 `30bc4f8db75d8f110f0cce87997ec48a0a5e00cc`, removes only four schedule lines in
 two inherited workflow files before Actions is enabled. The proposed source
 contains no workflow change; no additional periodic worker is installed.
+
+The [final evidence review](final-evidence-review.json) independently audits the
+focused regression, local full builds and hosted experimental control. The
+[pre-submission screen](pre-submission-screen.json) records the dated issue,
+policy and competing-PR check; it does not imply issue assignment.
 
 The [project contribution guide](https://github.com/apache/commons-lang/blob/c89cdf682fe21b0c39759cf58186ed5336a105d4/CONTRIBUTING.md)
 and [ASF generative tooling guidance](https://www.apache.org/legal/generative-tooling.html)
@@ -110,3 +187,12 @@ the source and execution evidence. The commits include `Generated-by`
 provenance. The existing Apache-2.0 source and test scaffolding retain their
 license. Conditional project-level reward scope does not establish a paid
 assignment, patch eligibility or earnings.
+
+## Continuation audit
+
+A fresh independent automated audit on October 18 at 21:05 UTC recovered the
+exact source and completed executions without rebuilding them. All 38 evidence
+checks passed, including the source/merge comparison, all 23 archived logs,
+the 14-case baseline, the complete local XML, and the experimental control.
+See [continuation-audit.json](continuation-audit.json). This audit is an evidence
+review, not 38 new software tests, human approval or an upstream acceptance.

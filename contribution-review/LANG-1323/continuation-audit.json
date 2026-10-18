@@ -1,0 +1,4775 @@
+{
+  "observed_at": "2026-10-18T21:05:25.511162+00:00",
+  "scope": "Read-only re-audit; no reruns or source edits",
+  "checks": [
+    {
+      "name": "All source subtree, POM and Maven workflow bytes match tested merge",
+      "passed": true,
+      "detail": {
+        "src": {
+          "source": "02fe75f8fe379116824c3be01e3b54f162a5ae18",
+          "merge": "02fe75f8fe379116824c3be01e3b54f162a5ae18"
+        },
+        "pom.xml": {
+          "source": "0a775d1afb2be07876791e638fbb39d4139d095a",
+          "merge": "0a775d1afb2be07876791e638fbb39d4139d095a"
+        },
+        ".github/workflows/maven.yml": {
+          "source": "4aa069b170e0b398f81e149ad0bc06bef85f85d0",
+          "merge": "4aa069b170e0b398f81e149ad0bc06bef85f85d0"
+        }
+      }
+    },
+    {
+      "name": "Only two workflow schedule edits distinguish merge",
+      "passed": true,
+      "detail": [
+        "M\t.github/workflows/codeql-analysis.yml",
+        "M\t.github/workflows/scorecards-analysis.yml"
+      ]
+    },
+    {
+      "name": "Schedule-only merge diff is four deletions",
+      "passed": true,
+      "detail": "diff --git a/.github/workflows/codeql-analysis.yml b/.github/workflows/codeql-analysis.yml\nindex 256d769..fe2d793 100644\n--- a/.github/workflows/codeql-analysis.yml\n+++ b/.github/workflows/codeql-analysis.yml\n@@ -21,8 +21,6 @@ on:\n   pull_request:\n     # The branches below must be a subset of the branches above\n     branches: [ master ]\n-  schedule:\n-    - cron: '33 9 * * 4'\n \n permissions:\n   contents: read\ndiff --git a/.github/workflows/scorecards-analysis.yml b/.github/workflows/scorecards-analysis.yml\nindex d24f80c..4eff602 100644\n--- a/.github/workflows/scorecards-analysis.yml\n+++ b/.github/workflows/scorecards-analysis.yml\n@@ -17,8 +17,6 @@ name: \"Scorecards supply-chain security\"\n \n on:\n   branch_protection_rule:\n-  schedule:\n-    - cron: \"30 1 * * 6\"    # Weekly on Saturdays\n   push:\n     branches: [ \"master\" ]"
+    },
+    {
+      "name": "Fresh PR source and tested merge match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "All 23 complete archived logs match manifest and original copies",
+      "passed": true,
+      "detail": [
+        {
+          "job_id": 117779871772,
+          "bytes": 14990,
+          "sha256": "811d4c5459463ff6fe4ac9f9195f9dfb79dd6355aa16bd2ad43648bbc39ac776",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871466,
+          "bytes": 228631,
+          "sha256": "63e66315e3e90aa30771aa24b1607a138110053d7ab99e57ebe1bc81687a6e2d",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871507,
+          "bytes": 155874,
+          "sha256": "7e78e5e79d76ff1449097b002369ea0163ba849dad765b1ca5232669b3e1e092",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871619,
+          "bytes": 154246,
+          "sha256": "52ad41be1740de547c2e9b2d85f77072ea537ad94fe5443bcf82641ba5d0fdaa",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871627,
+          "bytes": 171028,
+          "sha256": "4f1bf06d4defb8b8148aeab50196a67a499e96b21c6f579cd0eecc49ae6e31c3",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871644,
+          "bytes": 154153,
+          "sha256": "285e81f47b33a4e8757301db33955af397d9fb61f66f9b8e00380de8c2847a68",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871666,
+          "bytes": 169708,
+          "sha256": "bfc6e868eb93ee46375945d90f6943e7aa6dcc945d4156bf011f654106e10b78",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871669,
+          "bytes": 175513,
+          "sha256": "f194bc8e03e410eea34f587237e59709b49185ca5e18a18be852ff39ba8038b1",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871672,
+          "bytes": 155579,
+          "sha256": "7b8da258e6f6312b70a59f4e2e47860beb2d3ffaf2671477cfc32877c876932b",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871686,
+          "bytes": 155804,
+          "sha256": "a43b01c3e5e1f891c022e254c971dc026587555c8d055c8d9ee06b04f85ef35c",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871699,
+          "bytes": 177583,
+          "sha256": "e1c41332e66a7c157f58578aa7655edbdd444ddaaaf5e8d15afc16f43f17ac8b",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871736,
+          "bytes": 176243,
+          "sha256": "66ec36281641bb50d16f7d7692000ec0ff07b082ec3541539d5160bb5d17bc21",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871749,
+          "bytes": 173008,
+          "sha256": "fda13fabec861fedce6176ebf88a5fa22f352526c702f8e1dcc042aaf50a050f",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871751,
+          "bytes": 168828,
+          "sha256": "a2f867f6feb67e05833dab0c5cbdaf5b7c2c649cfa22d26b8735574d50189f6a",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871764,
+          "bytes": 154865,
+          "sha256": "b44e40bdfc7d59007e9d1a54a96487a1d6eb4a5cca32c65b733da1041e016ddb",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871769,
+          "bytes": 156289,
+          "sha256": "026fff43e816b4cf642d9d5cce9915dee875dafebe970c82c4b8c706ad727fe2",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871779,
+          "bytes": 155566,
+          "sha256": "0d83e2ef7083e3b843df11dd4307b676922f1e3ad725a5e469b3e028b8f1feca",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871801,
+          "bytes": 171916,
+          "sha256": "78eda25c1755a7bd8f9363756803cd6611b4ac91aece63cdb21342da1a0e6f45",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871811,
+          "bytes": 156525,
+          "sha256": "61aba682ee8739fb431e8b7255a570eef2ae36768030afefcb7a826a477b90f6",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871866,
+          "bytes": 169565,
+          "sha256": "3c5f7aba8f5cf067fffc49034ab4b13fc72b5f54aa80a38473c8a4062ad2efe3",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117779871541,
+          "bytes": 681772,
+          "sha256": "70266e74de8819107253aea09fc8aac08fa7f2fc4df59b487b1911817df8ef7c",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117780547870,
+          "bytes": 15442,
+          "sha256": "c8f9f379cf8d16e66cf9c96595e6aed09ca95297ac26d60fb2002eb465683842",
+          "manifest_and_local_match": true
+        },
+        {
+          "job_id": 117782918411,
+          "bytes": 162539,
+          "sha256": "84c87cc8d512a322a60afb08e91c974bb6de00b1a19bf5acefbda9163a208495",
+          "manifest_and_local_match": true
+        }
+      ]
+    },
+    {
+      "name": "Fresh Java 17 and Java 28 control logs exactly match archives",
+      "passed": true,
+      "detail": [
+        {
+          "job_id": 117779871619,
+          "sha256": "52ad41be1740de547c2e9b2d85f77072ea537ad94fe5443bcf82641ba5d0fdaa",
+          "matches_prior_archive": true
+        },
+        {
+          "job_id": 117782918411,
+          "sha256": "84c87cc8d512a322a60afb08e91c974bb6de00b1a19bf5acefbda9163a208495",
+          "matches_prior_archive": true
+        }
+      ]
+    },
+    {
+      "name": "Fresh ordinary matrix has 18 successes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fresh experimental job remains failed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871507: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871619: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871627: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871644: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871666: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871669: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871672: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871686: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871699: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871736: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871749: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871751: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871764: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871769: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871779: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871801: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871811: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Job 117779871866: exact checkout, command, tests, and default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Baseline has exactly 14 failing regressions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Fixed focused run has 510 cases, 509 passing and one skip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Full default XML: 316 suites, 88157 unique cases, 88139 pass, 18 skip",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Full default build ran all 14 new cases successfully",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Full default log and receipt establish successful default gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Control explicitly checks out exact upstream base",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Control and excerpt share actual Java 28 build",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Control independently reproduces all 40 ordered failure summaries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Both failing date test files unchanged from base",
+      "passed": true,
+      "detail": {
+        "src/test/java/org/apache/commons/lang3/time/FastDateParserTest.java": {
+          "base": "0fddcbafce40d83c9aca014d5132475c16f21905",
+          "source": "0fddcbafce40d83c9aca014d5132475c16f21905"
+        },
+        "src/test/java/org/apache/commons/lang3/time/FastDateParserJava15BugTest.java": {
+          "base": "29e0b074300e08116d2563ecad742be318286a86",
+          "source": "29e0b074300e08116d2563ecad742be318286a86"
+        }
+      }
+    },
+    {
+      "name": "CodeQL Analyze (javascript) completed and uploaded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CodeQL Analyze (java) completed and uploaded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Dependency Review retry completed and reviewed dependency diff",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "material_gaps": [
+    "Experimental Java 28 full log is not archived; attribution relies on retained exact browser final-result lines and matching complete control log.",
+    "Control deliberately runs only the two failing date-parser classes; it does not establish a passing full Java 28 baseline or explain separate JaCoCo major-version-72 diagnostics.",
+    "Hosted console summaries do not enumerate new parameterized cases; individual 14-case fail-before/pass-after proof is local JUnit XML.",
+    "Owned draft PR body still claims full default and hosted validation are pending and links older evidence."
+  ],
+  "source": {
+    "head": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+    "source_tree": "8e7432f90518a7173a88ed4cc945303293f9e9c9",
+    "upstream_base": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+    "tested_merge": "22d6135d62cc957e77777fcd9c1ebb8a4cc783c5",
+    "tested_merge_tree": "e0532a88f9d9ae3263815f71a122bfdb5f273105",
+    "merge_parents": [
+      "30bc4f8db75d8f110f0cce87997ec48a0a5e00cc",
+      "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d"
+    ],
+    "upstream_source_diff": ".../apache/commons/lang3/reflect/TypeUtils.java    | 14 ++---\n .../commons/lang3/reflect/TypeUtilsTest.java       | 65 ++++++++++++++++++++++\n 2 files changed, 69 insertions(+), 10 deletions(-)",
+    "source_merge_diff": "diff --git a/.github/workflows/codeql-analysis.yml b/.github/workflows/codeql-analysis.yml\nindex 256d769..fe2d793 100644\n--- a/.github/workflows/codeql-analysis.yml\n+++ b/.github/workflows/codeql-analysis.yml\n@@ -21,8 +21,6 @@ on:\n   pull_request:\n     # The branches below must be a subset of the branches above\n     branches: [ master ]\n-  schedule:\n-    - cron: '33 9 * * 4'\n \n permissions:\n   contents: read\ndiff --git a/.github/workflows/scorecards-analysis.yml b/.github/workflows/scorecards-analysis.yml\nindex d24f80c..4eff602 100644\n--- a/.github/workflows/scorecards-analysis.yml\n+++ b/.github/workflows/scorecards-analysis.yml\n@@ -17,8 +17,6 @@ name: \"Scorecards supply-chain security\"\n \n on:\n   branch_protection_rule:\n-  schedule:\n-    - cron: \"30 1 * * 6\"    # Weekly on Saturdays\n   push:\n     branches: [ \"master\" ]"
+  },
+  "ordinary_matrix": [
+    {
+      "job_id": 117779871507,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871507",
+      "runner": "windows-latest",
+      "java_target": "25",
+      "runtime": [
+        {
+          "line": 201,
+          "text": "2026-10-18T20:21:51.8946046Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)"
+        },
+        {
+          "line": 203,
+          "text": "2026-10-18T20:21:51.8948733Z Java version: 25.0.4.1, vendor: Eclipse Adoptium, runtime: C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\25.0.4-101.0\\x64"
+        },
+        {
+          "line": 205,
+          "text": "2026-10-18T20:21:51.8950362Z OS name: \"windows server 2025\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+        }
+      ],
+      "command": [
+        {
+          "line": 193,
+          "text": "2026-10-18T20:21:48.7203228Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1120,
+        "text": "2026-10-18T20:26:15.6455180Z [INFO] Tests run: 98609, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 98609,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 786,
+        "text": "2026-10-18T20:23:19.7817796Z [WARNING] Tests run: 528, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.288 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 528,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 214,
+            "text": "2026-10-18T20:22:03.9323196Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1192,
+            "text": "2026-10-18T20:27:05.9991359Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1196,
+            "text": "2026-10-18T20:27:25.1260204Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1198,
+            "text": "2026-10-18T20:27:25.1270655Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1215,
+            "text": "2026-10-18T20:27:59.9010222Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1216,
+            "text": "2026-10-18T20:27:59.9399599Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1217,
+            "text": "2026-10-18T20:27:59.9409182Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1230,
+            "text": "2026-10-18T20:28:05.4114069Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1190,
+            "text": "2026-10-18T20:27:05.9990013Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1156,
+            "text": "2026-10-18T20:26:23.9160153Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1159,
+            "text": "2026-10-18T20:26:40.5296413Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1256,
+            "text": "2026-10-18T20:28:10.9652761Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1253,
+            "text": "2026-10-18T20:28:10.7386698Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871619,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871619",
+      "runner": "ubuntu-latest",
+      "java_target": "17",
+      "runtime": [
+        {
+          "line": 214,
+          "text": "2026-10-18T20:21:45.2011406Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 216,
+          "text": "2026-10-18T20:21:45.2012550Z Java version: 17.0.20.1, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-17-jdk-amd64"
+        },
+        {
+          "line": 218,
+          "text": "2026-10-18T20:21:45.2014208Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+        }
+      ],
+      "command": [
+        {
+          "line": 206,
+          "text": "2026-10-18T20:21:44.1013334Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1123,
+        "text": "2026-10-18T20:24:23.5209085Z [INFO] Tests run: 88157, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 88157,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 823,
+        "text": "2026-10-18T20:23:08.1192393Z [WARNING] Tests run: 510, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.169 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 510,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 229,
+            "text": "2026-10-18T20:21:56.7895422Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1197,
+            "text": "2026-10-18T20:24:54.3423965Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1202,
+            "text": "2026-10-18T20:25:08.2144780Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1204,
+            "text": "2026-10-18T20:25:08.2147004Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1221,
+            "text": "2026-10-18T20:25:31.8854688Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1222,
+            "text": "2026-10-18T20:25:31.9171608Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1223,
+            "text": "2026-10-18T20:25:31.9172846Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1236,
+            "text": "2026-10-18T20:25:35.8052716Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1195,
+            "text": "2026-10-18T20:24:54.3419086Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1159,
+            "text": "2026-10-18T20:24:28.6544452Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1162,
+            "text": "2026-10-18T20:24:37.0990822Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1262,
+            "text": "2026-10-18T20:25:39.8620562Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1259,
+            "text": "2026-10-18T20:25:39.7076464Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871627,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871627",
+      "runner": "ubuntu-latest",
+      "java_target": "8",
+      "runtime": [
+        {
+          "line": 214,
+          "text": "2026-10-18T20:21:46.0055208Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 216,
+          "text": "2026-10-18T20:21:46.0055772Z Java version: 1.8.0_504, vendor: Temurin, runtime: /usr/lib/jvm/temurin-8-jdk-amd64/jre"
+        },
+        {
+          "line": 218,
+          "text": "2026-10-18T20:21:46.0056407Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+        }
+      ],
+      "command": [
+        {
+          "line": 206,
+          "text": "2026-10-18T20:21:43.8424898Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1145,
+        "text": "2026-10-18T20:22:44.8550004Z [INFO] Tests run: 24692, Failures: 0, Errors: 0, Skipped: 2466",
+        "tests": 24692,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2466
+      },
+      "type_utils": {
+        "line": 845,
+        "text": "2026-10-18T20:22:33.6461109Z [WARNING] Tests run: 461, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.122 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 461,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 229,
+            "text": "2026-10-18T20:21:53.8178234Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1400,
+            "text": "2026-10-18T20:23:20.9669309Z [INFO] --- apache-rat:0.17:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1424,
+            "text": "2026-10-18T20:23:30.8594438Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1426,
+            "text": "2026-10-18T20:23:30.8598717Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1441,
+            "text": "2026-10-18T20:23:41.5456499Z [INFO] --- spotbugs:4.8.6.6:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1442,
+            "text": "2026-10-18T20:23:41.5874335Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1443,
+            "text": "2026-10-18T20:23:41.5880665Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1456,
+            "text": "2026-10-18T20:23:44.0056331Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1378,
+            "text": "2026-10-18T20:23:12.8631003Z [INFO] All coverage checks have been met."
+          },
+          {
+            "line": 1398,
+            "text": "2026-10-18T20:23:20.9668396Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1201,
+            "text": "2026-10-18T20:22:49.2524540Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1352,
+            "text": "2026-10-18T20:23:05.4861332Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1204,
+            "text": "2026-10-18T20:22:52.8278074Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1355,
+            "text": "2026-10-18T20:23:05.5394495Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1458,
+            "text": "2026-10-18T20:23:44.0081867Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Animal Sniffer": [
+          {
+            "line": 304,
+            "text": "2026-10-18T20:22:12.6946734Z [INFO] --- animal-sniffer:1.28:check (checkAPIcompatibility) @ commons-lang3 ---"
+          },
+          {
+            "line": 1287,
+            "text": "2026-10-18T20:23:01.9334861Z [INFO] --- animal-sniffer:1.28:check (checkAPIcompatibility) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871644,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871644",
+      "runner": "windows-latest",
+      "java_target": "17",
+      "runtime": [
+        {
+          "line": 201,
+          "text": "2026-10-18T20:21:50.2832762Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)"
+        },
+        {
+          "line": 203,
+          "text": "2026-10-18T20:21:50.2834073Z Java version: 17.0.20.1, vendor: Eclipse Adoptium, runtime: C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\17.0.20-101\\x64"
+        },
+        {
+          "line": 205,
+          "text": "2026-10-18T20:21:50.2834971Z OS name: \"windows server 2025\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+        }
+      ],
+      "command": [
+        {
+          "line": 193,
+          "text": "2026-10-18T20:21:47.6421536Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1108,
+        "text": "2026-10-18T20:23:59.6519429Z [INFO] Tests run: 88157, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 88157,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 776,
+        "text": "2026-10-18T20:23:06.8593325Z [WARNING] Tests run: 510, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.186 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 510,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 214,
+            "text": "2026-10-18T20:22:02.8459024Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1180,
+            "text": "2026-10-18T20:24:40.7891407Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1184,
+            "text": "2026-10-18T20:24:53.7073788Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1186,
+            "text": "2026-10-18T20:24:53.7074705Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1203,
+            "text": "2026-10-18T20:25:20.5371532Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1204,
+            "text": "2026-10-18T20:25:20.5718653Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1205,
+            "text": "2026-10-18T20:25:20.5719259Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1218,
+            "text": "2026-10-18T20:25:25.4053639Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1178,
+            "text": "2026-10-18T20:24:40.7885764Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1144,
+            "text": "2026-10-18T20:24:04.7535400Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1147,
+            "text": "2026-10-18T20:24:12.8290755Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1244,
+            "text": "2026-10-18T20:25:28.6572455Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1241,
+            "text": "2026-10-18T20:25:28.5364051Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871666,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871666",
+      "runner": "ubuntu-latest",
+      "java_target": "27",
+      "runtime": [
+        {
+          "line": 221,
+          "text": "2026-10-18T20:21:48.6346363Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 223,
+          "text": "2026-10-18T20:21:48.6348786Z Java version: 27, vendor: Eclipse Adoptium, runtime: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/27.0.0-35/x64"
+        },
+        {
+          "line": 225,
+          "text": "2026-10-18T20:21:48.6351556Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+        }
+      ],
+      "command": [
+        {
+          "line": 213,
+          "text": "2026-10-18T20:21:48.1200746Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1233,
+        "text": "2026-10-18T20:25:40.2721763Z [INFO] Tests run: 100926, Failures: 0, Errors: 0, Skipped: 70",
+        "tests": 100926,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 70
+      },
+      "type_utils": {
+        "line": 843,
+        "text": "2026-10-18T20:22:55.2458945Z [WARNING] Tests run: 551, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.213 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 551,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 236,
+            "text": "2026-10-18T20:21:59.0735918Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1310,
+            "text": "2026-10-18T20:26:12.9706901Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1315,
+            "text": "2026-10-18T20:26:27.6246140Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1317,
+            "text": "2026-10-18T20:26:27.6286923Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1334,
+            "text": "2026-10-18T20:26:48.4118490Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1335,
+            "text": "2026-10-18T20:26:48.4407921Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1336,
+            "text": "2026-10-18T20:26:48.4408899Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1349,
+            "text": "2026-10-18T20:26:52.1445795Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1308,
+            "text": "2026-10-18T20:26:12.9695733Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1269,
+            "text": "2026-10-18T20:25:46.1104854Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1272,
+            "text": "2026-10-18T20:25:55.2123974Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1375,
+            "text": "2026-10-18T20:26:56.7495899Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1372,
+            "text": "2026-10-18T20:26:56.6500135Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871669,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871669",
+      "runner": "ubuntu-latest",
+      "java_target": "11",
+      "runtime": [
+        {
+          "line": 214,
+          "text": "2026-10-18T20:21:47.6408704Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 216,
+          "text": "2026-10-18T20:21:47.6409366Z Java version: 11.0.32.1, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-11-jdk-amd64"
+        },
+        {
+          "line": 218,
+          "text": "2026-10-18T20:21:47.6410269Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+        }
+      ],
+      "command": [
+        {
+          "line": 206,
+          "text": "2026-10-18T20:21:44.9200530Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1142,
+        "text": "2026-10-18T20:23:18.8188330Z [INFO] Tests run: 68247, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 68247,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 842,
+        "text": "2026-10-18T20:22:37.8449470Z [WARNING] Tests run: 506, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.152 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 506,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 229,
+            "text": "2026-10-18T20:21:55.6143811Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1399,
+            "text": "2026-10-18T20:23:54.8913017Z [INFO] --- apache-rat:0.17:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1424,
+            "text": "2026-10-18T20:24:05.0496740Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1426,
+            "text": "2026-10-18T20:24:05.0522596Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1443,
+            "text": "2026-10-18T20:24:19.6304946Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1444,
+            "text": "2026-10-18T20:24:19.6557988Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1445,
+            "text": "2026-10-18T20:24:19.6582129Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1458,
+            "text": "2026-10-18T20:24:21.9376367Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1377,
+            "text": "2026-10-18T20:23:49.7143677Z [INFO] All coverage checks have been met."
+          },
+          {
+            "line": 1397,
+            "text": "2026-10-18T20:23:54.8872098Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1198,
+            "text": "2026-10-18T20:23:23.3865125Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1346,
+            "text": "2026-10-18T20:23:44.6642401Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1201,
+            "text": "2026-10-18T20:23:28.9124387Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1349,
+            "text": "2026-10-18T20:23:45.1014264Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1504,
+            "text": "2026-10-18T20:24:25.9876018Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1501,
+            "text": "2026-10-18T20:24:25.4633840Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871672,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871672",
+      "runner": "ubuntu-latest",
+      "java_target": "21",
+      "runtime": [
+        {
+          "line": 214,
+          "text": "2026-10-18T20:21:45.0688500Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 216,
+          "text": "2026-10-18T20:21:45.0709040Z Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-21-jdk-amd64"
+        },
+        {
+          "line": 218,
+          "text": "2026-10-18T20:21:45.0711274Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+        }
+      ],
+      "command": [
+        {
+          "line": 206,
+          "text": "2026-10-18T20:21:43.8485233Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1136,
+        "text": "2026-10-18T20:24:24.1409550Z [INFO] Tests run: 92019, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 92019,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 836,
+        "text": "2026-10-18T20:22:48.1804574Z [WARNING] Tests run: 524, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.293 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 524,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 229,
+            "text": "2026-10-18T20:21:51.9199056Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1210,
+            "text": "2026-10-18T20:24:52.6478668Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1215,
+            "text": "2026-10-18T20:25:08.6477870Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1217,
+            "text": "2026-10-18T20:25:08.6507562Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1234,
+            "text": "2026-10-18T20:25:33.9748105Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1235,
+            "text": "2026-10-18T20:25:34.0056386Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1236,
+            "text": "2026-10-18T20:25:34.0073694Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1249,
+            "text": "2026-10-18T20:25:38.2648040Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1208,
+            "text": "2026-10-18T20:24:52.6470635Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1172,
+            "text": "2026-10-18T20:24:30.4612074Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1175,
+            "text": "2026-10-18T20:24:39.1499514Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1275,
+            "text": "2026-10-18T20:25:43.4167530Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1272,
+            "text": "2026-10-18T20:25:43.2717557Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871686,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871686",
+      "runner": "ubuntu-latest",
+      "java_target": "25",
+      "runtime": [
+        {
+          "line": 214,
+          "text": "2026-10-18T20:21:47.2339797Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 216,
+          "text": "2026-10-18T20:21:47.2347705Z Java version: 25.0.4.1, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-25-jdk-amd64"
+        },
+        {
+          "line": 218,
+          "text": "2026-10-18T20:21:47.2350986Z OS name: \"linux\", version: \"6.17.0-1022-azure\", arch: \"amd64\", family: \"unix\""
+        }
+      ],
+      "command": [
+        {
+          "line": 206,
+          "text": "2026-10-18T20:21:44.1619996Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1135,
+        "text": "2026-10-18T20:25:41.1914816Z [INFO] Tests run: 98609, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 98609,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 833,
+        "text": "2026-10-18T20:22:51.2984830Z [WARNING] Tests run: 528, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.221 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 528,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 229,
+            "text": "2026-10-18T20:21:57.2269954Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1209,
+            "text": "2026-10-18T20:26:10.2129469Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1214,
+            "text": "2026-10-18T20:26:25.8288775Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1216,
+            "text": "2026-10-18T20:26:25.8338093Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1233,
+            "text": "2026-10-18T20:26:47.6264327Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1234,
+            "text": "2026-10-18T20:26:47.6648333Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1235,
+            "text": "2026-10-18T20:26:47.6655840Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1248,
+            "text": "2026-10-18T20:26:51.6056227Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1207,
+            "text": "2026-10-18T20:26:10.2122677Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1171,
+            "text": "2026-10-18T20:25:46.8388516Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1174,
+            "text": "2026-10-18T20:25:56.1407642Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1274,
+            "text": "2026-10-18T20:26:56.3962684Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1271,
+            "text": "2026-10-18T20:26:56.2784426Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871699,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871699",
+      "runner": "windows-latest",
+      "java_target": "11",
+      "runtime": [
+        {
+          "line": 201,
+          "text": "2026-10-18T20:21:53.4822482Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)"
+        },
+        {
+          "line": 203,
+          "text": "2026-10-18T20:21:53.4823893Z Java version: 11.0.32.1, vendor: Eclipse Adoptium, runtime: C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\11.0.32-101\\x64"
+        },
+        {
+          "line": 205,
+          "text": "2026-10-18T20:21:53.4824869Z OS name: \"windows server 2025\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+        }
+      ],
+      "command": [
+        {
+          "line": 193,
+          "text": "2026-10-18T20:21:50.3730832Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1138,
+        "text": "2026-10-18T20:25:12.7927852Z [INFO] Tests run: 68247, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 68247,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 806,
+        "text": "2026-10-18T20:23:46.5715690Z [WARNING] Tests run: 506, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.302 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 506,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 214,
+            "text": "2026-10-18T20:22:06.8365356Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1426,
+            "text": "2026-10-18T20:26:33.7498248Z [INFO] --- apache-rat:0.17:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1461,
+            "text": "2026-10-18T20:26:54.9167391Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1463,
+            "text": "2026-10-18T20:26:54.9170595Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1480,
+            "text": "2026-10-18T20:27:32.2244114Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1481,
+            "text": "2026-10-18T20:27:32.3085140Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1482,
+            "text": "2026-10-18T20:27:32.3089144Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1495,
+            "text": "2026-10-18T20:27:38.6150737Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1404,
+            "text": "2026-10-18T20:26:20.5679930Z [INFO] All coverage checks have been met."
+          },
+          {
+            "line": 1424,
+            "text": "2026-10-18T20:26:33.7496031Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1205,
+            "text": "2026-10-18T20:25:23.3319484Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1373,
+            "text": "2026-10-18T20:26:07.1629824Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1208,
+            "text": "2026-10-18T20:25:35.5450098Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1376,
+            "text": "2026-10-18T20:26:07.6937657Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1552,
+            "text": "2026-10-18T20:27:47.0929855Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1549,
+            "text": "2026-10-18T20:27:46.5356209Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871736,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871736",
+      "runner": "macos-latest",
+      "java_target": "11",
+      "runtime": [
+        {
+          "line": 205,
+          "text": "2026-10-18T20:22:01.0002740Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 207,
+          "text": "2026-10-18T20:22:01.0008300Z Java version: 11.0.32.1, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.32-101/aarch64/Contents/Home"
+        },
+        {
+          "line": 209,
+          "text": "2026-10-18T20:22:01.0015450Z OS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\""
+        }
+      ],
+      "command": [
+        {
+          "line": 197,
+          "text": "2026-10-18T20:21:59.9442500Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1133,
+        "text": "2026-10-18T20:24:56.8196900Z [INFO] Tests run: 68247, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 68247,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 583,
+        "text": "2026-10-18T20:22:55.4254840Z [WARNING] Tests run: 506, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.496 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 506,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 220,
+            "text": "2026-10-18T20:22:08.5146300Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1390,
+            "text": "2026-10-18T20:26:09.4576600Z [INFO] --- apache-rat:0.17:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1415,
+            "text": "2026-10-18T20:26:31.1054630Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1417,
+            "text": "2026-10-18T20:26:31.1088750Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1434,
+            "text": "2026-10-18T20:26:56.0063820Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1435,
+            "text": "2026-10-18T20:26:56.0583900Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1436,
+            "text": "2026-10-18T20:26:56.0584610Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1449,
+            "text": "2026-10-18T20:27:01.2604680Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1368,
+            "text": "2026-10-18T20:26:03.4365280Z [INFO] All coverage checks have been met."
+          },
+          {
+            "line": 1388,
+            "text": "2026-10-18T20:26:09.4554150Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1189,
+            "text": "2026-10-18T20:25:08.5267320Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1337,
+            "text": "2026-10-18T20:25:55.2585940Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1192,
+            "text": "2026-10-18T20:25:19.6648820Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1340,
+            "text": "2026-10-18T20:25:55.8954890Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1495,
+            "text": "2026-10-18T20:27:10.9471460Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1492,
+            "text": "2026-10-18T20:27:10.3960980Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871749,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871749",
+      "runner": "windows-latest",
+      "java_target": "8",
+      "runtime": [
+        {
+          "line": 201,
+          "text": "2026-10-18T20:21:58.3560202Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)"
+        },
+        {
+          "line": 203,
+          "text": "2026-10-18T20:21:58.3562721Z Java version: 1.8.0_504, vendor: Temurin, runtime: C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\8.0.504-1\\x64\\jre"
+        },
+        {
+          "line": 205,
+          "text": "2026-10-18T20:21:58.3564363Z OS name: \"windows server 2025\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+        }
+      ],
+      "command": [
+        {
+          "line": 193,
+          "text": "2026-10-18T20:21:53.1675111Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1141,
+        "text": "2026-10-18T20:24:21.6027157Z [INFO] Tests run: 24692, Failures: 0, Errors: 0, Skipped: 2466",
+        "tests": 24692,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2466
+      },
+      "type_utils": {
+        "line": 809,
+        "text": "2026-10-18T20:23:59.3959588Z [WARNING] Tests run: 461, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.251 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 461,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 214,
+            "text": "2026-10-18T20:22:14.3189323Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1427,
+            "text": "2026-10-18T20:25:34.7971061Z [INFO] --- apache-rat:0.17:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1462,
+            "text": "2026-10-18T20:25:53.3079886Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1464,
+            "text": "2026-10-18T20:25:53.3086199Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1479,
+            "text": "2026-10-18T20:26:22.9473644Z [INFO] --- spotbugs:4.8.6.6:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1480,
+            "text": "2026-10-18T20:26:23.0303968Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1481,
+            "text": "2026-10-18T20:26:23.0308279Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1494,
+            "text": "2026-10-18T20:26:29.3484837Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1405,
+            "text": "2026-10-18T20:25:21.5869176Z [INFO] All coverage checks have been met."
+          },
+          {
+            "line": 1425,
+            "text": "2026-10-18T20:25:34.7969838Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1208,
+            "text": "2026-10-18T20:24:33.5524682Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1379,
+            "text": "2026-10-18T20:25:08.7036773Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1211,
+            "text": "2026-10-18T20:24:42.2275184Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1382,
+            "text": "2026-10-18T20:25:08.8320842Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1496,
+            "text": "2026-10-18T20:26:29.3519262Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Animal Sniffer": [
+          {
+            "line": 300,
+            "text": "2026-10-18T20:23:15.8106282Z [INFO] --- animal-sniffer:1.28:check (checkAPIcompatibility) @ commons-lang3 ---"
+          },
+          {
+            "line": 1303,
+            "text": "2026-10-18T20:25:00.2732813Z [INFO] --- animal-sniffer:1.28:check (checkAPIcompatibility) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871751,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871751",
+      "runner": "windows-latest",
+      "java_target": "27",
+      "runtime": [
+        {
+          "line": 207,
+          "text": "2026-10-18T20:22:05.1371864Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)"
+        },
+        {
+          "line": 209,
+          "text": "2026-10-18T20:22:05.1373484Z Java version: 27, vendor: Eclipse Adoptium, runtime: C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\27.0.0-35\\x64"
+        },
+        {
+          "line": 211,
+          "text": "2026-10-18T20:22:05.1374725Z OS name: \"windows server 2025\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+        }
+      ],
+      "command": [
+        {
+          "line": 199,
+          "text": "2026-10-18T20:22:03.6748190Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1217,
+        "text": "2026-10-18T20:24:58.4256842Z [INFO] Tests run: 100926, Failures: 0, Errors: 0, Skipped: 70",
+        "tests": 100926,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 70
+      },
+      "type_utils": {
+        "line": 795,
+        "text": "2026-10-18T20:23:15.9073517Z [WARNING] Tests run: 551, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.142 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 551,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 220,
+            "text": "2026-10-18T20:22:18.0183282Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1292,
+            "text": "2026-10-18T20:25:37.1620376Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1296,
+            "text": "2026-10-18T20:25:49.0225291Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1298,
+            "text": "2026-10-18T20:25:49.0225871Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1315,
+            "text": "2026-10-18T20:26:10.9760217Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1316,
+            "text": "2026-10-18T20:26:11.0008207Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1317,
+            "text": "2026-10-18T20:26:11.0008716Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1330,
+            "text": "2026-10-18T20:26:14.8832963Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1290,
+            "text": "2026-10-18T20:25:37.1618562Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1253,
+            "text": "2026-10-18T20:25:03.4592633Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1256,
+            "text": "2026-10-18T20:25:11.0324773Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1356,
+            "text": "2026-10-18T20:26:17.8821826Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1353,
+            "text": "2026-10-18T20:26:17.7804272Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871764,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871764",
+      "runner": "macos-latest",
+      "java_target": "17",
+      "runtime": [
+        {
+          "line": 205,
+          "text": "2026-10-18T20:22:00.7917550Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 207,
+          "text": "2026-10-18T20:22:00.7919460Z Java version: 17.0.20.1, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-101/aarch64/Contents/Home"
+        },
+        {
+          "line": 209,
+          "text": "2026-10-18T20:22:00.7924290Z OS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\""
+        }
+      ],
+      "command": [
+        {
+          "line": 197,
+          "text": "2026-10-18T20:21:59.7902990Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1114,
+        "text": "2026-10-18T20:25:37.6374750Z [INFO] Tests run: 88157, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 88157,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 564,
+        "text": "2026-10-18T20:22:55.3941840Z [WARNING] Tests run: 510, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.639 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 510,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 220,
+            "text": "2026-10-18T20:22:09.2153200Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1188,
+            "text": "2026-10-18T20:26:13.2114180Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1193,
+            "text": "2026-10-18T20:26:33.4882870Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1195,
+            "text": "2026-10-18T20:26:33.4943050Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1212,
+            "text": "2026-10-18T20:26:55.8038390Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1213,
+            "text": "2026-10-18T20:26:55.8317720Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1214,
+            "text": "2026-10-18T20:26:55.8325510Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1227,
+            "text": "2026-10-18T20:27:01.1405970Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1186,
+            "text": "2026-10-18T20:26:13.1885290Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1150,
+            "text": "2026-10-18T20:25:45.3160870Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1153,
+            "text": "2026-10-18T20:25:55.9375770Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1253,
+            "text": "2026-10-18T20:27:07.5371390Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1250,
+            "text": "2026-10-18T20:27:07.3209630Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871769,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871769",
+      "runner": "macos-latest",
+      "java_target": "21",
+      "runtime": [
+        {
+          "line": 205,
+          "text": "2026-10-18T20:22:00.2229150Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 207,
+          "text": "2026-10-18T20:22:00.2469680Z Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.12-101.0.LTS/aarch64/Contents/Home"
+        },
+        {
+          "line": 209,
+          "text": "2026-10-18T20:22:00.2675090Z OS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\""
+        }
+      ],
+      "command": [
+        {
+          "line": 197,
+          "text": "2026-10-18T20:21:58.9833910Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1127,
+        "text": "2026-10-18T20:25:08.4130130Z [INFO] Tests run: 92019, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 92019,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 577,
+        "text": "2026-10-18T20:22:48.6091910Z [WARNING] Tests run: 524, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.640 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 524,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 220,
+            "text": "2026-10-18T20:22:08.4068060Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1201,
+            "text": "2026-10-18T20:25:43.0101660Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1206,
+            "text": "2026-10-18T20:26:03.0891210Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1208,
+            "text": "2026-10-18T20:26:03.1099570Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1225,
+            "text": "2026-10-18T20:26:30.6709550Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1226,
+            "text": "2026-10-18T20:26:30.7254060Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1227,
+            "text": "2026-10-18T20:26:30.7288340Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1240,
+            "text": "2026-10-18T20:26:36.0769240Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1199,
+            "text": "2026-10-18T20:25:43.0098960Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1163,
+            "text": "2026-10-18T20:25:18.3027600Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1166,
+            "text": "2026-10-18T20:25:27.5381690Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1266,
+            "text": "2026-10-18T20:26:42.7133380Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1263,
+            "text": "2026-10-18T20:26:42.4853080Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871779,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871779",
+      "runner": "windows-latest",
+      "java_target": "21",
+      "runtime": [
+        {
+          "line": 201,
+          "text": "2026-10-18T20:21:53.3722153Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)"
+        },
+        {
+          "line": 203,
+          "text": "2026-10-18T20:21:53.3748007Z Java version: 21.0.12.1, vendor: Eclipse Adoptium, runtime: C:\\hostedtoolcache\\windows\\Java_Temurin-Hotspot_jdk\\21.0.12-101.0\\x64"
+        },
+        {
+          "line": 205,
+          "text": "2026-10-18T20:21:53.3749799Z OS name: \"windows server 2025\", version: \"10.0\", arch: \"amd64\", family: \"windows\""
+        }
+      ],
+      "command": [
+        {
+          "line": 193,
+          "text": "2026-10-18T20:21:50.2694043Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1121,
+        "text": "2026-10-18T20:25:15.8318232Z [INFO] Tests run: 92019, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 92019,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 789,
+        "text": "2026-10-18T20:23:26.4468578Z [WARNING] Tests run: 524, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.306 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 524,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 214,
+            "text": "2026-10-18T20:22:05.8571751Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1193,
+            "text": "2026-10-18T20:26:02.2006750Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1197,
+            "text": "2026-10-18T20:26:22.2852839Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1199,
+            "text": "2026-10-18T20:26:22.2854382Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1216,
+            "text": "2026-10-18T20:26:54.0203246Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1217,
+            "text": "2026-10-18T20:26:54.0709271Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1218,
+            "text": "2026-10-18T20:26:54.0711579Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1231,
+            "text": "2026-10-18T20:27:00.6263238Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1191,
+            "text": "2026-10-18T20:26:02.2004427Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1157,
+            "text": "2026-10-18T20:25:24.5971782Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1160,
+            "text": "2026-10-18T20:25:36.7114268Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1257,
+            "text": "2026-10-18T20:27:06.1783580Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1254,
+            "text": "2026-10-18T20:27:05.9867433Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871801,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871801",
+      "runner": "macos-latest",
+      "java_target": "8",
+      "runtime": [
+        {
+          "line": 212,
+          "text": "2026-10-18T20:26:46.5508400Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 214,
+          "text": "2026-10-18T20:26:46.5509560Z Java version: 1.8.0_504, vendor: Azul Systems, Inc., runtime: /Users/runner/hostedtoolcache/Java_Zulu_jdk/8.0.504-1/aarch64/Contents/Home/jre"
+        },
+        {
+          "line": 216,
+          "text": "2026-10-18T20:26:46.5510750Z OS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\""
+        }
+      ],
+      "command": [
+        {
+          "line": 204,
+          "text": "2026-10-18T20:26:46.2123860Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1143,
+        "text": "2026-10-18T20:27:47.9161420Z [INFO] Tests run: 24766, Failures: 0, Errors: 0, Skipped: 2466",
+        "tests": 24766,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 2466
+      },
+      "type_utils": {
+        "line": 593,
+        "text": "2026-10-18T20:27:10.9919530Z [WARNING] Tests run: 461, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.422 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 461,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 227,
+            "text": "2026-10-18T20:26:49.1211620Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1398,
+            "text": "2026-10-18T20:28:17.1950360Z [INFO] --- apache-rat:0.17:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1422,
+            "text": "2026-10-18T20:28:28.3944970Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1424,
+            "text": "2026-10-18T20:28:28.3950240Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1439,
+            "text": "2026-10-18T20:28:39.9305830Z [INFO] --- spotbugs:4.8.6.6:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1440,
+            "text": "2026-10-18T20:28:39.9699430Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1441,
+            "text": "2026-10-18T20:28:39.9701330Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1454,
+            "text": "2026-10-18T20:28:41.7774550Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1376,
+            "text": "2026-10-18T20:28:13.8733130Z [INFO] All coverage checks have been met."
+          },
+          {
+            "line": 1396,
+            "text": "2026-10-18T20:28:17.1949530Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1199,
+            "text": "2026-10-18T20:27:52.6983780Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1350,
+            "text": "2026-10-18T20:28:12.3759470Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1202,
+            "text": "2026-10-18T20:27:56.4185100Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          },
+          {
+            "line": 1353,
+            "text": "2026-10-18T20:28:12.4345220Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1456,
+            "text": "2026-10-18T20:28:41.7801840Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Animal Sniffer": [
+          {
+            "line": 302,
+            "text": "2026-10-18T20:27:03.5858830Z [INFO] --- animal-sniffer:1.28:check (checkAPIcompatibility) @ commons-lang3 ---"
+          },
+          {
+            "line": 1285,
+            "text": "2026-10-18T20:28:08.1613610Z [INFO] --- animal-sniffer:1.28:check (checkAPIcompatibility) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871811,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871811",
+      "runner": "macos-latest",
+      "java_target": "25",
+      "runtime": [
+        {
+          "line": 205,
+          "text": "2026-10-18T20:22:01.2063450Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 207,
+          "text": "2026-10-18T20:22:01.2193080Z Java version: 25.0.4.1, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/25.0.4-101.0.LTS/aarch64/Contents/Home"
+        },
+        {
+          "line": 209,
+          "text": "2026-10-18T20:22:01.2371610Z OS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\""
+        }
+      ],
+      "command": [
+        {
+          "line": 197,
+          "text": "2026-10-18T20:21:59.1618560Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1126,
+        "text": "2026-10-18T20:26:54.5086080Z [INFO] Tests run: 98609, Failures: 0, Errors: 0, Skipped: 18",
+        "tests": 98609,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "type_utils": {
+        "line": 574,
+        "text": "2026-10-18T20:22:51.3948930Z [WARNING] Tests run: 528, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.361 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 528,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 220,
+            "text": "2026-10-18T20:22:09.2920130Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1200,
+            "text": "2026-10-18T20:27:29.5379630Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1205,
+            "text": "2026-10-18T20:27:50.5217690Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1207,
+            "text": "2026-10-18T20:27:50.5259240Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1224,
+            "text": "2026-10-18T20:28:14.7979930Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1225,
+            "text": "2026-10-18T20:28:14.8383670Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1226,
+            "text": "2026-10-18T20:28:14.8484960Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1239,
+            "text": "2026-10-18T20:28:18.9723830Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1198,
+            "text": "2026-10-18T20:27:29.5374660Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1162,
+            "text": "2026-10-18T20:27:01.7626870Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1165,
+            "text": "2026-10-18T20:27:12.4324260Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1265,
+            "text": "2026-10-18T20:28:25.3217530Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1262,
+            "text": "2026-10-18T20:28:25.1175170Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": 117779871866,
+      "url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871866",
+      "runner": "macos-latest",
+      "java_target": "27",
+      "runtime": [
+        {
+          "line": 205,
+          "text": "2026-10-18T20:21:53.8411110Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+        },
+        {
+          "line": 207,
+          "text": "2026-10-18T20:21:53.8565060Z Java version: 27, vendor: Eclipse Adoptium, runtime: /Users/runner/hostedtoolcache/Java_Temurin-Hotspot_jdk/27.0.0-35/aarch64/Contents/Home"
+        },
+        {
+          "line": 209,
+          "text": "2026-10-18T20:21:53.8566480Z OS name: \"mac os x\", version: \"26.6.2\", arch: \"aarch64\", family: \"mac\""
+        }
+      ],
+      "command": [
+        {
+          "line": 197,
+          "text": "2026-10-18T20:21:53.2398630Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all"
+        }
+      ],
+      "overall": {
+        "line": 1217,
+        "text": "2026-10-18T20:25:10.5312690Z [INFO] Tests run: 100926, Failures: 0, Errors: 0, Skipped: 70",
+        "tests": 100926,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 70
+      },
+      "type_utils": {
+        "line": 574,
+        "text": "2026-10-18T20:22:30.8576600Z [WARNING] Tests run: 551, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.188 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest",
+        "tests": 551,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 1
+      },
+      "gate_evidence": {
+        "clean": [
+          {
+            "line": 220,
+            "text": "2026-10-18T20:22:00.6046030Z [INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+          }
+        ],
+        "RAT": [
+          {
+            "line": 1294,
+            "text": "2026-10-18T20:25:36.9408800Z [INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "Checkstyle": [
+          {
+            "line": 1299,
+            "text": "2026-10-18T20:25:51.1391450Z [INFO] You have 0 Checkstyle violations."
+          }
+        ],
+        "japicmp": [
+          {
+            "line": 1301,
+            "text": "2026-10-18T20:25:51.1400990Z [INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs check": [
+          {
+            "line": 1318,
+            "text": "2026-10-18T20:26:08.4202290Z [INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "SpotBugs zero bugs": [
+          {
+            "line": 1319,
+            "text": "2026-10-18T20:26:08.4688620Z [INFO] BugInstance size is 0"
+          }
+        ],
+        "SpotBugs zero errors": [
+          {
+            "line": 1320,
+            "text": "2026-10-18T20:26:08.4707750Z [INFO] Error size is 0"
+          }
+        ],
+        "PMD": [
+          {
+            "line": 1333,
+            "text": "2026-10-18T20:26:12.1693590Z [INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+          }
+        ],
+        "JaCoCo coverage": [
+          {
+            "line": 1292,
+            "text": "2026-10-18T20:25:36.9401050Z [INFO] All coverage checks have been met."
+          }
+        ],
+        "Javadoc lifecycle": [
+          {
+            "line": 1253,
+            "text": "2026-10-18T20:25:15.6719580Z [INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "Javadoc jar": [
+          {
+            "line": 1256,
+            "text": "2026-10-18T20:25:24.1078740Z [INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+          }
+        ],
+        "build success": [
+          {
+            "line": 1359,
+            "text": "2026-10-18T20:26:16.6505890Z [INFO] BUILD SUCCESS"
+          }
+        ],
+        "Javadoc standalone": [
+          {
+            "line": 1356,
+            "text": "2026-10-18T20:26:16.5363260Z [INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+          }
+        ]
+      }
+    }
+  ],
+  "local_runs": {
+    "baseline-hash-platform-ca": {
+      "suite_reports": 1,
+      "testcase_count": 14,
+      "unique_identities": 14,
+      "outcomes": {
+        "failed": 14
+      },
+      "suite_attribute_mismatches": [],
+      "type_utils_count": 14,
+      "type_utils_outcomes": {
+        "failed": 14
+      },
+      "new_cases": [
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[1]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[2]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[3]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[4]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[5]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[6]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[7]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[8]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[9]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[10]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[11]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[12]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[13]",
+          "outcome": "failed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[14]",
+          "outcome": "failed"
+        }
+      ],
+      "suite_manifest": [
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.TypeUtilsTest.xml",
+          "tests": 14,
+          "sha256": "610720f52e875952ac889aaf2fec08910de4ca5636ae514d21c24fae20520e3f"
+        }
+      ],
+      "exit_code": 1,
+      "started_at": "2026-10-18T20:07:07.356092Z",
+      "finished_at": "2026-10-18T20:08:25.724612Z",
+      "source_commit": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+      "log_hash": "e2c7150c714553652fb0458cbf5dc48cc14ecdf36921de2a84ad12d329f28b87",
+      "log_hash_matches_receipt": true,
+      "source_hashes_unchanged_in_receipt": true
+    },
+    "fixed-typeutils": {
+      "suite_reports": 1,
+      "testcase_count": 510,
+      "unique_identities": 510,
+      "outcomes": {
+        "passed": 509,
+        "skipped": 1
+      },
+      "suite_attribute_mismatches": [],
+      "type_utils_count": 510,
+      "type_utils_outcomes": {
+        "passed": 509,
+        "skipped": 1
+      },
+      "new_cases": [
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[1]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[2]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[3]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[4]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[5]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[6]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[7]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[8]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[9]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[10]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[11]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[12]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[13]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[14]",
+          "outcome": "passed"
+        }
+      ],
+      "suite_manifest": [
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.TypeUtilsTest.xml",
+          "tests": 510,
+          "sha256": "6c902ea7bb5abe7518def5c210bc8f0e3e3c110ea34532f3b1d9b9b86f180271"
+        }
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-18T20:10:39.420804Z",
+      "finished_at": "2026-10-18T20:11:12.149997Z",
+      "source_commit": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+      "log_hash": "39942d41df8c7486c5eaab1e9afc23549158a1c6f5a2bebf53c15bf37bcc1360",
+      "log_hash_matches_receipt": true,
+      "source_hashes_unchanged_in_receipt": true
+    },
+    "default-maven-child-ca": {
+      "suite_reports": 316,
+      "testcase_count": 88157,
+      "unique_identities": 88157,
+      "outcomes": {
+        "passed": 88139,
+        "skipped": 18
+      },
+      "suite_attribute_mismatches": [],
+      "type_utils_count": 510,
+      "type_utils_outcomes": {
+        "passed": 509,
+        "skipped": 1
+      },
+      "new_cases": [
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[1]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[2]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[3]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[4]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[5]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[6]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[7]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[8]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[9]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[10]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[11]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[12]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[13]",
+          "outcome": "passed"
+        },
+        {
+          "class": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+          "name": "testHashCodeMatchesJdk(String, Type)[14]",
+          "outcome": "passed"
+        }
+      ],
+      "suite_manifest": [
+        {
+          "file": "TEST-org.apache.commons.lang3.AnnotationUtilsTest.xml",
+          "tests": 21,
+          "sha256": "d7b9a0c3d2b7f99fabcb6c087b778ba95fb301ac377b117a8dce86686b850a47"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.AppendableJoinerTest.xml",
+          "tests": 11,
+          "sha256": "70d3a1c571b5be6d05cc322af302af128bd97bd404ae0ab94471c92d7da7c28a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArchUtilsTest.xml",
+          "tests": 6,
+          "sha256": "b656fa78749a85a218177c042c7e6a7eec83b1931b965b2af43da5ba1098c63a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayFillTest.xml",
+          "tests": 28,
+          "sha256": "35bfdcff27278d1fcf9c74211a3732fbb574389a8eab453b7b0fe6e3afdaf39f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArraySorterTest.xml",
+          "tests": 9,
+          "sha256": "db71610a3478e57e6db8bfbdd21e7f0e0c3b6f2e00c27d6a89c315e673e603af"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsAddTest.xml",
+          "tests": 22,
+          "sha256": "2f11a325c64d0470d2b647a71f46f3c61360a3a98e7d1bd2a7b44a690233c0b0"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsConcatTest.xml",
+          "tests": 9,
+          "sha256": "8215388817154029365c0086db7bfc5186d888934916b2ae6d792916c04afd02"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsGetDimensionsTest.xml",
+          "tests": 21,
+          "sha256": "d1eba7c657d23f57f87ed37b283d2d38581dbfc10e4ffc2a65fa602f5036a185"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsInsertTest.xml",
+          "tests": 9,
+          "sha256": "525216c54296179b664b0fbb56260a16905e3057531f1d1a201930d6919678cf"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.xml",
+          "tests": 55,
+          "sha256": "636079d356cbcd93439f6b52fe2f1c3e649dc980baac7b409dd0af42167c4a47"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsRemoveTest.xml",
+          "tests": 37,
+          "sha256": "a58699ceb2797a4b315e6b0c363d68f91b56fae68e72b096c92a7d7ab30836ee"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsSetTest.xml",
+          "tests": 2,
+          "sha256": "5284bcee8939f57ad5ee464a2a65c0ae3bd4047a908c0d052ecb24d75c718a60"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ArrayUtilsTest.xml",
+          "tests": 361,
+          "sha256": "4004507b891952a6e77db955f6b411aa18842912419a64a8a0117ce29b7ac916"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.AutoCloseablesTest.xml",
+          "tests": 18,
+          "sha256": "0805b33fe62ae95e6395f0da6757db3c58585ec1638806ff2596bbc0dd4f432f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.BitFieldLongTest.xml",
+          "tests": 13,
+          "sha256": "07e0a9900181a1a828ccdadb5d1153e52cdc681fbf009b221aa55c2f04a4981d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.BitFieldTest.xml",
+          "tests": 19,
+          "sha256": "a5a771e7611bff6f7dc85a2c4a64153c44bca40158c1a73f71e5dc6cb7be91fe"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.BooleanUtilsTest.xml",
+          "tests": 90,
+          "sha256": "6f741a6bbd67b0371fbe9457f1d73af50597893f4785dce0e3b069f6a58c1c3b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CachedRandomBitsTest.xml",
+          "tests": 11,
+          "sha256": "41626faa56700fcd4991ee6ba465ebfe4dcc64a18bd64600620290ec1dc7c6b1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharEncodingTest.xml",
+          "tests": 5,
+          "sha256": "14cf1ea62b5500b78f25919d2e699180eb4763691fe9a01247a1ad36ff22c6a1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharRangeReadObjectTest.xml",
+          "tests": 2,
+          "sha256": "2c4c4a4f5e266993bbb5e5121b7863e6a745ff4d69f43f96939ea0c3d264fe2c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharRangeTest.xml",
+          "tests": 21,
+          "sha256": "8ae3044a8b6fe9f3eb26f7ce3fb4e6855b6cc4da6dafdbd01ab3c04f2eb21f7f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharSequenceUtilsTest.xml",
+          "tests": 16,
+          "sha256": "a893a9ee35679967678cf423cd82c61cf0cb4e46acde30f78f89eb5c5c942c57"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharSetTest.xml",
+          "tests": 15,
+          "sha256": "f3773d589785d78660751d2587a012b3c6dbca53df6771327f64c0db7296afed"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharSetUtilsTest.xml",
+          "tests": 11,
+          "sha256": "89e196b2f80a8997a476ec80aac9f4320a4dc2e80fc5dd5bd9ec2ccb283fb5e5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharUtilsTest.xml",
+          "tests": 27,
+          "sha256": "e4b7594ea5d5e40ea1babc2a89297567a3a2bffc118a72552970c29f182d6511"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.CharsetsTest.xml",
+          "tests": 3,
+          "sha256": "56aac98c5a3cb62be600f2fd11853b214819307cf9f10a6ceb7f4d4cd6474ff6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ClassLoaderUtilsTest.xml",
+          "tests": 4,
+          "sha256": "470e64524c688ecc4c30aed8136d42f32c3993340ccdc8b589cb64979462cba4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ClassPathUtilsTest.xml",
+          "tests": 29,
+          "sha256": "7e8fe2d5e6fe774d0c1d6809c8b672a7da6beddb06de305c24c663bcf80caff5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ClassUtilsGetShortClassNameTest.xml",
+          "tests": 4,
+          "sha256": "24d5e0e3a443f987efda8287db70f64de097430937ea7ee09bb194c1088ae665"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ClassUtilsOssFuzzTest.xml",
+          "tests": 2,
+          "sha256": "4a4edc7b79f607ce739b0c96a8e4dcd5c231c23a1f330b718862526309acbfcc"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ClassUtilsShortClassNameTest.xml",
+          "tests": 11,
+          "sha256": "04cf1c5764216f79e3a6104e4a47a182987f7329e3f6d99df2fb66ae90c672cb"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ClassUtilsTest.xml",
+          "tests": 388,
+          "sha256": "5f317a2c59c0d9be91cd222da1788aa5c7b44d9c8d74ff4d41ba9dd505abb2c2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ConversionTest.xml",
+          "tests": 55,
+          "sha256": "0b24a3f30e465b1dd6bf17c256719fe102fa904f45e95e94f743c6787077ea24"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.DoubleRangeTest.xml",
+          "tests": 28,
+          "sha256": "36eca84a4ebea1cdcca80b67ecfed7a04343f44392144a78803f9291d127c2a7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.EnumUtilsTest.xml",
+          "tests": 48,
+          "sha256": "b6f2f1953411b04ff488e6949c1e18010bf37530620ff0458f0352a0e0270afa"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.FunctionsTest.xml",
+          "tests": 43,
+          "sha256": "15a78d69c0eb672fe0d88aed519406dc99febb90956df23b7156bcc8a097d31a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.IntegerRangeTest.xml",
+          "tests": 28,
+          "sha256": "08d6c11f5281e71eb424c82e3c790c29cba44fd3e421bbce9c91d933631af267"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.JavaVersionTest.xml",
+          "tests": 4,
+          "sha256": "06c061fc4ed710a0dd6b37263b86156044b0102d6c71af1e28dd416954e88188"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.LocaleUtilsTest.xml",
+          "tests": 2567,
+          "sha256": "63d858c6b11983cde053c58a87cdf0c19d286e7ee2dab838988343d5da662ab7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.LongRangeTest.xml",
+          "tests": 29,
+          "sha256": "01a64bd43b40fb24547df8214abc80074e852a5fb67f6154b194c5cdeab9346b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.NotImplementedExceptionTest.xml",
+          "tests": 1,
+          "sha256": "de39c7782b764029a09004a6e8bee0b49a7d686fd44e5415a5651783d1b5140d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ObjectUtilsTest.xml",
+          "tests": 60,
+          "sha256": "5fcabddb1e10127c61f0441e095b545dbac99653b9b97db4176ab0654a074a29"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.RandomStringUtilsTest.xml",
+          "tests": 107,
+          "sha256": "ef94728a057e46cfcf02d6e163561818b5b4d2448803365139e5e5f7815407f1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.RandomUtilsTest.xml",
+          "tests": 133,
+          "sha256": "3be5b790c927072c818b0321f9434e5c5290fb2b3c5c4a9c7c4f2cf6cebe2ee6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.RangeReadObjectTest.xml",
+          "tests": 10,
+          "sha256": "870c947b3f2e47a487dcf02643c3dd36fe0614bd54c5f6f1afd876e74998e61c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.RangeTest.xml",
+          "tests": 29,
+          "sha256": "c42964570f97b06b9c573bb669ea393f27516c3a32b573ef5d3d859a62b1c482"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.RegExUtilsTest.xml",
+          "tests": 19,
+          "sha256": "c506c95d55181cd7c0778f3a80951d10ec8f220ad16193314d7cd38ef0146708"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.RuntimeEnvironmentTest.xml",
+          "tests": 10,
+          "sha256": "51e970680601fa3180bb98e3400ffe7f477b3584dcc4b1b3cd08a7ed5a8f1603"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.SerializationUtilsTest.xml",
+          "tests": 28,
+          "sha256": "5fc7b7f0789c344859a80a4e8049af50ff5bd8d30d333024be0ca20cbf9c395a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StreamsTest.xml",
+          "tests": 11,
+          "sha256": "d3bfd42564ab1453fd99bda1f50e4fff9e9c1d02afcc8c568e335581dccbc752"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringEscapeUtilsTest.xml",
+          "tests": 37,
+          "sha256": "f78701787a5ef7ad58b9775d0ac4dfd8e81721c12e3cf1efdf9b9cb59d087229"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsAbbreviateTest.xml",
+          "tests": 9,
+          "sha256": "9dd5c4b69cde45db77b86235db734a168da265c32d5f65254daf9450d4c287b2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsContainsTest.xml",
+          "tests": 25,
+          "sha256": "73768d989e0e1f910af2ed0969749e5af54293932c54176b31b54d36d6cc55f6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsEmptyBlankTest.xml",
+          "tests": 12,
+          "sha256": "8d9431bedea8cb69ae3a2a16cefc2d8b8613a5157bcb842d9a36258ad5c6ada4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.xml",
+          "tests": 71,
+          "sha256": "6cd61cef6ebd32b5dd1928af14fac87b9c0388d08dd4033985ef54cefc47b7f7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsIndexOfAnyTest.xml",
+          "tests": 5,
+          "sha256": "03355b78e174b104d92616aaa5345b1376ced98b48d0861ad7bba5f76a81da3a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsIsTest.xml",
+          "tests": 14,
+          "sha256": "c697f602e2b3d6dcd27f9dbef40e934d7841c47b44bc2e00cbbe1744b204bbdb"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsJoinExceptionTest.xml",
+          "tests": 16,
+          "sha256": "4069b94a37e807e4eba45589a733af0d690980da7f8ac786b05b1f1cea4b4278"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsStartsEndsWithTest.xml",
+          "tests": 6,
+          "sha256": "889700a93b89dd3f4e1c4dacdae19da24afb140247f9d34cb2580fb07d7bb02d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsStripTest.xml",
+          "tests": 19,
+          "sha256": "e43e53d9477d549a1fefc3936670799bd7f200c9ca80290d7b1ae82e498e0cdf"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsSubstringTest.xml",
+          "tests": 20,
+          "sha256": "b7fd85afeb075792a415a849a46c83cf7ceb6ce8d6f74684d458d6b99bb5f027"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsTest.xml",
+          "tests": 183,
+          "sha256": "790367a9d0993692013900f4fdd0da8aa863b3127c332f1c7379870c17c59f99"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsTrimTest.xml",
+          "tests": 4,
+          "sha256": "9c84ebfe2231b804d01bb47e2afd3236d79a66ebb4b7adba8e92e38982ea64aa"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringUtilsValueOfTest.xml",
+          "tests": 3,
+          "sha256": "9d0e5c3d6eaf738e521e13d5bb6f48510bb22872764afced5e5af1e599a64300"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.StringsTest.xml",
+          "tests": 16,
+          "sha256": "04eb3b2f46183cc6f8984ef9a4967c275c1a71df1ec5dfe4cb372e1d4a440d72"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.SystemPropertiesTest.xml",
+          "tests": 61,
+          "sha256": "666c9417ab14f824b548c599377c7ac36d758a40c8e5251887a1586ae6e5f707"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.SystemUtilsTest.xml",
+          "tests": 24,
+          "sha256": "af5c53fb3bd34353b25d54ea0c33ef40113a8d6d41f5a480c74ddd2f300bacd4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ThreadUtilsTest.xml",
+          "tests": 36,
+          "sha256": "76738a511e50a8475553aa0b3232941468b44ac60d3dee1336f48ec7cf9ba138"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ValidateDoublesTest.xml",
+          "tests": 7,
+          "sha256": "5b7539c6a173f17f2235fc646153a5f771cafa72da250751403e1dc3b5a2d366"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.ValidateTest.xml",
+          "tests": 214,
+          "sha256": "e6348777f72bed24c69b0f94b49886dd2c5c0fe3a3371941efb8fdb50f53999c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.arch.ProcessorTest.xml",
+          "tests": 7,
+          "sha256": "836a00f488a20911e9f4ffd6ce062bfaf2c08cb891904c55051346e4f9eb4cd6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.AbstractReflectionSetAccessibleTest.xml",
+          "tests": 3,
+          "sha256": "e1eec058d892c280d09abc806f1b5cfc31d7ea8d10c9db6c635235a5b026ea02"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.CompareToBuilderNoForceTest.xml",
+          "tests": 50,
+          "sha256": "4f029c919413422c0a07812cd9e69e0f83179fa67eac128246db7113bb414e9c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.CompareToBuilderTest.xml",
+          "tests": 50,
+          "sha256": "aa4d22a21478b7017e5cf377d3955738a3a895a4502b4d493a8e27a8d2cd1866"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ConversionTest.xml",
+          "tests": 3,
+          "sha256": "251675934e5753e5db49cd1bd485a529aeeb4b721c9dda6294a96702a1eb83de"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.DefaultToStringStyleTest.xml",
+          "tests": 11,
+          "sha256": "6e5ee4d6665d8fbee7549b7cd7ddca3d1400af60d9bce1ef08c3e92bb1f70ff8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.DiffBuilderNoForceTest.xml",
+          "tests": 39,
+          "sha256": "dd4486f84c2520dbf9bf7f749406a4ef2d1b5a0b36cd3bb5cc8882662e10a134"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.DiffBuilderTest.xml",
+          "tests": 39,
+          "sha256": "7a4b9ff8428bfa600c57435d095c42cc79dc64b7c361d9ea4a0f92b24a3e889e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.DiffResultTest.xml",
+          "tests": 11,
+          "sha256": "a0fb0541d7d30f8b64738f4898dce25668765540a331cf366639759e70583c83"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.DiffTest.xml",
+          "tests": 4,
+          "sha256": "0a3b0537c3983e740c246f5f185c4ff559dec2a64edef4e9b222111eedeae2c9"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.EqualsBuilderNoForceTest.xml",
+          "tests": 61,
+          "sha256": "a8a1a840de7921d20029dbb2d54bb13c219afa5b0166c7dcdf550dbafb8f59de"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.EqualsBuilderReflectJreImplementationNoForceTest.xml",
+          "tests": 2,
+          "sha256": "60de448be0b2d26f704969a6fe83e8d4a62ba0ca4ac38fc4ac68a9cf64af6364"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.EqualsBuilderReflectJreImplementationTest.xml",
+          "tests": 2,
+          "sha256": "3edc663f08f9e23283acf62a41438e7a41f19c7454f6fa862c14a8bc8fc0cf3f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.EqualsBuilderReflectionEqualsCycleTest.xml",
+          "tests": 2,
+          "sha256": "98d7f4f0f3d6846ef09e122861eb877378b715b31386be17fd2c8bb64abde5ee"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.EqualsBuilderTest.xml",
+          "tests": 61,
+          "sha256": "34c6227640e20e94246a0840330d4945945c5240edde4e4badd465387c5b7caa"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.HashCodeBuilderAndEqualsBuilderTest.xml",
+          "tests": 5,
+          "sha256": "c2d88083f58569c51a5f9ef53cf3998bb62d9217f9e6809f68ef283bb1214d50"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.HashCodeBuilderCycleTest.xml",
+          "tests": 3,
+          "sha256": "039b735e6cec383eef58560503fb4765d8ad3b9db0fab30a6d3104b9597f72d1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.HashCodeBuilderTest.xml",
+          "tests": 47,
+          "sha256": "b690f0ef5c0600dc4390c19e88b3258e39080fdfd7e0d87a4aecf58d2d3e50d2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.IDKeyTest.xml",
+          "tests": 1,
+          "sha256": "f47d9a523baaa18b6234195327939988cd24c0616619a9c367ee48ffbb168b7e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.JsonToStringStyleNoForceTest.xml",
+          "tests": 33,
+          "sha256": "7e3640bfb92793ecd38a3823d9612fe0db012e482f837cde42c58bb6e3049b87"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.JsonToStringStyleTest.xml",
+          "tests": 33,
+          "sha256": "a68684f90b601118867121487efc409915e7ec0f5b1ca9ca16eaa1feb1c5944d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.MultiLineToStringStyleTest.xml",
+          "tests": 11,
+          "sha256": "b00fb68b383ff884a5cd8bf500b71d3f11fecbf025fe82a0c342ec788348ad21"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleNoForceTest.xml",
+          "tests": 14,
+          "sha256": "9518e18c4d9b5c3680c382e9379842be7ccadee12ac4415587fe7fe97afc6e95"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.MultilineRecursiveToStringStyleTest.xml",
+          "tests": 14,
+          "sha256": "39c4568402c3c7577a6333927d2faaf4a1a90f0d959043e486bf0225f01b6a7a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.NoClassNameToStringStyleTest.xml",
+          "tests": 11,
+          "sha256": "cbd591ceadf48e3b8feb9805744074a0000013b8a170c03874d0670d6b53963a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.xml",
+          "tests": 11,
+          "sha256": "db5e008114ca8246017bc703fab04c62695714a5e26f159b4b8720643691fe55"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.RecursiveToStringStyleNoForceTest.xml",
+          "tests": 16,
+          "sha256": "16a3041a8048a8fc336126ec3be01b03842b5d19f4aa7ea14a2746a6d7190445"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.RecursiveToStringStyleTest.xml",
+          "tests": 16,
+          "sha256": "c887c5de1a80aeb0251072407a4c3d480d844a3f6389a804ac96889e7131c100"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionDiffBuilderTest.xml",
+          "tests": 35,
+          "sha256": "1f7546b483bf55c14066b4162489058e9f03028e8a84d3df8be890edfc5d6568"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderConcurrencyTest.xml",
+          "tests": 3,
+          "sha256": "544a346815a26d80276a111a80952e4a671de59fb9665eeda5011a8753a8f870"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderCustomImplementationNoForceTest.xml",
+          "tests": 1,
+          "sha256": "0558c6801a7e06bea1f58d8b187da94ab44c8dca044bc6692c1e7d0cc21ea2f1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderCustomImplementationTest.xml",
+          "tests": 1,
+          "sha256": "0bf37fff6477957fcd43ffe29e87055f8e567c884273cbffb34d7dbdf28fac58"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeNoForceTest.xml",
+          "tests": 11,
+          "sha256": "2bff0139f17f2f33339a3ee5d6274f9d86fbcd64b341399029685a044cd2008d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeNullValuesNoForceTest.xml",
+          "tests": 5,
+          "sha256": "9fe217e3ae9b29e02e00816138456a27a1ddb804cdb14a59999121e8802e9a1f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeNullValuesTest.xml",
+          "tests": 5,
+          "sha256": "ceee21634ab966b38c39cbe26b5aea497861499aa8e2283c5c6fdf747ca34b41"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeTest.xml",
+          "tests": 11,
+          "sha256": "1f2e39b844473fee3c43f244244138679b0da4f58903c80e7fe78434d6efc010"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeWithAnnotationNoForceTest.xml",
+          "tests": 1,
+          "sha256": "0d43d4c6ab2c67855fae0684b4b8b56fd700ba32b2930797828f21823995735c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderExcludeWithAnnotationTest.xml",
+          "tests": 1,
+          "sha256": "1db409037c91a039a0d850077250f8ef869a5827c03b9b220b033227446399fa"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderIncludeNoForceTest.xml",
+          "tests": 20,
+          "sha256": "d08e34b4278e3c5241f233d3639e555209278250f09d474732de3f2b324c2cdf"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderIncludeTest.xml",
+          "tests": 20,
+          "sha256": "55ea7087ddf26314dce898ffec82461e4f43d41384b7c8793cfc664858aee396"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderMutateInspectConcurrencyTest.xml",
+          "tests": 1,
+          "sha256": "1b253815120ed2fbbb4f572fc8df0ba8bdaf19989c595cb0682b296612531ece"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderSummaryNoForceTest.xml",
+          "tests": 1,
+          "sha256": "214b27d47e53656f30ab0608117562c2273bdff3f15246df6aac48e659a66aaf"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderSummaryTest.xml",
+          "tests": 1,
+          "sha256": "01f126462627cc16083075718fd324313f54c4583e19dc5032c6cadde6d876c4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ReflectionToStringBuilderTest.xml",
+          "tests": 1,
+          "sha256": "e23c15b25215d7270b39ace33c0df3cce2aba3ad4d07a155e2948f23bff62f10"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ShortPrefixToStringStyleTest.xml",
+          "tests": 11,
+          "sha256": "deab11d3badb6fe7b486345452dc490290cc362f18c918b47d14f8c93b0f3e25"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.SimpleToStringStyleTest.xml",
+          "tests": 11,
+          "sha256": "0e3476ce5aa8c1f50c3afd8c03eda2edc8ca9d00b53e50dc16fc9fdbb94ff908"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.StandardToStringStyleTest.xml",
+          "tests": 20,
+          "sha256": "f5c5ee6b9eee9524efc515679795f711ff5d9681dda8719ebe189ae8c76cc789"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ToStringBuilderAppendCycleTest.xml",
+          "tests": 4,
+          "sha256": "43dcc23396fa3337f470d014baf435991ddadbb31c95c92b27a782791f1e295d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ToStringBuilderNoForceTest.xml",
+          "tests": 95,
+          "sha256": "25c6173c9013ab79af9883c7a3b3ec166627b4eb1ec779d28c8d69e6de77e2c5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ToStringBuilderTest.xml",
+          "tests": 95,
+          "sha256": "1f08b5d77701d2623c3006b197a96e5137a227a5132e95e4dd1ed355af3cbb67"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ToStringStyleConcurrencyTest.xml",
+          "tests": 3,
+          "sha256": "9f749503ec3083b9ce9686f2a2364c162b2532ae8c941ed528d17e57dd3d1c6f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.builder.ToStringStyleTest.xml",
+          "tests": 12,
+          "sha256": "5749b252aba1ebcb55e2e391c5af39bddc7225fb7d436c77d0f4505e06d05f26"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.compare.ComparableUtilsTest.xml",
+          "tests": 70,
+          "sha256": "e8ccd802a70e78dec7aadd7b0444eb3618c236d53d15515b2e9125085134b7b8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.compare.ObjectToStringComparatorTest.xml",
+          "tests": 7,
+          "sha256": "e949d5b65132180e78c1020ea9eaaf485834b48928a972161cf62e8815ababe2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.AtomicInitializerNonObjectTest.xml",
+          "tests": 5,
+          "sha256": "6081888578003de5711efdbf12431eba7482b23e50ac088386550295b4e0cc7d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.AtomicInitializerObjectTest.xml",
+          "tests": 5,
+          "sha256": "bb70ccf372d8d0aa16add56d1c2df1f12feeb7a345ddb1937ada92e56181acad"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.AtomicInitializerSupplierTest.xml",
+          "tests": 10,
+          "sha256": "7d0db1c10bfa9faf0775e38fe1b17258596495afaccc2fca95bcf9110d616fc8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.AtomicSafeInitializerInitTest.xml",
+          "tests": 1,
+          "sha256": "cdeeb17fad6dca72ec858aa730915ffd47aa56e844ad0bb7ce765f3995951d28"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.AtomicSafeInitializerSupplierTest.xml",
+          "tests": 12,
+          "sha256": "68b457be32b24fd28f54e4966b4a0e6192cdcc8bcb56a761cea718c11577d85e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.AtomicSafeInitializerTest.xml",
+          "tests": 15,
+          "sha256": "75270a4b41894ad40663582582b656b97b2923d8766bfb7d002e9829af3e9280"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.BackgroundInitializerSupplierTest.xml",
+          "tests": 21,
+          "sha256": "2370b77fa25c1240ee4ec41a84faceccc5170f21899b7b8dfb00318916ff165c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.BackgroundInitializerTest.xml",
+          "tests": 18,
+          "sha256": "127fdb839a09ca5bb069fbde927ef9eeed13415a08ecc7a357d47aeb22e774b6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.xml",
+          "tests": 17,
+          "sha256": "32b6d3e526c11e5a5b287be8ea197e215fa965fe2da0c898be96258f10191dd5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest.xml",
+          "tests": 4,
+          "sha256": "4e34734e0be74432e11d01df04a4ce9c004c98a55d9f5f968f61e3f2328f0548"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.CircuitBreakingExceptionTest.xml",
+          "tests": 7,
+          "sha256": "400e8d5c5a45f0142a186a1313df69ba7ec77796fcb6b7590756437998023196"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.ConcurrentExceptionTest.xml",
+          "tests": 4,
+          "sha256": "509fc26dbbabb96059b439d4c2efc7d12de917b29d58c5b55d7b34f09db8264a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.ConcurrentRuntimeExceptionTest.xml",
+          "tests": 3,
+          "sha256": "d8bcdb310c914988cc5830233fed4c1f1da3e6aa858ebb1f8f0960707726a049"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.xml",
+          "tests": 35,
+          "sha256": "0ff4ce87be910ae4ef54b111e4632b3478591f92c841d7f63faf050b406cc913"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.ConstantInitializerTest.xml",
+          "tests": 8,
+          "sha256": "f0e258e3869306203c5f81d0e432beffd98a3da0224a5a753fb4e413e9c0e731"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.EventCountCircuitBreakerTest.xml",
+          "tests": 19,
+          "sha256": "2ce9d84906770fc37c6ba1b0c9630016fcc68874f95b9fc6649f8562ca9f69f7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.FutureTasksTest.xml",
+          "tests": 1,
+          "sha256": "f448b8dc404249b6e3fb5ef1f0027e5de73c853c7a67363eb038649bb0d18c8c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.LazyInitializerAnonClassTest.xml",
+          "tests": 5,
+          "sha256": "2ddd37fddcb884830f208504167496fbcfff5c0d0f0b0bd587c79ea22471df2c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.LazyInitializerCloserTest.xml",
+          "tests": 5,
+          "sha256": "3a5df399b431012ed7590b922a54563d03263541602a0c6ed1671a4e9025640a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.LazyInitializerFailableCloserTest.xml",
+          "tests": 5,
+          "sha256": "b7bc35b01790366f53332aea6b25c32900776661f8d3305b1bd7e8c25f88b8af"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.LazyInitializerSimpleTest.xml",
+          "tests": 5,
+          "sha256": "d47be234255b72d865899ca796c00abfcac6c7caadaf973f4592ae072496aaf1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.LazyInitializerSingleInstanceTest.xml",
+          "tests": 5,
+          "sha256": "50f9f3b1338ad040ec6af3e417ef793ec7a966e8c1c6d79116fc091d7c17e5a9"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.LazyInitializerSupplierTest.xml",
+          "tests": 10,
+          "sha256": "4b805058323bb1d94f188f82b8fbaff5318938cced0b85df4d90ccafca134e39"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.MemoizerCacheTest.xml",
+          "tests": 12,
+          "sha256": "4263c96187ae4a2ce734f3b44fed3f147530a43757edc260df88e26e861bb7c6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.MemoizerComputableTest.xml",
+          "tests": 6,
+          "sha256": "2e3aa3e257b07a1d19ee2a3de07678b32df4f81421dc9cec737c90b43f4e0c3a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.MemoizerFunctionTest.xml",
+          "tests": 6,
+          "sha256": "a175d28a891171aea2fba35330bd739b773f388d3df72c4a8b02bb01cea30e6b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.MultiBackgroundInitializerSupplierTest.xml",
+          "tests": 22,
+          "sha256": "9689d2bfcddb549f08b91c2fa2d6eb4bbdccdf1ed1340cce53c971b71dd24299"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.MultiBackgroundInitializerTest.xml",
+          "tests": 18,
+          "sha256": "663de8749aa22624342318f15a9a3778ce28b76062df771e5be6db2078fb9871"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.ThresholdCircuitBreakerTest.xml",
+          "tests": 7,
+          "sha256": "29766eb172a49238a353accc6131c36fa0d43bfb787cfbf9bd6ae1cae984d0b6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.TimedSemaphoreTest.xml",
+          "tests": 18,
+          "sha256": "7f8448570a591ea2c9a5b3defe0a3da8c7ba198d57943f3b0256ce0f567c8d8e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.UncheckedExecutionExceptionTest.xml",
+          "tests": 1,
+          "sha256": "1cdba3d677460ffdfdbe874b4033367ffd3b80a7b2e0990c8c1b822298603e23"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.UncheckedFutureTest.xml",
+          "tests": 10,
+          "sha256": "ddc3ee1af9d9e8f8586e87fd758216bf6b070d00938e6dc3fc0f67d27db1e8a5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.UncheckedTimeoutExceptionTest.xml",
+          "tests": 1,
+          "sha256": "4ba915cd4a79ef5ab783fe2f44fc09ffe26510f295b5dc613e32ce2eae7cf7a4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.concurrent.locks.LockingVisitorsTest.xml",
+          "tests": 19,
+          "sha256": "c50b2352adb05df14a76c50758ecbdb76f784ea546e129ac7925c7912b3f1eeb"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.event.EventListenerSupportReadObjectTest.xml",
+          "tests": 6,
+          "sha256": "61dadd39289be66c8e6e4ecc537ab72ee9d0d0b5687de63e9df71fb3036e7e1b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.event.EventListenerSupportTest.xml",
+          "tests": 12,
+          "sha256": "1150e287fad996dcb7ae8402cc42d751aa5223de24fb31b555e73b8476f5e7fb"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.event.EventUtilsTest.xml",
+          "tests": 9,
+          "sha256": "6b10f2a0cfdd85b18cf45ed280cad88e212e368f7347811c23016cbecea4fb30"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.CloneFailedExceptionTest.xml",
+          "tests": 6,
+          "sha256": "8975cf7ae05b0321f25de98aeeac2f23b9f9ef366ab4c90cb7f8c34541cf1210"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.ContextedExceptionTest.xml",
+          "tests": 15,
+          "sha256": "cf7eaf7a3d190bd83a64b941568a7f45f124545d55aeeb29f0504ee4c3073f20"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.ContextedRuntimeExceptionTest.xml",
+          "tests": 14,
+          "sha256": "32b72958229c0363cc00af799c01c6361b7c892acf36ae8965827e9af77c0c6a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.DefaultExceptionContextTest.xml",
+          "tests": 10,
+          "sha256": "cd1919e39c2f5b49686122110bf18a18cb36db1b4b9ab20a35c81beb0d2e54d2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.ExceptionUtilsTest.xml",
+          "tests": 70,
+          "sha256": "844878c0b0e67617cdbb16a3b15b1af28495d1bd9e1e6d6bc79258700a625362"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.UncheckedExceptionTest.xml",
+          "tests": 1,
+          "sha256": "45f54fc6649fc5131f75fbeed1374bc868852750bf5d2a05efbae51a06380c04"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.UncheckedIllegalAccessExceptionTest.xml",
+          "tests": 1,
+          "sha256": "ee6504e210db607dae6495778fd391c26f1a5b4b5de6b7631f23ee0394c77453"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.UncheckedInterruptedExceptionTest.xml",
+          "tests": 1,
+          "sha256": "5c2d0aaaaaeb477923054736ecf550ae32079b3cea3263f76cfa459c21f6208e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.exception.UncheckedReflectiveOperationExceptionTest.xml",
+          "tests": 1,
+          "sha256": "bf59dba70e694df78d74e2da3dafb669974f29e0a9dd441a894b305b771e946a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.external.AnnotationEqualsTest.xml",
+          "tests": 10,
+          "sha256": "6082b42c5b4d7aba645268fbfbcc5231d1f017c4718a6327d7531ec6ee2c2a94"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.BooleanConsumerTest.xml",
+          "tests": 2,
+          "sha256": "cd8fbbf9b202769226c03c60f57352ad2d5985314e46bba55c92aad96aaf62c3"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.ByteConsumerTest.xml",
+          "tests": 2,
+          "sha256": "d4c7785d484f6b531b073ce740bb19e893d03a083fda1a89fb44d82cd76332f9"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.ByteSupplierTest.xml",
+          "tests": 1,
+          "sha256": "db4c4a6fe096b804cbbebffb3dac9eb947c5632a41e22b11d7105d310492fab8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.ConsumersTest.xml",
+          "tests": 2,
+          "sha256": "a3c2ec168a11bf6f867906692f7ca3192f4c62f149289526683d8198efd47754"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableBiFunctionTest.xml",
+          "tests": 7,
+          "sha256": "fa407a678d5071679fa9aa898eb84a40ce13d713dd5de3b8661806f623c88d74"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableBiPredicateTest.xml",
+          "tests": 11,
+          "sha256": "7b62b88b92451c7bc8dd90b2524b3cbb89f7d4ab95f3e4391b50191693c7ce0e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableBooleanSupplierTest.xml",
+          "tests": 3,
+          "sha256": "8634baf28e8e0562213e2245661509d86b9e93cf26cc2395e88ce1b7a727c5f6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableByteConsumerTest.xml",
+          "tests": 7,
+          "sha256": "642d7dfaa655fb95f7653ba76feeef364b788e6ef3e3a869819eeb0954e1dda6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableByteSupplierTest.xml",
+          "tests": 2,
+          "sha256": "cddfb86af61b16b9f2201675ea9975a9737991380700d65517e368aa2504fe4e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableCallableTest.xml",
+          "tests": 2,
+          "sha256": "17e2bc126b36dff3f7cf601f9de5f9c9ae4453eac616f8aa0ee375dc1aa24b3d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableConsumerTest.xml",
+          "tests": 11,
+          "sha256": "e89ce1cfc0fb8270231c00f6e746e4558fc628c5f45fbd70d590c1299a17f9f2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleBinaryOperatorTest.xml",
+          "tests": 2,
+          "sha256": "e7f639b52c852d2f836bb79f43101d67857cedf115f422492eb5d5e595d584da"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleConsumerTest.xml",
+          "tests": 7,
+          "sha256": "f1addb8163ab73078fa0596650b5ceafd98c3aa554dbee886436b4a9811f0bcc"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleFunctionTest.xml",
+          "tests": 4,
+          "sha256": "46856cdb771f48030c6d8ca67d936deff3663298d7c606abfa9d92ba7f07258e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoublePredicateTest.xml",
+          "tests": 11,
+          "sha256": "cbc0aed5aa8391cf5d3f46dd1c669180adb978bf99c13e76bb98d22d41d36360"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleSupplierTest.xml",
+          "tests": 2,
+          "sha256": "56f8ac098547d8e39959f95d7067d0e82d182e6ac3a0b5b04cdcbb6fa7a9e113"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleToIntFunctionTest.xml",
+          "tests": 4,
+          "sha256": "f64057535439472d1dd3106a35170313364c4403ea7e49893b7f56ab22bb2262"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleToLongFunctionTest.xml",
+          "tests": 4,
+          "sha256": "420becea59eda11450b59600b3aa5505da1b2cb17d1273dd1652bbcf90ed1bd5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableDoubleUnaryOperatorTest.xml",
+          "tests": 9,
+          "sha256": "152bdc405e4acef6c4d4100d9d490dcd2120966b2ea874c6edbfa532eb02b856"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableFunctionTest.xml",
+          "tests": 10,
+          "sha256": "53cb21f75938534e295d27ed6fa1ce37b1ae8f2aa3e51c9aef35e97462220218"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntBinaryOperatorTest.xml",
+          "tests": 2,
+          "sha256": "feb0d53ae8158330d1c115f1f956ba61dcdca2a34c34406afb3c3de15e7cbdae"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntConsumerTest.xml",
+          "tests": 7,
+          "sha256": "b38f30f31809385de7b41271678855912b9cb7069b7e6d46f9603cf04fe4ac8a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntFunctionTest.xml",
+          "tests": 4,
+          "sha256": "4d80454c4e0f42bedf1e26bd933f806aa23ce7f7eb8578c2e902a570c0fad69d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntPredicateTest.xml",
+          "tests": 11,
+          "sha256": "1c0bbc3aaedd3497ffb8ad81252b3c844e8647d9b6e21264c26130ca65db9fc2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntSupplierTest.xml",
+          "tests": 2,
+          "sha256": "1ed26f9ae0dbbb6762c81be91f6d7b1a30e3b135850d97b58d426cf9aeaf1aca"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntToDoubleFunctionTest.xml",
+          "tests": 4,
+          "sha256": "2987d98d86001b44aa198de773362a5aee3251cf848c6ac447e4765bbbe4d3ff"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntToFloatFunctionTest.xml",
+          "tests": 4,
+          "sha256": "a6905b565c432ef0459efb172563c413717d6a7bbe3ba415ce1be75a7d937f83"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntToLongFunctionTest.xml",
+          "tests": 4,
+          "sha256": "fa1514c2587b9784748a47cced2539f91b674824839cbf182f776ad9bd297d1c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableIntUnaryOperatorTest.xml",
+          "tests": 9,
+          "sha256": "981430fac9dd91f35c87915354181c40203b2d179c16145a926b050b80e5815b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongBinaryOperatorTest.xml",
+          "tests": 2,
+          "sha256": "285a9ee0c3f3b230136bc97dca6b1f71f26d276ddef43aa77ba335d675e7224e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongConsumerTest.xml",
+          "tests": 7,
+          "sha256": "297baea3053c8b19c4dddd9aa46cc2bd4acd14e39cbf63899ba6f7b3b74bf464"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongFunctionTest.xml",
+          "tests": 4,
+          "sha256": "cee66856d3c015f1d12cdeb0c617260ae02b58381d0e34a36cd9599b9211f81d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongPredicateTest.xml",
+          "tests": 11,
+          "sha256": "27e8b6862b1eec409cc4237be38cfffa3c7dfad11bc6ad1ac0926b0f9667add1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongSupplierTest.xml",
+          "tests": 2,
+          "sha256": "bd112afec8a2d53d8a9b166c175e083501f6fd5ed148cc27459fc6923cdd5744"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongToDoubleFunctionTest.xml",
+          "tests": 4,
+          "sha256": "7fb11d9d77133ac41849225403e8d825fbb6805246c99be34179a6afa8b57b89"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongToIntFunctionTest.xml",
+          "tests": 4,
+          "sha256": "114536f40669162d7fa85a28ec7f9e49f63cfd52e9b8b0b7e15160d64a5cb730"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableLongUnaryOperatorTest.xml",
+          "tests": 9,
+          "sha256": "f34681c71e9c1743401faaa614c2320884fa746ad8d2f2365d6c39797e08b45c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableObjDoubleConsumerTest.xml",
+          "tests": 4,
+          "sha256": "529c8a1908e744a90d6cf48e000f5985669cba6d13b9af9d625b752e63de2516"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableObjIntConsumerTest.xml",
+          "tests": 4,
+          "sha256": "c2c8f6396953fb2940487c0f56a2360433b3e06e610a42125cadbaa33038c3df"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableObjLongConsumerTest.xml",
+          "tests": 4,
+          "sha256": "c1149839db72dd0e32eeacce90e00ad6e76fff27ab400eb6e9e171743c14085d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailablePredicateTest.xml",
+          "tests": 11,
+          "sha256": "ee74104668a5e09b8fb6e405bae991c2341d48e2bcabaa2c4839e71230555019"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableRunnableTest.xml",
+          "tests": 2,
+          "sha256": "52521f6e3f27326388fed0b0c0e0818b16b3d32b6c5b46e7fdfa06edb63e60c7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableShortSupplierTest.xml",
+          "tests": 2,
+          "sha256": "506e2cf86b855959c427a3ac8e8c377eab687e5d243db66f7df86f5fb6cea171"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableSupplierTest.xml",
+          "tests": 6,
+          "sha256": "2be9d8008b9297516dcbacc0516cdab8e6b71316d909abfb150ee8ddaf23d104"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableTest.xml",
+          "tests": 177,
+          "sha256": "0142440b2baaa75267efc2547bbf73a855f10b3f8d011b0347b3db16df777071"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToBooleanFunctionTest.xml",
+          "tests": 4,
+          "sha256": "068832ffdaf3629c2065dafb6f5023ff5eb721cb03746cf6d6402b64e395950f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToDoubleBiFunctionTest.xml",
+          "tests": 4,
+          "sha256": "4244affd094ce8faa284b2c391c36c09a65fc1da79dc215b2e28fa472fee5e9b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToDoubleFunctionTest.xml",
+          "tests": 4,
+          "sha256": "a80cc189cdbe33b785f4dbd56811f7ddc3644f951076983d8c9a8532b9280f9e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToIntBiFunctionTest.xml",
+          "tests": 4,
+          "sha256": "6bea2de219b6b1aa7ad7b0d5d00606724c4eaed77be8b1fb4c089a23a779eab7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToIntFunctionTest.xml",
+          "tests": 4,
+          "sha256": "62b1386cd5e382339da5da9784a9bc0b1708e9cf59c66f1c37e5f1ed81f3a69d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToLongBiFunctionTest.xml",
+          "tests": 4,
+          "sha256": "f4fb7ba2d1343f4b544d085d95d5e05d9178b75252c8f5d7da8d546638979bf8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FailableToLongFunctionTest.xml",
+          "tests": 4,
+          "sha256": "dd3dec6e68b0233df94ddd8a6d6e41a5c3679cf9e54b4da54d1e95e9d88ea753"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.FunctionsTest.xml",
+          "tests": 5,
+          "sha256": "18db07cf0764a6b080088b0b2a96a67017e2f0cb448c6ee32f1539f10be6910a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.IntToCharFunctionTest.xml",
+          "tests": 1,
+          "sha256": "fb50cbb88394164d942e82bea363a5e48414ecb768cd4fd815b3afb0108ebae9"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersBiConsumerTest.xml",
+          "tests": 3,
+          "sha256": "fea4bc0deb34e32e98889ffaad25d55c2d68c986f98eba202feb6dc6e2bdc852"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersBiFunctionTest.xml",
+          "tests": 5,
+          "sha256": "5312c5fa7f9bfa4d522c28cca5ffea533a1ba1f87cfd150411a2bffe5ea58efd"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersFailableBiConsumerTest.xml",
+          "tests": 5,
+          "sha256": "28ed49b82c28742c9952bc12720f9ae94462cdf4950a701d7ce50f0aa1ce39e8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersFailableBiFunctionTest.xml",
+          "tests": 5,
+          "sha256": "9b39c75d6f23a601cea38e83052f88f71b63540a587801016d91dc64241482b2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersFailableFunctionTest.xml",
+          "tests": 6,
+          "sha256": "a92ace9e90d03736c03869a28754d98045e9c6999e104524766952b0ee652b00"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersFailableSupplierTest.xml",
+          "tests": 2,
+          "sha256": "06a13837680a98c97e7079928aa3e7d4ae522017906497a617aba52f6a7767c5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersFunctionTest.xml",
+          "tests": 8,
+          "sha256": "3fd652537187f654461ae266e0591472b6aa4ec72b4d371efd2c42c4d9ce4069"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.MethodInvokersSupplierTest.xml",
+          "tests": 2,
+          "sha256": "05d49c579bbdaebd16172dda1d72b4dbce706ed145e3ba71af086d5ccf4d6282"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.PredicatesTest.xml",
+          "tests": 2,
+          "sha256": "e5cef8fb5bcb8602286b41ae7a85e54912557c8bd9ffbccc7fd96f0ebce9729b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.SuppliersTest.xml",
+          "tests": 1,
+          "sha256": "af44366af4eacb6ea5519d9c8b61f777a877880e1bc91389755bf9e74eb3fb62"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.ToBooleanBiFunctionTest.xml",
+          "tests": 1,
+          "sha256": "51db6c211a0a76593ff115ebf60c4e0e42518f470e5aeb3d43fb789e6e1e5d5c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.TriConsumerTest.xml",
+          "tests": 2,
+          "sha256": "bc10af39f2c226792cb9edc753aace6b9fdaf38925bd13e7eee903a2e24b366a"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.function.TriFunctionTest.xml",
+          "tests": 2,
+          "sha256": "c590a8497f7b02a7f80ac9724f863588bf46525c1551f86ef4a5db9a94ebc4a4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.math.FractionReadObjectTest.xml",
+          "tests": 4,
+          "sha256": "f1023d1a397627ff4c844df9d1b2e454e9e13249a3da2bec79af1535b130b223"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.math.FractionTest.xml",
+          "tests": 39,
+          "sha256": "190617302228f7a8b9373a2f6d76d70b43e9a4f696eafb5a4fc7205a17dcf9ce"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.math.IEEE754rUtilsTest.xml",
+          "tests": 3,
+          "sha256": "11bf00c50aa5fe2d2f436e3c0e3a38df3da4b2cad870d13245f00f9bc60be423"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.math.NumberUtilsTest.xml",
+          "tests": 271,
+          "sha256": "ad01d5706c3a318ae68b14bbc747b84d367b3d95d5a3b48c50bc1d8219e332e2"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableBooleanTest.xml",
+          "tests": 9,
+          "sha256": "e52de6e1038f14ac018655a0b91b8b3cd6121899ea21041401484c1ed869c432"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableByteTest.xml",
+          "tests": 25,
+          "sha256": "7c186c7df17b024b616e9bd980dc98092b9571fb375f0e4f7301cf7d23e269d0"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableDoubleTest.xml",
+          "tests": 26,
+          "sha256": "4a277609bd2ea105304e4ca51d42ae34d0cf1a6791292254e0821890888b9888"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableFloatTest.xml",
+          "tests": 26,
+          "sha256": "e3e69d9e9bd895e87ecb392b6939d820652e6d9f3fd8f970cdb903959dcbf584"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableIntTest.xml",
+          "tests": 25,
+          "sha256": "fc8a68dc01999eac577c2f1389050b6fa311ce5f0969a6272560d51088341aa0"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableLongTest.xml",
+          "tests": 25,
+          "sha256": "c6820f4df73c7f97ff93a64c5eb23bdd22012ad6c50c84fb4de480204e7caa39"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableObjectTest.xml",
+          "tests": 5,
+          "sha256": "1c6bfca98d2d26f548ebe7444bbb651175415680faf630559f129af7301aed76"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.mutable.MutableShortTest.xml",
+          "tests": 22,
+          "sha256": "ccc0a160cfbac6265ae4a006e347ac019034168bd928101335f7bb2cd8b3f917"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.ConstructorUtilsTest.xml",
+          "tests": 11,
+          "sha256": "80f7945010845cd41ccb14ddd14f1e3ee812231d00a1cbda71600fa49442801d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.FieldUtilsTest.xml",
+          "tests": 69,
+          "sha256": "95da732cbf0ab137c52593c274cb30a4c7a475e710bb1b29c69a1819953824ab"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.InheritanceUtilsTest.xml",
+          "tests": 9,
+          "sha256": "df9886a84850d0d8a74efff47c4787353e5174e13fc2b832dcac946824d7bed1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.Lang1703Test.xml",
+          "tests": 1,
+          "sha256": "e4caf4fa7051cfba94c017feab9d2f7976594e51eb4d31d2c1ff17d7b6ad649c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.Lang1792Test.xml",
+          "tests": 1,
+          "sha256": "9936ff37ce5286d7ec16b6a469e6514b0df4738f4c820d609aef7342093fb30e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.MethodUtilsAnnotationsTest.xml",
+          "tests": 1,
+          "sha256": "e0e90f9d095349af4263a4da8809aedcdbd83a91ccc2efab833b5079e7939ec0"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.MethodUtilsTest.xml",
+          "tests": 67,
+          "sha256": "13c97f41f5cbb6e1613c6e81fc382990cf31bfa167134a77873928702dc24771"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.TypeLiteralTest.xml",
+          "tests": 4,
+          "sha256": "61f3fe1bad413afde330b0da09b34613358e44ec14551ef0cf47c0af11ad2261"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.reflect.TypeUtilsTest.xml",
+          "tests": 510,
+          "sha256": "38735a3387f4af6b12e2a2ff22297a8a22a8895eac662df3e9ddd4cc76bdb1e7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.stream.FailableStreamTest.xml",
+          "tests": 3,
+          "sha256": "a84996f488ade7bbe9e9e718497b397d4d2be54692c82d9ba3c5563ee21750f4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.stream.IntStreamsTest.xml",
+          "tests": 4,
+          "sha256": "8d354a4b4768b1680d02c7d6a4ce7a4cd8309fed39cc236b5c7008eb5e6093da"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.stream.LangCollectorsTest.xml",
+          "tests": 17,
+          "sha256": "806c7e38437acade01ac465954bee83d3858d1c02c312ec3bde5b1c390c95823"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.stream.StreamsTest.xml",
+          "tests": 35,
+          "sha256": "8c9d28923d22fbd0551d0bde341b9c573635a2e91eff12ea2cbf464952c1529e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.CompositeFormatTest.xml",
+          "tests": 2,
+          "sha256": "0b37073e86fe19d98d293464333084fc191a7e13177ecc84f32e809d7a158039"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.ExtendedMessageFormatTest.xml",
+          "tests": 26463,
+          "sha256": "2ae26960de26e019989b3d128cba3798ebc9818384de181bcb4e3a7aea30fa66"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.FormattableUtilsTest.xml",
+          "tests": 18,
+          "sha256": "2bee17569311267a21a7da0bfecc728dd2e7240cae825208f1d3763b9114c762"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrBuilderAppendInsertTest.xml",
+          "tests": 51,
+          "sha256": "35899a1cea4134436ff698d98beb57c9f91dae8439a8c088f1a4ee65f84b73ff"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrBuilderClearTest.xml",
+          "tests": 6,
+          "sha256": "e14ab325286bc0e029296d5568bebcb5785bffe6db126679f825a271eb1386b4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrBuilderTest.xml",
+          "tests": 92,
+          "sha256": "554d331c806fa6d3f63922075dd741db29bd9875e75f0d5f336dd0c42b499808"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrLookupTest.xml",
+          "tests": 6,
+          "sha256": "f116d77743fe4cba60e386bd014d9c6ad78c8717d1997bafeb27a6baa75513af"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrMatcherTest.xml",
+          "tests": 14,
+          "sha256": "9b52b7919f238985e77e7f4869027fd20a3b6c83bbfaf346c083ddad660f24b4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrSubstitutorTest.xml",
+          "tests": 43,
+          "sha256": "14a4725ed2a11da48f9710eeb28e2e7ec9dea90774c90dc34ce659cb8ce6ccf6"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.StrTokenizerTest.xml",
+          "tests": 55,
+          "sha256": "2fb0b4f798a9c2fbc0a8e70ca9320cc53d0350cdce3152581ed25b513788ca14"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.WordUtilsTest.xml",
+          "tests": 37,
+          "sha256": "ece4cf3dd4bc5f5a3008d41113d6e2a297f873dc35f444cad2ccf2f9d9193ae8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.EntityArraysTest.xml",
+          "tests": 4,
+          "sha256": "454b48bbda3bf79e61a23f35207aaf9056417e5bc0567c76928d4de660b2417b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.LookupTranslatorTest.xml",
+          "tests": 3,
+          "sha256": "e32aac6408206b14f44d08f0992f3447de1ca9161e838344b6620b915dcbe920"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.NumericEntityEscaperTest.xml",
+          "tests": 6,
+          "sha256": "ae6471d68d3d5f22467f50a49ae9f9b4ed6b46b2962875a4673c6d54f930e22c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.NumericEntityUnescaperTest.xml",
+          "tests": 5,
+          "sha256": "0bacdb5364ba722410ec042c8ac85eda67014ac40967ddf700aadc41b28da82d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.OctalUnescaperTest.xml",
+          "tests": 1,
+          "sha256": "3d875a341867b5dde9923f062a560f327ff41138eb5082acf74f7ddce988122e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.UnicodeEscaperTest.xml",
+          "tests": 4,
+          "sha256": "8898d9333082ee5c71771c50453571ddc725f24f01fa2e2fcc916bd4dddda3f7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.UnicodeUnescaperTest.xml",
+          "tests": 5,
+          "sha256": "e4ee0737c5d9eca42231789fdfe6a9bd5170380418e0174a933718c93b271cc7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.text.translate.UnicodeUnpairedSurrogateRemoverTest.xml",
+          "tests": 2,
+          "sha256": "85cd6c93751bb18e06770a1be141de467a6df6857ce733df7a3b9ad1d6c04ee4"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.CalendarUtilsTest.xml",
+          "tests": 1903,
+          "sha256": "b2659cb3b8e46fc8223acdcb319c87a3461bfb25b16d99b471231ba1bdf54bba"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.DateFormatUtilsTest.xml",
+          "tests": 13,
+          "sha256": "43859a38d5ddabf307a05da7b29d8e0ae29cd731c3b858cf52c70933b04bff77"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.DateUtilsFragmentTest.xml",
+          "tests": 57,
+          "sha256": "95199499418672d74c234ba30fe17aebe9f08247b3bcda88b828e5e7f5a02ca9"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.DateUtilsRoundingTest.xml",
+          "tests": 22,
+          "sha256": "c3f9c74e9cf2f74d889d43223682986b9e91dcd3aecf4c25ee8fc1504713689d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.DateUtilsTest.xml",
+          "tests": 134,
+          "sha256": "0e532da6c9cc9c634699ddd0a75b5e8e4f8dffd0505596910feeb51294fec869"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.DurationFormatUtilsTest.xml",
+          "tests": 53,
+          "sha256": "2517dc6331173a3cfef5af55de4473a7bb10f69b4b38d7df1abca51e4eda0eb5"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.DurationUtilsTest.xml",
+          "tests": 19,
+          "sha256": "78ba4025e81d08a2eeb2e584151f8ec8326b6aab1933bc7d51ed8acbc39117c8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateFormatTest.xml",
+          "tests": 29,
+          "sha256": "87ae779c277e1c642784bd38ffb6e160400aae91dd9f757aabe4c68e717be21f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateFormat_PrinterTest.xml",
+          "tests": 1252,
+          "sha256": "f75a06a4c7cc523c899ccc28a4979101042ecf69ff4f6bef1d60945b9500a589"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateParserJava15BugTest.xml",
+          "tests": 1034,
+          "sha256": "2fc792df27e2fd3711b38e44db5d7d12a1171f92d25a7a33bcdff25f5b450b39"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateParserReadObjectTest.xml",
+          "tests": 2,
+          "sha256": "958f4ea963348e78fec1133c7f5572a38a02e3ada59628b929d26669c4cda96f"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateParserSDFTest.xml",
+          "tests": 276,
+          "sha256": "a8baf0b1c2e16f8783b5403012f5aae48bca3dc19fba86ffbe408782c6077d6c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateParserTest.xml",
+          "tests": 43798,
+          "sha256": "5a7ac11b1026d3ab55f1b504eecce12875fbfc0f38d0a5fecc7c6a4fa6289c91"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateParser_MoreOrLessTest.xml",
+          "tests": 7,
+          "sha256": "8bdbd7119ba1ff7fd42a7dd6169dc8770705542cbc22bfc96dc4f287056f9b1e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDateParser_TimeZoneStrategyTest.xml",
+          "tests": 2043,
+          "sha256": "b0ba5824a1df7ae1af12249f231c481f3c0283fbefb3016bbaba1e82d8d57a67"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDatePrinterTest.xml",
+          "tests": 1252,
+          "sha256": "3f6e796af8d444fb72dd6458be017e0b292c6f2076564788c58b5ae410ad61c1"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastDatePrinterTimeZonesTest.xml",
+          "tests": 632,
+          "sha256": "7b54e0864ad38fe65d50bf23752b1e098a7bbdcb20b9861d5f12cbcfeee59c9e"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.FastTimeZoneTest.xml",
+          "tests": 25,
+          "sha256": "3f8fc8ac22c0792a1ad7af41a460f1b9dd271701eeef4f73a58aa7bbb52c66a0"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.GmtTimeZoneTest.xml",
+          "tests": 11,
+          "sha256": "76f09e92e07eacf510ee84543c8efacb125455a1114b1ac1462f6528eaf91a76"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.ImmutableTimeZoneTest.xml",
+          "tests": 19,
+          "sha256": "388757521f966cb96cfa40845707ff4cafd51eaac2c61d121e3d44e250c82670"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.InstantsTest.xml",
+          "tests": 28,
+          "sha256": "c89296b823b56d094ca33b1af609a2e1ca85049c356c8f332325462f27f9bc1b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.StopWatchTest.xml",
+          "tests": 41,
+          "sha256": "65bc13c8255be9d2ab3f9a540fcf3e38584323c4b3335ff122a36aad0a69abda"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.TimeZonesGmtTest.xml",
+          "tests": 7,
+          "sha256": "4d6f998f5599faba6217fbfa42c9b923a52e0df446f4d2ce44135249654d5e42"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.TimeZonesTest.xml",
+          "tests": 1,
+          "sha256": "38c3115d5a6cb34a3da6ff0c6e9a6f3bb39ee7eb0941ccbc668c1fcf744c0a0b"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.time.WeekYearTest.xml",
+          "tests": 32,
+          "sha256": "0356578aa91d50dbf41a9395e1856abd9f788793b407143aea01e4d77de2719c"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.tuple.ImmutablePairTest.xml",
+          "tests": 24,
+          "sha256": "2e19ab11d7ada855b1b4fe0490290da203411d884532da3418e642ff390c5f73"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.tuple.ImmutableTripleTest.xml",
+          "tests": 17,
+          "sha256": "38938071439479e64238351d87601a0f1483f5cf4f8044f5df426435c7e1fa6d"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.tuple.MutablePairTest.xml",
+          "tests": 13,
+          "sha256": "449af2ae25ffdf498a4f60e6cc85775963e43a2eecd9307e4836d58d81c9f5cc"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.tuple.MutableTripleTest.xml",
+          "tests": 11,
+          "sha256": "5e460fbeec94ce799da5aa32391ad6766348ffb7400bf4e3d44c91776ec9f702"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.tuple.PairTest.xml",
+          "tests": 23,
+          "sha256": "83ec847c4c73fb263102652fe6e5265665c9f702b2a363eb66d31a0c5366df74"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.tuple.TripleTest.xml",
+          "tests": 13,
+          "sha256": "e56fb06a2a5631733855ea4d09fc6329c1c64e205a29edac47a6877eeb3af2e8"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.util.FluentBitSetReadObjectTest.xml",
+          "tests": 9,
+          "sha256": "6e7457521e773bfa07f24e41f23b72c8b0e4371226265db6dc55c055a2028f66"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.util.FluentBitSetTest.xml",
+          "tests": 44,
+          "sha256": "405bc7e42bca98f1c48e01eef03ee7c0f713c00feeb4f8d2b2712a07026ebfd7"
+        },
+        {
+          "file": "TEST-org.apache.commons.lang3.util.IterableStringTokenizerTest.xml",
+          "tests": 29,
+          "sha256": "83cb01b6896509e60869b152850a2026407a5789aeab51bbc50161aada25e75a"
+        }
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-18T20:25:37.088220Z",
+      "finished_at": "2026-10-18T20:30:51.641369Z",
+      "source_commit": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+      "log_hash": "efec1d965ed61b251128f09f5681fb91c9610b9c8391b12f6269ea0c07884166",
+      "log_hash_matches_receipt": true,
+      "source_hashes_unchanged_in_receipt": true
+    }
+  },
+  "local_default_gate_evidence": {
+    "clean": [
+      {
+        "line": 9,
+        "text": "[INFO] --- clean:3.5.0:clean (default-clean) @ commons-lang3 ---"
+      }
+    ],
+    "RAT": [
+      {
+        "line": 1150,
+        "text": "[INFO] --- apache-rat:0.18:check (default-cli) @ commons-lang3 ---"
+      }
+    ],
+    "Checkstyle": [
+      {
+        "line": 1154,
+        "text": "[INFO] You have 0 Checkstyle violations."
+      }
+    ],
+    "japicmp": [
+      {
+        "line": 1156,
+        "text": "[INFO] --- japicmp:0.26.3:cmp (default-cli) @ commons-lang3 ---"
+      }
+    ],
+    "SpotBugs check": [
+      {
+        "line": 1174,
+        "text": "[INFO] --- spotbugs:4.10.5.0:check (default-cli) @ commons-lang3 ---"
+      }
+    ],
+    "SpotBugs zero bugs": [
+      {
+        "line": 1175,
+        "text": "[INFO] BugInstance size is 0"
+      }
+    ],
+    "SpotBugs zero errors": [
+      {
+        "line": 1176,
+        "text": "[INFO] Error size is 0"
+      }
+    ],
+    "PMD": [
+      {
+        "line": 1189,
+        "text": "[INFO] --- pmd:3.28.0:check (default-cli) @ commons-lang3 ---"
+      }
+    ],
+    "JaCoCo coverage": [
+      {
+        "line": 1148,
+        "text": "[INFO] All coverage checks have been met."
+      }
+    ],
+    "Javadoc lifecycle": [
+      {
+        "line": 929,
+        "text": "[INFO] --- javadoc:3.11.2:javadoc (create-javadoc-jar) @ commons-lang3 ---"
+      }
+    ],
+    "Javadoc jar": [
+      {
+        "line": 932,
+        "text": "[INFO] --- javadoc:3.11.2:jar (create-javadoc-jar) @ commons-lang3 ---"
+      }
+    ],
+    "build success": [
+      {
+        "line": 1215,
+        "text": "[INFO] BUILD SUCCESS"
+      }
+    ],
+    "Javadoc standalone": [
+      {
+        "line": 1212,
+        "text": "[INFO] --- javadoc:3.11.2:javadoc (default-cli) @ commons-lang3 ---"
+      }
+    ]
+  },
+  "experimental_control": {
+    "experimental_job_id": 117779871695,
+    "experimental_receipt_sha256": "36345515448ad64a6d93e75ea9626090aae39d0fadf3ad3b7ab879444f333517",
+    "experimental_total": {
+      "line": 49,
+      "text": "2026-10-18T20:26:02.0551015Z [ERROR] Tests run: 100926, Failures: 40, Errors: 0, Skipped: 18",
+      "tests": 100926,
+      "failures": 40,
+      "errors": 0,
+      "skipped": 18
+    },
+    "experimental_type_utils": {
+      "tests": 551,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 1
+    },
+    "experimental_evidence_scope": "Prior exact browser excerpts only; complete experimental log not available",
+    "control_job_id": 117782918411,
+    "control_total": {
+      "line": 1387,
+      "text": "2026-10-18T20:37:56.6537093Z [ERROR] Tests run: 52400, Failures: 40, Errors: 0, Skipped: 0",
+      "tests": 52400,
+      "failures": 40,
+      "errors": 0,
+      "skipped": 0
+    },
+    "control_runtime": [
+      {
+        "line": 224,
+        "text": "2026-10-18T20:35:28.2481091Z Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)"
+      },
+      {
+        "line": 226,
+        "text": "2026-10-18T20:35:28.2483569Z Java version: 28-beta, vendor: Eclipse Adoptium, runtime: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/28.0.0-ea.20.0.ea/x64"
+      }
+    ],
+    "control_command": [
+      {
+        "line": 216,
+        "text": "2026-10-18T20:35:26.8855622Z ##[group]Run mvn --errors --show-version --batch-mode --no-transfer-progress -Ddoclint=all -Dtest=FastDateParserJava15BugTest,FastDateParserTest test"
+      }
+    ],
+    "control_scope": "Only the two failing date-parser test classes, not full default Maven or TypeUtils",
+    "failure_summaries": [
+      "FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: '\u0445.\u202f\u0441-\u0447./2003/\u043d\u0430\u0440\u04d1\u0441/0010/0012/0000/00/\u043a.\u202f\u0443./\u0448\u04d1\u043c\u0430\u0442 \u043a\u0443\u043d', error : java.text.ParseException: Unparseable date: '\u0445.\u202f\u0441-\u0447./2003/\u043d\u0430\u0440\u04d1\u0441/0010/0012/0000/00/\u043a.\u202f\u0443./\u0448\u04d1\u043c\u0430\u0442 \u043a\u0443\u043d', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: '\u0445.\u202f\u0441-\u0447./2003/\u043d\u0430\u0440\u04d1\u0441/0010/0012/0000/00/\u043a.\u202f\u0443./\u0448\u04d1\u043c\u0430\u0442 \u043a\u0443\u043d', error : java.text.ParseException: Unparseable date: '\u0445.\u202f\u0441-\u0447./2003/\u043d\u0430\u0440\u04d1\u0441/0010/0012/0000/00/\u043a.\u202f\u0443./\u0448\u04d1\u043c\u0430\u0442 \u043a\u0443\u043d', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: '\u0445.\u202f\u0441-\u0447./2003/2/10/12/\u043a.\u202f\u0443./0/0/\u0448\u043c', error : java.text.ParseException: Unparseable date: '\u0445.\u202f\u0441-\u0447./2003/2/10/12/\u043a.\u202f\u0443./0/0/\u0448\u043c', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: '\u0445.\u202f\u0441-\u0447./2003/2/10/12/\u043a.\u202f\u0443./0/0/\u0448\u043c', error : java.text.ParseException: Unparseable date: '\u0445.\u202f\u0441-\u0447./2003/2/10/12/\u043a.\u202f\u0443./0/0/\u0448\u043c', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl"
+    ],
+    "ordered_failure_summaries_equal": true,
+    "control_unsupported_major_72_count": 0
+  },
+  "codeql": [
+    {
+      "job_id": 117779871466,
+      "name": "Analyze (javascript)",
+      "conclusion": "success",
+      "upload": [
+        {
+          "line": 1914,
+          "text": "2026-10-18T20:22:15.9146286Z Successfully uploaded results"
+        }
+      ],
+      "test_skip": []
+    },
+    {
+      "job_id": 117779871541,
+      "name": "Analyze (java)",
+      "conclusion": "success",
+      "upload": [
+        {
+          "line": 4384,
+          "text": "2026-10-18T20:24:28.0619523Z Successfully uploaded results"
+        }
+      ],
+      "test_skip": [
+        {
+          "line": 1510,
+          "text": "2026-10-18T20:22:05.9698990Z [2026-10-18 20:22:05] [autobuild] > mvn clean package -f pom.xml -B -V -e -Dfindbugs.skip -Dcheckstyle.skip -Dpmd.skip=true -Dspotbugs.skip -Denforcer.skip -Dmaven.javadoc.skip -DskipTests -Dmaven.test.skip.exec -Dlicense.skip=true -Drat.skip=true -Dspotless.check.skip=true"
+        },
+        {
+          "line": 2779,
+          "text": "2026-10-18T20:23:16.6489768Z [2026-10-18 20:23:16] [autobuild] [INFO] Tests are skipped."
+        }
+      ]
+    }
+  ],
+  "dependency_review": {
+    "initial_failed_job": 117779871772,
+    "initial_error": [
+      {
+        "line": 136,
+        "text": "2026-10-18T20:21:44.4828424Z ##[error]Dependency review is not supported on this repository. Please ensure that Dependency graph is enabled, see https://github.com/agamal026/commons-lang/settings/security_analysis"
+      }
+    ],
+    "successful_retry_job": 117780547870,
+    "successful_result": [
+      {
+        "line": 137,
+        "text": "2026-10-18T20:24:42.9420625Z Dependency review did not detect any vulnerable packages with severity level \"low\" or higher."
+      },
+      {
+        "line": 142,
+        "text": "2026-10-18T20:24:42.9430872Z Dependency review did not detect any denied packages"
+      }
+    ]
+  },
+  "all_checks_passed": true
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-18T20:36:48.631Z",
+  "job_url": "https://github.com/agamal026/commons-lang/actions/runs/39162942665/job/117779871695",
+  "job_id": 117779871695,
+  "workflow_run_id": 39162942665,
+  "attempt": 1,
+  "source_sha": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+  "checkout_sha": "22d6135d62cc957e77777fcd9c1ebb8a4cc783c5",
+  "runtime": "Eclipse Temurin 28-beta (28.0.0-ea.20.0.ea), Apache Maven 3.10.0, Ubuntu",
+  "collection": "After two connector log-transport failures, inspected the browser's View raw logs document through read-only DOM text extraction. The ordinary job page truncated the build step; the raw document exposed complete final Results, BUILD FAILURE and cleanup. This receipt retains selected exact lines from that document, not the complete 16.6-million-character log archive or its raw-byte digest.",
+  "job_result": "failure",
+  "aggregate_workflow_result": "success",
+  "experimental_continue_on_error": true,
+  "suite": {
+    "tests": 100926,
+    "failures": 40,
+    "errors": 0,
+    "skipped": 18
+  },
+  "typeutils": {
+    "tests": 551,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "failing_classes": [
+    {
+      "class": "org.apache.commons.lang3.time.FastDateParserJava15BugTest",
+      "tests": 1206,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "org.apache.commons.lang3.time.FastDateParserTest",
+      "tests": 51194,
+      "failures": 36,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "diagnosis": "The fatal Surefire result lists 40 existing date-parser failures for Chuvash cv/cv_RU/cv_RU_#Cyrl locale parsing. Separate JaCoCo unsupported-major-version-72 instrumentation errors are also present. Do not label the whole experimental build as passing or attribute its exit solely to the instrumentation messages. The focused TypeUtils class passes.",
+  "exact_upstream_control": {
+    "source_sha": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+    "workflow_commit": "bd12677bd0eb5f76a4233d66f343342b682fb8c5",
+    "run_url": "https://github.com/agamal026/commons-lang/actions/runs/39163962620",
+    "stage": "in_progress",
+    "scope": "Only the two failing date-parser classes on unmodified upstream source, same requested Ubuntu/Temurin28-ea. No full baseline suite or repeated ordinary matrix."
+  },
+  "rendered_document": {
+    "chars": 16565967,
+    "checkout": [
+      "2026-10-18T20:21:41.9334802Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +22d6135d62cc957e77777fcd9c1ebb8a4cc783c5:refs/remotes/pull/1/merge",
+      "2026-10-18T20:21:42.7833790Z  * [new ref]         22d6135d62cc957e77777fcd9c1ebb8a4cc783c5 -> pull/1/merge",
+      "2026-10-18T20:21:42.8652204Z 22d6135d62cc957e77777fcd9c1ebb8a4cc783c5"
+    ],
+    "final_results": [
+      "2026-10-18T20:26:02.0489858Z [INFO] Results:",
+      "2026-10-18T20:26:02.0490140Z [INFO] ",
+      "2026-10-18T20:26:02.0493411Z [ERROR] Failures: ",
+      "2026-10-18T20:26:02.0496041Z [ERROR]   FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "2026-10-18T20:26:02.0497790Z ",
+      "2026-10-18T20:26:02.0499887Z [ERROR]   FastDateParserJava15BugTest.testLocales_Long_BC:106->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/нарӑс/0010/0012/0000/00/к. у./шӑмат кун', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "2026-10-18T20:26:02.0501541Z ",
+      "2026-10-18T20:26:02.0503639Z [ERROR]   FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "2026-10-18T20:26:02.0505110Z ",
+      "2026-10-18T20:26:02.0506967Z [ERROR]   FastDateParserJava15BugTest.testLocales_Short_BC:134->testLocales:91->testLocale:79 locale: cv, formattedDate: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', error : java.text.ParseException: Unparseable date: 'х. с-ч./2003/2/10/12/к. у./0/0/шм', parse position = java.text.ParsePosition[index=4,errorIndex=4]",
+      "2026-10-18T20:26:02.0508349Z ",
+      "2026-10-18T20:26:02.0508832Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0509838Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0510819Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0511951Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0512958Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0513949Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0514961Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0515999Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0517010Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0518162Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0519236Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0520239Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0521249Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0524264Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0525605Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0526857Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0528144Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0529320Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0530494Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0531534Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0532755Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0533831Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0534877Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0536058Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv",
+      "2026-10-18T20:26:02.0537159Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0538287Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0539388Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0540489Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0541578Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0542799Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU",
+      "2026-10-18T20:26:02.0543981Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0545195Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0546351Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0547535Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0548693Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0549859Z [ERROR]   FastDateParserTest.testParses:680->validateSdfFormatFdpParseEquality:951 locale cv_RU_#Cyrl",
+      "2026-10-18T20:26:02.0550590Z [INFO] ",
+      "2026-10-18T20:26:02.0551015Z [ERROR] Tests run: 100926, Failures: 40, Errors: 0, Skipped: 18",
+      "2026-10-18T20:26:02.0551491Z [INFO] ",
+      "2026-10-18T20:26:02.0558163Z [INFO] ------------------------------------------------------------------------",
+      "2026-10-18T20:26:02.0559096Z [ERROR] BUILD FAILURE"
+    ],
+    "instrumentation_samples": [
+      "2026-10-18T20:22:41.1063057Z Caused by: java.io.IOException: Error while instrumenting com/sun/tools/javac/api/JavacTool with JaCoCo 0.8.15.202606040825/6c5260a.",
+      "2026-10-18T20:22:41.1069125Z Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 72",
+      "2026-10-18T20:22:41.1573212Z Caused by: java.io.IOException: Error while instrumenting com/sun/tools/javac/util/PropagatedException with JaCoCo 0.8.15.202606040825/6c5260a.",
+      "2026-10-18T20:22:41.1722944Z Caused by: java.lang.IllegalArgumentException: Unsupported class file major version 72"
+    ],
+    "lines": 128285,
+    "typeutils": [
+      "2026-10-18T20:23:20.8790295Z [WARNING] Tests run: 551, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.198 s -- in org.apache.commons.lang3.reflect.TypeUtilsTest"
+    ]
+  }
+}
