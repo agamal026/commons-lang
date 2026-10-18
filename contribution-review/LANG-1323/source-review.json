@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "repository": "apache/commons-lang",
+  "issue": "https://issues.apache.org/jira/browse/LANG-1323",
+  "review_kind": "Independent automated source review and audit of coordinator-executed regression artifacts",
+  "reviewed_at": "2026-10-18T20:14:06.647089+00:00",
+  "reviewer_model": "OpenAI GPT-6 Astra",
+  "decision": "accept_focused_fix_with_required_default_build_still_pending",
+  "blocking_findings": [],
+  "source": {
+    "upstream_base": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+    "regression_checkpoint": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+    "regression_checkpoint_url": "https://github.com/agamal026/commons-lang/commit/203b78fc407c5a651a42abbcd0d69d36ad348558",
+    "regression_tree": "df1c650675048e2771068d6fdfbfba57d79edfa6",
+    "canonical_checkpoint_tree_read_at": "2026-10-18T20:13:00.902Z",
+    "canonical_checkpoint_tree_complete": true,
+    "canonical_regression_blob": "f145a0fabd1a9ac979f99c9842a763822443ced2",
+    "canonical_unchanged_production_blob": "c30e0f2644217e8e22539048ba46589323e3c7ea",
+    "reviewed_production_blob": "852283424eb1c04a2f7978faec9554e374f0660c",
+    "reviewed_production_sha256": "d662f3ebc05f601c2f6cfd0a0b66d9362f501a3d1e498a3d7bc4ddb029cab767",
+    "reviewed_test_sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+    "production_change": {
+      "files": 1,
+      "additions": 4,
+      "deletions": 10,
+      "methods": [
+        "GenericArrayTypeImpl.hashCode",
+        "ParameterizedTypeImpl.hashCode"
+      ]
+    },
+    "full_change_against_upstream": {
+      "files": 2,
+      "additions": 69,
+      "deletions": 10
+    },
+    "reversing_only_the_two_reviewed_method_edits_reproduces_upstream_source_byte_for_byte": true
+  },
+  "assessment": {
+    "cause": "The existing shift/OR formulas differ from hashes of equal JDK reflection objects, allowing equal Type values to occupy different hash buckets.",
+    "implementation": "Generic arrays return the component hash. Parameterized types combine the type-argument array, nullable owner and raw-type hashes using XOR. Nested type composition therefore uses the same compatible component results.",
+    "invariants": [
+      "Generic array component and parameterized raw type are validated non-null by existing factories. Parameterized type arguments reject null elements; a nullable owner is handled by Objects.hashCode.",
+      "No public signature, constructor, equality, wildcard normalization, type traversal, changelog, dependency or workflow behavior changes. Reversal of the two edited method bodies reproduces the entire upstream source file.",
+      "Tests use public reflection, no internal JDK classes or fixed numeric hash expectations. They establish symmetric equality before checking exact hash equality and HashMap/HashSet lookup in both directions.",
+      "The 14 cases cover top-level parameterized types, raw/static owners, parameterized owners with generic and non-generic members, nested arguments, type variables, one- and two-dimensional generic arrays and wildcard/array composition."
+    ],
+    "runtime_result_interpretation": "Every baseline case reached assertAll after both equality assertions and failed all five hash/collection checks. Every corresponding new case passed in the fixed whole-class run without skips. The one fixed-run skip is an unchanged existing TODO-disabled method.",
+    "jdk_specification_limit": "Java SE interface documentation does not prescribe these exact hash algorithms. This correction establishes observed JDK reflection interoperability, not a newly specified Java SE algorithm. Other supported runtime/platform results remain to be observed."
+  },
+  "runtime": {
+    "java_version": "17.0.20.1",
+    "vendor": "Eclipse Adoptium",
+    "vm": "OpenJDK 64-Bit Server VM",
+    "maven_version": "3.9.16",
+    "executions_performed_by": "Coordinator",
+    "new_builds_run_by_this_reviewer": 0,
+    "evidence": [
+      {
+        "label": "baseline",
+        "source_state": "Published regression-only checkpoint with unchanged upstream production.",
+        "head_during_run": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+        "started_at": "2026-10-18T20:07:07.356092Z",
+        "finished_at": "2026-10-18T20:08:25.724612Z",
+        "exit_code": 1,
+        "command_display": "mvn --batch-mode --no-transfer-progress -U -Dtest=TypeUtilsTest#testHashCodeMatchesJdk test",
+        "command_display_limit": "Local Maven binary, repository-cache and settings paths omitted; they select the runtime/dependency routing, not test exclusions.",
+        "file_hashes": {
+          "src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java": {
+            "sha256": "955c2a35d65fa0e9b17761aaea1822dbdf97c9a55ec0abda708bdb768e80fdd3",
+            "git_blob_sha": "c30e0f2644217e8e22539048ba46589323e3c7ea"
+          },
+          "src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java": {
+            "sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+            "git_blob_sha": "f145a0fabd1a9ac979f99c9842a763822443ced2"
+          },
+          "pom.xml": {
+            "sha256": "1984e9dfe6f82464c7eb96271a7ba0955e7564b441618c56fbf05cf80ca8fb83",
+            "git_blob_sha": "0a775d1afb2be07876791e638fbb39d4139d095a"
+          }
+        },
+        "file_hashes_unchanged_across_run": true,
+        "summary": {
+          "tests": 14,
+          "failures": 14,
+          "errors": 0,
+          "skipped": 0
+        },
+        "regression_cases": [
+          {
+            "case": 1,
+            "field": "array",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 2,
+            "field": "arrayArgument",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 3,
+            "field": "entry",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 4,
+            "field": "list",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 5,
+            "field": "listArray",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 6,
+            "field": "map",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 7,
+            "field": "member",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 8,
+            "field": "nested",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 9,
+            "field": "nestedArray",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 10,
+            "field": "nestedListArray",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 11,
+            "field": "nonGenericMember",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 12,
+            "field": "variableList",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 13,
+            "field": "wildcardArrayArgument",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          },
+          {
+            "case": 14,
+            "field": "wildcardList",
+            "result": "failed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": true
+          }
+        ],
+        "evidence_files": [
+          {
+            "file": "maven.log",
+            "bytes": 993,
+            "sha256": "e2c7150c714553652fb0458cbf5dc48cc14ecdf36921de2a84ad12d329f28b87",
+            "scope": "Original local capture; any publication redaction must be recorded separately."
+          },
+          {
+            "file": "surefire-reports/TEST-org.apache.commons.lang3.reflect.TypeUtilsTest.xml",
+            "bytes": 183487,
+            "sha256": "610720f52e875952ac889aaf2fec08910de4ca5636ae514d21c24fae20520e3f",
+            "scope": "Original local capture; XML includes runtime properties and may require redaction for publication."
+          },
+          {
+            "file": "surefire-reports/org.apache.commons.lang3.reflect.TypeUtilsTest.txt",
+            "bytes": 164736,
+            "sha256": "ddee1402221a322b43c08e71d3ac9be3526829c3ee060277f3c04831428a90e7",
+            "scope": "Original local capture; any publication redaction must be recorded separately."
+          }
+        ],
+        "stdout_complete": false,
+        "evidence_limit": "Captured stdout is only 993 bytes and stops after antrun. The complete fresh Surefire XML and text report establish the 14 test outcomes; stdout is not claimed complete.",
+        "existing_skip": null
+      },
+      {
+        "label": "fixed",
+        "source_state": "Working production fix over the published regression-only checkpoint; the production fix was not committed during this run.",
+        "head_during_run": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+        "started_at": "2026-10-18T20:10:39.420804Z",
+        "finished_at": "2026-10-18T20:11:12.149997Z",
+        "exit_code": 0,
+        "command_display": "mvn --batch-mode --no-transfer-progress -Dtest=TypeUtilsTest test",
+        "command_display_limit": "Local Maven binary, repository-cache and settings paths omitted; they select the runtime/dependency routing, not test exclusions.",
+        "file_hashes": {
+          "src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java": {
+            "sha256": "d662f3ebc05f601c2f6cfd0a0b66d9362f501a3d1e498a3d7bc4ddb029cab767",
+            "git_blob_sha": "852283424eb1c04a2f7978faec9554e374f0660c"
+          },
+          "src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java": {
+            "sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+            "git_blob_sha": "f145a0fabd1a9ac979f99c9842a763822443ced2"
+          },
+          "pom.xml": {
+            "sha256": "1984e9dfe6f82464c7eb96271a7ba0955e7564b441618c56fbf05cf80ca8fb83",
+            "git_blob_sha": "0a775d1afb2be07876791e638fbb39d4139d095a"
+          }
+        },
+        "file_hashes_unchanged_across_run": true,
+        "summary": {
+          "tests": 510,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 1
+        },
+        "regression_cases": [
+          {
+            "case": 1,
+            "field": "array",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 2,
+            "field": "arrayArgument",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 3,
+            "field": "entry",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 4,
+            "field": "list",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 5,
+            "field": "listArray",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 6,
+            "field": "map",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 7,
+            "field": "member",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 8,
+            "field": "nested",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 9,
+            "field": "nestedArray",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 10,
+            "field": "nestedListArray",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 11,
+            "field": "nonGenericMember",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 12,
+            "field": "variableList",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 13,
+            "field": "wildcardArrayArgument",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          },
+          {
+            "case": 14,
+            "field": "wildcardList",
+            "result": "passed",
+            "skipped": false,
+            "hash_and_four_collection_assertions_failed": false
+          }
+        ],
+        "evidence_files": [
+          {
+            "file": "maven.log",
+            "bytes": 5605,
+            "sha256": "39942d41df8c7486c5eaab1e9afc23549158a1c6f5a2bebf53c15bf37bcc1360",
+            "scope": "Original local capture; any publication redaction must be recorded separately."
+          },
+          {
+            "file": "surefire-reports/TEST-org.apache.commons.lang3.reflect.TypeUtilsTest.xml",
+            "bytes": 74860,
+            "sha256": "6c902ea7bb5abe7518def5c210bc8f0e3e3c110ea34532f3b1d9b9b86f180271",
+            "scope": "Original local capture; XML includes runtime properties and may require redaction for publication."
+          },
+          {
+            "file": "surefire-reports/org.apache.commons.lang3.reflect.TypeUtilsTest.txt",
+            "bytes": 344,
+            "sha256": "73497f4be1970d42675e250a4976acf4095b478c1bf7f006d7699e28c2c493c9",
+            "scope": "Original local capture; any publication redaction must be recorded separately."
+          }
+        ],
+        "stdout_complete": true,
+        "evidence_limit": "Complete captured stdout includes compilation, Surefire totals and BUILD SUCCESS. This is the TypeUtilsTest-focused Maven test goal, not the project default verification goal.",
+        "existing_skip": {
+          "name": "testIsAssignableGenericArrayTypeToWildcardType",
+          "reason": "TODO",
+          "unchanged_in_base": true
+        }
+      }
+    ]
+  },
+  "provenance": {
+    "existing_report": "https://issues.apache.org/jira/browse/LANG-1323?focusedCommentId=15979471&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel",
+    "recent_explicit_remaining_work": "https://github.com/apache/commons-lang/pull/1807#discussion_r4177989738",
+    "related_merged_wildcard_correction": "https://github.com/apache/commons-lang/pull/1807",
+    "basis": "Original tests exercise public Java reflection APIs. Review uses Apache-licensed project source and its existing private implementation structure; no OpenJDK implementation source was copied into this change. Prior contributors and unresolved specification context remain acknowledged.",
+    "java_api_reference": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/reflect/ParameterizedType.html",
+    "specification_issue": "https://bugs.openjdk.org/browse/JDK-7082069"
+  },
+  "remaining_gates": [
+    "Complete the required successful default Maven build and evaluate any actual failure without silently skipping checks.",
+    "Verify the exact production source publication and any required hosted runtime/platform validation before claiming those results.",
+    "Refresh upstream competition and contribution policy before submission; retain explicit AI scope disclosure and the outstanding Jira backlink dependency."
+  ],
+  "claims_not_established": [
+    "Personal human review or learning",
+    "Maintainer acceptance or merge",
+    "Patch Rewards security qualification or participant eligibility",
+    "Financial payment, subscription activation or compute grant",
+    "Any unexecuted default-build or hosted CI result"
+  ]
+}

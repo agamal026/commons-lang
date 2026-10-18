@@ -1,0 +1,3150 @@
+{
+  "schema_version": 1,
+  "repository": "apache/commons-lang",
+  "upstream_base": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+  "source_commit": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+  "published_exact_source_commit": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+  "working_tree_during_run": "two-method production fix prepared over the regression commit; all file hashes match the later published fixed source",
+  "started_at": "2026-10-18T20:10:39.420804Z",
+  "finished_at": "2026-10-18T20:11:12.149997Z",
+  "exit_code": 0,
+  "command_with_routing_redacted": [
+    "mvn",
+    "--settings",
+    "<private-runtime-settings>",
+    "--batch-mode",
+    "--no-transfer-progress",
+    "-Dmaven.repo.local=<local-cache>",
+    "-Dtest=TypeUtilsTest",
+    "test"
+  ],
+  "routing_note": "Only private Maven settings and local cache paths are elided. The existing runtime proxy and platform Java trust store were used; no certificate-validation bypass or source/build configuration change was made.",
+  "runtime": {
+    "java": "Eclipse Temurin 17.0.20.1+1",
+    "maven": "Apache Maven 3.9.16",
+    "os": "Linux amd64"
+  },
+  "files_before": {
+    "src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java": {
+      "sha256": "d662f3ebc05f601c2f6cfd0a0b66d9362f501a3d1e498a3d7bc4ddb029cab767",
+      "git_blob_sha": "852283424eb1c04a2f7978faec9554e374f0660c"
+    },
+    "src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java": {
+      "sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+      "git_blob_sha": "f145a0fabd1a9ac979f99c9842a763822443ced2"
+    },
+    "pom.xml": {
+      "sha256": "1984e9dfe6f82464c7eb96271a7ba0955e7564b441618c56fbf05cf80ca8fb83",
+      "git_blob_sha": "0a775d1afb2be07876791e638fbb39d4139d095a"
+    }
+  },
+  "files_after": {
+    "src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java": {
+      "sha256": "d662f3ebc05f601c2f6cfd0a0b66d9362f501a3d1e498a3d7bc4ddb029cab767",
+      "git_blob_sha": "852283424eb1c04a2f7978faec9554e374f0660c"
+    },
+    "src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java": {
+      "sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+      "git_blob_sha": "f145a0fabd1a9ac979f99c9842a763822443ced2"
+    },
+    "pom.xml": {
+      "sha256": "1984e9dfe6f82464c7eb96271a7ba0955e7564b441618c56fbf05cf80ca8fb83",
+      "git_blob_sha": "0a775d1afb2be07876791e638fbb39d4139d095a"
+    }
+  },
+  "raw_junit_xml_sha256": "6c902ea7bb5abe7518def5c210bc8f0e3e3c110ea34532f3b1d9b9b86f180271",
+  "raw_junit_xml_bytes": 74860,
+  "normalization": "All testcase identities, durations, outcomes and failure/error/skip attributes are preserved below. Local JVM/Maven property blocks and repeated stack traces are omitted.",
+  "junit_totals": {
+    "tests": 510,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1
+  },
+  "test_cases": [
+    {
+      "name": "testParameterizeWithOwner3ArgsNullPointerException",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.092",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesMutuallyCyclicAssignments",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeVarArgs",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesSelfReferencingTypeArgument",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[1]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.016",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[2]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[3]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[4]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[5]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[6]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[7]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[8]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[9]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[10]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[11]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[12]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[13]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[14]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[15]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[16]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[17]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[18]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[19]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[20]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[21]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[22]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[23]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[24]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[25]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[26]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[27]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[28]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[29]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[30]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[31]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[32]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[33]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[34]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[35]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[36]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[37]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[38]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[39]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[40]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[41]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[42]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[43]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[44]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[45]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWildcardBounds(String, String, boolean)[46]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithParameterizedWildcardBound",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithParameterizedType1",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithParameterizedType2",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithParameterizedType3",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesMultiLevelOwnerType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesReturnsTheSameWildcardWhenNothingChanges",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesSelfReferencingTypeArgumentBesideVariable",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testBoundedParameterizedTypeArgumentToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithBoundedWildcardObject",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testToLongString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericComparableTypes",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testGClassToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesOwnerType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesMutuallyReferencingTypeArguments",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericArrayTypeToParameterizedType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeMapArg",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_HiddenMapLogic",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesGenericArray",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericClassHierarchy",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableWildcardWithMultipleUpperBounds",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesSelfOwnedTypeWithStructuralHashCode",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testGetTypeArguments",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testWrap",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesCycleThroughTypeArgumentAndOwner",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testGetRawType_LANG_1697",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testToString_LANG_1311",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.015",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesMultiLevelOwnerType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsInstance",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariables",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesSelfCyclicAssignment",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeWithOwnerVarArgsNullPointerException",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesMultiBoundWildcard",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesPr437",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_Type_TypeVariable_Map_Public",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesOwnerType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testWildcardType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesCyclicOwnerChain",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithLowerBoundedWildcard",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testWildcardTypeRedundantUpperBound",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeWithOwner",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testCyclicWildcardTypeToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariables",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableDirectClassHierarchy",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeNullPointerException",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testNormalizeUpperBounds_LANG_820",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericListTypes",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testGetPrimitiveArrayComponentType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesGenericArraySelfReference",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testContainsTypeVariablesCyclicOwnerType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesWildcardCycleThroughOwnerType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1114",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1190",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1348",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1524",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1698",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1700",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "test_LANG_1702",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[1]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "passed",
+      "fixture_field": "array"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[2]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "arrayArgument"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[3]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "entry"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[4]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "list"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[5]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed",
+      "fixture_field": "listArray"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[6]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "map"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[7]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "member"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[8]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed",
+      "fixture_field": "nested"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[9]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "nestedArray"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[10]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "nestedListArray"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[11]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed",
+      "fixture_field": "nonGenericMember"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[12]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "variableList"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[13]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed",
+      "fixture_field": "wildcardArrayArgument"
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[14]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed",
+      "fixture_field": "wildcardList"
+    },
+    {
+      "name": "testTypesSatisfyVariables",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testDependentBoundsClassAndTypeParametersToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[1]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[2]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[3]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[4]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[5]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[6]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[7]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[8]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[9]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[10]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[11]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[12]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[13]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[14]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[15]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[16]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[17]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[18]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[19]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[20]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[21]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[22]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[23]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[24]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[25]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[26]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.006",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[27]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[28]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[29]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[30]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[31]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[32]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[33]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[34]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[35]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[36]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[37]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[38]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[39]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[40]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[41]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[42]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[43]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[44]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[45]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[46]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[47]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[48]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[49]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[50]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[51]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[52]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[53]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[54]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[55]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[56]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[57]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[58]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[59]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[60]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[61]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[62]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[63]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[64]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[65]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[66]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[67]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[68]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[69]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[70]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[71]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[72]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[73]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[74]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[75]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[76]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[77]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[78]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[79]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[80]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[81]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[82]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.026",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[83]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[84]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[85]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[86]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[87]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[88]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[89]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[90]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[91]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[92]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[93]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[94]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[95]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[96]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[97]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[98]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[99]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[100]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[101]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[102]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[103]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[104]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[105]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[106]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[107]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[108]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[109]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[110]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[111]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[112]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[113]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[114]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[115]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[116]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[117]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[118]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[119]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[120]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[121]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[122]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[123]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[124]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[125]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[126]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[127]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[128]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[129]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[130]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[131]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[132]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[133]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[134]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[135]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[136]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[137]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[138]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[139]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[140]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[141]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[142]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[143]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[144]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[145]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[146]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[147]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[148]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[149]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[150]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[151]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[152]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[153]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[154]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[155]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[156]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[157]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[158]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[159]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[160]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[161]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[162]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[163]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[164]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[165]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[166]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[167]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[168]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[169]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[170]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[171]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[172]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[173]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[174]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[175]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[176]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[177]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[178]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[179]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[180]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[181]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[182]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[183]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[184]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[185]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[186]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[187]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[188]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[189]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[190]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[191]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[192]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[193]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[194]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[195]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[196]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[197]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[198]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[199]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[200]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[201]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[202]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[203]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[204]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[205]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[206]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[207]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[208]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[209]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[210]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[211]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[212]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[213]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[214]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[215]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[216]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[217]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[218]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[219]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[220]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[221]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[222]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[223]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[224]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[225]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[226]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[227]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[228]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[229]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[230]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[231]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[232]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[233]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[234]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[235]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[236]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[237]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[238]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[239]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[240]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[241]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[242]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[243]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[244]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[245]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[246]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[247]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[248]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[249]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[250]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[251]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[252]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[253]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[254]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[255]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[256]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[257]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[258]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[259]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[260]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[261]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[262]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[263]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[264]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[265]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[266]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[267]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[268]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[269]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[270]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[271]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[272]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[273]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[274]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[275]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[276]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[277]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[278]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[279]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[280]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[281]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[282]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[283]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[284]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[285]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[286]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[287]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[288]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[289]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[290]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[291]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[292]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[293]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[294]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[295]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[296]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[297]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[298]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[299]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[300]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[301]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[302]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[303]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[304]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[305]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[306]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[307]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[308]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[309]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[310]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[311]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[312]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[313]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[314]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[315]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[316]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[317]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[318]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[319]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[320]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[321]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[322]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[323]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[324]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[325]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[326]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[327]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[328]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[329]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[330]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[331]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[332]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[333]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[334]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[335]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[336]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[337]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[338]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[339]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[340]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[341]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[342]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testTypeToString(Type)[343]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testGetTypeArgumentsInheritedWildcardBounds",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsArrayTypeClasses",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesRepeatedVariable",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testUnboundedWildcardType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testNormalizeUpperBounds",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testMultiBoundRecursiveType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testDetermineTypeArguments",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testCyclicOwnerParameterizedTypeToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testRecursiveTypeWildcardBoundClass",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeNarrowerTypeArray",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesWildcardBounds",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testLowerBoundedWildcardType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesReturnsTheSameTypeWhenNothingChanges",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesGenericArrayCyclicAssignment",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizedOwnerWithNonGenericInnerClassToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testMultiParamRecursiveType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testGenericArrayType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testThreadLocalCleanupAfterException",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.002",
+      "result": "passed"
+    },
+    {
+      "name": "testCyclicParameterizedTypeToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericArrayTypeToObject",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testInterfaceBoundPreserved",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testWildcardTypeImplicitUpperBound",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testGetRawType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testEquals",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testRepeatedSiblingReferencesToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesSelfOwnedTypeWithTypeVariable",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericArrayTypeToWildcardType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "skipped",
+      "skipped": {
+        "message": "TODO"
+      }
+    },
+    {
+      "name": "testGetTypeArgumentsInheritedGenericArray",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testBoundedGenericArrayTypeToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testGetArrayComponentType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesCyclicOwnerChainFromEitherType",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testWildcardTypeBuilderDefensiveCopy",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithUnboundedWildcard",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableClasses",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignableGenericListArrays",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testDeprecatedConstructor",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_UnrelatedTypeVariables",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testParameterizeVarArgsNullPointerException",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testUnrollVariablesSelfReferencingTypeArgument",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testToLongStringBoundedTypeVariable",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.0",
+      "result": "passed"
+    },
+    {
+      "name": "testIsAssignable_ClassWithUpperBoundedWildcard",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testCyclicGenericArrayTypeToString",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    },
+    {
+      "name": "testIsArrayGenericTypes",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.001",
+      "result": "passed"
+    }
+  ],
+  "console_capture": {
+    "sha256": "39942d41df8c7486c5eaab1e9afc23549158a1c6f5a2bebf53c15bf37bcc1360",
+    "bytes": 5605,
+    "complete": true,
+    "note": "Captured through BUILD SUCCESS and compared with the temporary capture after process exit."
+  },
+  "interpretation": "All 14 new regression invocations pass without skips. The full class has one pre-existing @Disabled(\"TODO\") case, testIsAssignableGenericArrayTypeToWildcardType."
+}

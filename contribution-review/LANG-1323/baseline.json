@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "repository": "apache/commons-lang",
+  "upstream_base": "c89cdf682fe21b0c39759cf58186ed5336a105d4",
+  "source_commit": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+  "published_exact_source_commit": "203b78fc407c5a651a42abbcd0d69d36ad348558",
+  "working_tree_during_run": "clean regression-only commit; production unchanged",
+  "started_at": "2026-10-18T20:07:07.356092Z",
+  "finished_at": "2026-10-18T20:08:25.724612Z",
+  "exit_code": 1,
+  "command_with_routing_redacted": [
+    "mvn",
+    "--settings",
+    "<private-runtime-settings>",
+    "--batch-mode",
+    "--no-transfer-progress",
+    "-Dmaven.repo.local=<local-cache>",
+    "-U",
+    "-Dtest=TypeUtilsTest#testHashCodeMatchesJdk",
+    "test"
+  ],
+  "routing_note": "Only private Maven settings and local cache paths are elided. The existing runtime proxy and platform Java trust store were used; no certificate-validation bypass or source/build configuration change was made.",
+  "runtime": {
+    "java": "Eclipse Temurin 17.0.20.1+1",
+    "maven": "Apache Maven 3.9.16",
+    "os": "Linux amd64"
+  },
+  "files_before": {
+    "src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java": {
+      "sha256": "955c2a35d65fa0e9b17761aaea1822dbdf97c9a55ec0abda708bdb768e80fdd3",
+      "git_blob_sha": "c30e0f2644217e8e22539048ba46589323e3c7ea"
+    },
+    "src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java": {
+      "sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+      "git_blob_sha": "f145a0fabd1a9ac979f99c9842a763822443ced2"
+    },
+    "pom.xml": {
+      "sha256": "1984e9dfe6f82464c7eb96271a7ba0955e7564b441618c56fbf05cf80ca8fb83",
+      "git_blob_sha": "0a775d1afb2be07876791e638fbb39d4139d095a"
+    }
+  },
+  "files_after": {
+    "src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java": {
+      "sha256": "955c2a35d65fa0e9b17761aaea1822dbdf97c9a55ec0abda708bdb768e80fdd3",
+      "git_blob_sha": "c30e0f2644217e8e22539048ba46589323e3c7ea"
+    },
+    "src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java": {
+      "sha256": "888ff2289bebfd096c0d637194f074bfddb1ec76a6ac1472b5f5295ad2d4b9ee",
+      "git_blob_sha": "f145a0fabd1a9ac979f99c9842a763822443ced2"
+    },
+    "pom.xml": {
+      "sha256": "1984e9dfe6f82464c7eb96271a7ba0955e7564b441618c56fbf05cf80ca8fb83",
+      "git_blob_sha": "0a775d1afb2be07876791e638fbb39d4139d095a"
+    }
+  },
+  "raw_junit_xml_sha256": "610720f52e875952ac889aaf2fec08910de4ca5636ae514d21c24fae20520e3f",
+  "raw_junit_xml_bytes": 183487,
+  "normalization": "All testcase identities, durations, outcomes and failure/error/skip attributes are preserved below. Local JVM/Maven property blocks and repeated stack traces are omitted.",
+  "junit_totals": {
+    "tests": 14,
+    "failures": 14,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_cases": [
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[1]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.072",
+      "result": "failed",
+      "fixture_field": "array",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <754527379> but was: <754527411>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[2]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "failed",
+      "fixture_field": "arrayArgument",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <766757143> but was: <-1358988078>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[3]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.005",
+      "result": "failed",
+      "fixture_field": "entry",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <774118493> but was: <2146418049>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[4]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "failed",
+      "fixture_field": "list",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <436096836> but was: <-1090520351>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[5]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "failed",
+      "fixture_field": "listArray",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <436096836> but was: <-1090519311>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[6]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "failed",
+      "fixture_field": "map",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <1948513333> but was: <-42623>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[7]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "failed",
+      "fixture_field": "member",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <1571317391> but was: <-1695>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[8]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "failed",
+      "fixture_field": "nested",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <1994773175> but was: <-2135648>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[9]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "failed",
+      "fixture_field": "nestedArray",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <754527379> but was: <754527411>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[10]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "failed",
+      "fixture_field": "nestedListArray",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <436096836> but was: <-1090519311>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[11]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "failed",
+      "fixture_field": "nonGenericMember",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <2025228404> but was: <-135274239>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[12]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.004",
+      "result": "failed",
+      "fixture_field": "variableList",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <766757143> but was: <-1358988110>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[13]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.005",
+      "result": "failed",
+      "fixture_field": "wildcardArrayArgument",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <2025228614> but was: <-33597>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    },
+    {
+      "name": "testHashCodeMatchesJdk(String, Type)[14]",
+      "classname": "org.apache.commons.lang3.reflect.TypeUtilsTest",
+      "time": "0.003",
+      "result": "failed",
+      "fixture_field": "wildcardList",
+      "failure": {
+        "message": "Multiple Failures (5 failures)\n org.opentest4j.AssertionFailedError: expected: <1414505779> but was: <-10530666>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <value> but was: <null>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>\n org.opentest4j.AssertionFailedError: expected: <true> but was: <false>",
+        "type": "org.opentest4j.MultipleFailuresError"
+      }
+    }
+  ],
+  "console_capture": {
+    "sha256": "e2c7150c714553652fb0458cbf5dc48cc14ecdf36921de2a84ad12d329f28b87",
+    "bytes": 993,
+    "complete": false,
+    "note": "Baseline console capture ends after antrun; no full console audit is claimed. Fresh complete JUnit XML supplies the 14 case results and their five failures each."
+  },
+  "interpretation": "All 14 cases first passed symmetric equality, then each failed all five checks: exact hash, HashMap lookup both ways and HashSet lookup both ways. These are 14 JUnit failures containing 70 assertion failures, not 70 tests."
+}

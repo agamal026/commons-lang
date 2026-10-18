@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "attempt": "baseline-hash",
+      "started_at": "2026-10-18T19:59:23.688187Z",
+      "finished_at": "2026-10-18T19:59:26.930650Z",
+      "exit_code": 1,
+      "tests_executed": 0,
+      "problem": "Maven direct DNS unavailable without runtime proxy settings"
+    },
+    {
+      "attempt": "baseline-hash-proxy",
+      "started_at": "2026-10-18T20:00:23.270324Z",
+      "finished_at": "2026-10-18T20:00:26.153420Z",
+      "exit_code": 1,
+      "tests_executed": 0,
+      "problem": "Damaged local JDK module image, independently confirmed against the verified archive"
+    },
+    {
+      "attempt": "baseline-hash-verified-runtime",
+      "started_at": "2026-10-18T20:05:33.689965Z",
+      "finished_at": "2026-10-18T20:05:36.441839Z",
+      "exit_code": 1,
+      "tests_executed": 0,
+      "problem": "Vendor JDK trust store lacked the platform routing CA; resolved by using the existing system Java trust store"
+    }
+  ],
+  "runtime_repair": "A separate extraction of the official archive matched all 246 regular files. Networking-class and socket-initialization probes passed. The cause of the damaged original extraction is not established.",
+  "jdk_archive_sha256": "3808d1d15e3ec6bd5b84057fb5d84c33d8a1536a258146bcea2e603fc726e08e",
+  "maven_archive_sha512": "831a8591fe20c8243b1dbe7d71e3244f31d1665b0804b2e825e38cbbe5ce0cafb8338851f90780735568773e0a6cd07bbec107cda0b896b008b861075358b6f6",
+  "private_material_omitted": "Routing configuration, private environment data, local diagnostic paths and raw runtime property blocks."
+}
