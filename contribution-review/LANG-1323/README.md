@@ -75,7 +75,11 @@ and repeated stack traces are omitted. The baseline console capture stops after
 the antrun heading; its complete fresh JUnit XML, independently inspected, is the
 case-level evidence. No full baseline console audit is claimed. The
 [passing console](fixed-typeutils.log) includes the final result and
-`BUILD SUCCESS`.
+`BUILD SUCCESS`. Only absolute source-checkout and Maven-cache directory
+prefixes are replaced with `<source-checkout>` and `<local-cache>`.
+`fixed-typeutils.json` records the explicit placeholder map and replacement
+counts, retains the original raw capture SHA-256 and size, and separately
+identifies the published normalized log. All other log bytes are unchanged.
 
 Three earlier setup attempts stopped before any tests. They are retained as
 limits in [setup-limits.json](setup-limits.json): routing configuration, a

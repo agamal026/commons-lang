@@ -3144,7 +3144,28 @@
     "sha256": "39942d41df8c7486c5eaab1e9afc23549158a1c6f5a2bebf53c15bf37bcc1360",
     "bytes": 5605,
     "complete": true,
-    "note": "Captured through BUILD SUCCESS and compared with the temporary capture after process exit."
+    "note": "Original raw capture, retained separately, includes BUILD SUCCESS and was compared with the temporary capture after process exit. The published copy has only the path-prefix substitutions described in published_console_capture."
   },
-  "interpretation": "All 14 new regression invocations pass without skips. The full class has one pre-existing @Disabled(\"TODO\") case, testIsAssignableGenericArrayTypeToWildcardType."
+  "interpretation": "All 14 new regression invocations pass without skips. The full class has one pre-existing @Disabled(\"TODO\") case, testIsAssignableGenericArrayTypeToWildcardType.",
+  "published_console_capture": {
+    "file": "fixed-typeutils.log",
+    "sha256": "9cb8af61fbc37204251b519d93cfd2b4cf99dfec3732489e2f5195cf27c6a2d4",
+    "bytes": 5223,
+    "complete": true,
+    "derived_from_raw_sha256": "39942d41df8c7486c5eaab1e9afc23549158a1c6f5a2bebf53c15bf37bcc1360",
+    "raw_bytes": 5605,
+    "normalization": "Replace only the absolute source-checkout and Maven-cache directory prefixes with the listed placeholders. All remaining bytes, line ordering, compiler and JaCoCo options, warnings, totals, result status and timestamps are preserved.",
+    "placeholder_map": [
+      {
+        "placeholder": "<source-checkout>",
+        "raw_prefix_scope": "Absolute root directory of the Commons Lang source checkout",
+        "replacement_occurrences": 12
+      },
+      {
+        "placeholder": "<local-cache>",
+        "raw_prefix_scope": "Absolute root directory of the Maven artifact cache",
+        "replacement_occurrences": 1
+      }
+    ]
+  }
 }

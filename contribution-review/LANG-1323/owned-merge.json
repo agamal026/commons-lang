@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-18T20:22:41.642600+00:00",
+  "source_sha": "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d",
+  "source_tree": "8e7432f90518a7173a88ed4cc945303293f9e9c9",
+  "merge_sha": "22d6135d62cc957e77777fcd9c1ebb8a4cc783c5",
+  "merge_tree": "e0532a88f9d9ae3263815f71a122bfdb5f273105",
+  "parents": [
+    "30bc4f8db75d8f110f0cce87997ec48a0a5e00cc",
+    "9f75a9a6c2fcbc3d287a170827f2efe861cbe90d"
+  ],
+  "changed_files": [
+    ".github/workflows/codeql-analysis.yml",
+    ".github/workflows/scorecards-analysis.yml"
+  ],
+  "diff": "diff --git a/.github/workflows/codeql-analysis.yml b/.github/workflows/codeql-analysis.yml\nindex 256d769..fe2d793 100644\n--- a/.github/workflows/codeql-analysis.yml\n+++ b/.github/workflows/codeql-analysis.yml\n@@ -21,8 +21,6 @@ on:\n   pull_request:\n     # The branches below must be a subset of the branches above\n     branches: [ master ]\n-  schedule:\n-    - cron: '33 9 * * 4'\n \n permissions:\n   contents: read\ndiff --git a/.github/workflows/scorecards-analysis.yml b/.github/workflows/scorecards-analysis.yml\nindex d24f80c..4eff602 100644\n--- a/.github/workflows/scorecards-analysis.yml\n+++ b/.github/workflows/scorecards-analysis.yml\n@@ -17,8 +17,6 @@ name: \"Scorecards supply-chain security\"\n \n on:\n   branch_protection_rule:\n-  schedule:\n-    - cron: \"30 1 * * 6\"    # Weekly on Saturdays\n   push:\n     branches: [ \"master\" ]\n \n",
+  "production_test_pom_and_maven_workflow_byte_identical": true
+}
